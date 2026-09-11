@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "pricedown";
+  src: url("/pricedown.otf");
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "pricedown";
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+#root,
+.main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===== Team Section Styles ===== */
+.team-section {
+  width: 100%;
+  background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+}
+
+.team-header {
+  text-align: center;
+  padding: 0 20px 50px;
+}
+
+.team-main-title {
+  font-family: "pricedown";
+  font-size: clamp(2.6rem, 7vw, 6rem);
+  color: #fff;
+  letter-spacing: clamp(1px, 0.4vw, 4px);
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #fff 0%, #ccc 50%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.team-subtitle {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(0.75rem, 2.5vw, 1.2rem);
+  color: #888;
+  letter-spacing: clamp(2px, 0.8vw, 6px);
+  text-transform: uppercase;
+}
+
+.team-divider {
+  width: clamp(60px, 15vw, 120px);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e74c3c, transparent);
+  margin: 24px auto 0;
+}
+
+.team-group {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.team-group-title {
+  font-family: "pricedown";
+  font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: clamp(1px, 0.3vw, 2px);
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.team-group-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #e74c3c;
+  margin: 10px auto 0;
+}
+
+.team-group-icon {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.team-card {
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px 18px 22px;
+  text-align: center;
+  width: 100%;
+  max-width: 260px;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.35s ease, border-color 0.35s ease;
+  backdrop-filter: blur(10px);
+}
+
+.team-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 35px rgba(231, 76, 60, 0.15),
+    0 0 20px rgba(231, 76, 60, 0.08);
+  border-color: rgba(231, 76, 60, 0.3);
+}
+
+.team-avatar-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  box-shadow: 0 4px 18px rgba(231, 76, 60, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.team-card:hover .team-avatar-wrapper {
+  box-shadow: 0 4px 26px rgba(231, 76, 60, 0.5);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0a0a0a;
+}
+
+.team-avatar-initials {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+.team-card-name {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.team-card-role {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #999;
+  letter-spacing: 0.4px;
+}
+
+.team-event-header {
+  text-align: center;
+  margin: 60px 0 40px;
+  padding: 0 20px;
+}
+
+.team-event-title {
+  font-family: "pricedown";
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: #fff;
+  letter-spacing: clamp(1px, 0.3vw, 3px);
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.team-footer {
+  text-align: center;
+  padding: 50px 20px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 30px;
+}
+
+.team-footer-text {
+  color: #555;
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
+  letter-spacing: 1px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 50px 0;
+  }
+  .team-header {
+    padding: 0 16px 36px;
+  }
+  .team-group {
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+  }
+  .team-card {
+    padding: 22px 14px 18px;
+    border-radius: 14px;
+  }
+  .team-avatar-wrapper {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 12px;
+  }
+  .team-avatar-initials {
+    font-size: 1.4rem;
+  }
+  .team-card-name {
+    font-size: 0.98rem;
+  }
+  .team-card-role {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+  }
+  .team-card {
+    max-width: 100%;
+    padding: 18px 8px 14px;
+    border-radius: 12px;
+  }
+  .team-avatar-wrapper {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 10px;
+    padding: 2.5px;
+  }
+  .team-avatar-initials {
+    font-size: 1.25rem;
+  }
+  .team-card-name {
+    font-size: 0.88rem;
+    line-height: 1.25;
+  }
+  .team-card-role {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
