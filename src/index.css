@@ -1,0 +1,2194 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "pricedown";
+  src: url("/pricedown.otf");
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "pricedown";
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+#root,
+.main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   TEAM SECTION
+   ========================================================= */
+
+.team-section {
+  width: 100%;
+  background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+  padding: 80px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+}
+
+.team-header {
+  text-align: center;
+  padding: 0 20px 50px;
+}
+
+.team-main-title {
+  font-family: "pricedown";
+  font-size: clamp(2.6rem, 7vw, 6rem);
+  color: #fff;
+  letter-spacing: clamp(1px, 0.4vw, 4px);
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #fff 0%, #ccc 50%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.team-subtitle {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(0.75rem, 2.5vw, 1.2rem);
+  color: #888;
+  letter-spacing: clamp(2px, 0.8vw, 6px);
+  text-transform: uppercase;
+}
+
+.team-divider {
+  width: clamp(60px, 15vw, 120px);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e74c3c, transparent);
+  margin: 24px auto 0;
+}
+
+.team-group {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.team-group-title {
+  font-family: "pricedown";
+  font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: clamp(1px, 0.3vw, 2px);
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.team-group-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #e74c3c;
+  margin: 10px auto 0;
+}
+
+.team-group-icon {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.team-card {
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px 18px 22px;
+  text-align: center;
+  width: 100%;
+  max-width: 260px;
+  transition:
+    transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.team-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 14px 35px rgba(231, 76, 60, 0.15),
+    0 0 20px rgba(231, 76, 60, 0.08);
+  border-color: rgba(231, 76, 60, 0.3);
+}
+
+.team-avatar-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  box-shadow: 0 4px 18px rgba(231, 76, 60, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.team-card:hover .team-avatar-wrapper {
+  box-shadow: 0 4px 26px rgba(231, 76, 60, 0.5);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0a0a0a;
+}
+
+.team-avatar-initials {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.team-card-name {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.team-card-role {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #999;
+  letter-spacing: 0.4px;
+}
+
+.team-event-header {
+  text-align: center;
+  margin: 60px 0 40px;
+  padding: 0 20px;
+}
+
+.team-event-title {
+  font-family: "pricedown";
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: #fff;
+  letter-spacing: clamp(1px, 0.3vw, 3px);
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.team-footer {
+  text-align: center;
+  padding: 50px 20px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 30px;
+}
+
+.team-footer-text {
+  color: #555;
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 50px 0;
+  }
+
+  .team-header {
+    padding: 0 16px 36px;
+  }
+
+  .team-group {
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+  }
+
+  .team-card {
+    padding: 22px 14px 18px;
+    border-radius: 14px;
+  }
+
+  .team-avatar-wrapper {
+    width: 76px;
+    height: 76px;
+    margin-bottom: 12px;
+  }
+
+  .team-avatar-initials {
+    font-size: 1.4rem;
+  }
+
+  .team-card-name {
+    font-size: 0.98rem;
+  }
+
+  .team-card-role {
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+  }
+
+  .team-card {
+    max-width: 100%;
+    padding: 18px 8px 14px;
+    border-radius: 12px;
+  }
+
+  .team-avatar-wrapper {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 10px;
+    padding: 2.5px;
+  }
+
+  .team-avatar-initials {
+    font-size: 1.25rem;
+  }
+
+  .team-card-name {
+    font-size: 0.88rem;
+    line-height: 1.25;
+  }
+
+  .team-card-role {
+    font-size: 0.72rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* =========================================================
+   SIDEBAR OVERLAY
+   ========================================================= */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+  z-index: 9998;
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  max-width: 85vw;
+  height: 100vh;
+
+  background: rgba(10, 10, 10, 0.55);
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+
+  transform: translateX(-100%);
+
+  transition:
+    transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* =========================================================
+   SIDEBAR CLOSE BUTTON
+   ========================================================= */
+
+.sidebar-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  background: transparent;
+
+  color: #fff;
+
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SIDEBAR CONTENT
+   ========================================================= */
+
+.sidebar-content {
+  width: 100%;
+  height: 100%;
+
+  padding: 90px 45px 40px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content h2 {
+  margin: 0 0 60px;
+
+  color: #fff;
+
+  font-family: "pricedown";
+
+  font-size: 32px;
+
+  letter-spacing: 0.08em;
+}
+
+.sidebar-content nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-content nav button {
+  padding: 14px 0;
+
+  border: none;
+  background: transparent;
+
+  color: #fff;
+
+  text-align: left;
+
+  font-family: "pricedown";
+  font-size: 20px;
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-content nav button:hover {
+  opacity: 0.6;
+  transform: translateX(8px);
+}
+
+/* =========================================================
+   SIDEBAR MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .sidebar {
+    width: 300px;
+    max-width: 82vw;
+  }
+
+  .sidebar-content {
+    padding: 80px 30px 30px;
+  }
+
+  .sidebar-content h2 {
+    font-size: 28px;
+    margin-bottom: 45px;
+  }
+
+  .sidebar-content nav button {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+
+  .sidebar-close {
+    top: 18px;
+    right: 18px;
+  }
+}
+
+/* =========================================================
+   SMOOTH SCROLLING
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================================
+   COMPETITIONS SECTION
+   SAME BACKGROUND STYLE AS TEAM SECTION
+   ========================================================= */
+
+.competitions-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 130px 6vw 100px;
+
+  box-sizing: border-box;
+
+  /* SAME AS TEAM SECTION */
+  background:
+    linear-gradient(
+      180deg,
+      #000 0%,
+      #0a0a0a 50%,
+      #000 100%
+    );
+
+  color: #fff;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+/* ---------------------------------------------------------
+   BACKGROUND GRID
+   --------------------------------------------------------- */
+
+.competitions-background-grid {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  opacity: 0.18;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.competitions-header {
+  position: relative;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.competitions-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 22px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.eyebrow-line {
+  display: block;
+
+  width: 45px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.competitions-header h1 {
+  position: relative;
+
+  margin: 0;
+
+  font-size: clamp(58px, 10vw, 145px);
+
+  line-height: 0.85;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   HEADER GLITCH
+   --------------------------------------------------------- */
+
+.competitions-header h1::before,
+.competitions-header h1::after {
+  content: attr(data-text);
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0;
+}
+
+.competitions-header h1::before {
+  transform: translateX(-2px);
+
+  color: rgba(190, 110, 255, 0.75);
+}
+
+.competitions-header h1::after {
+  transform: translateX(2px);
+
+  color: rgba(110, 60, 255, 0.75);
+}
+
+.competitions-header h1:hover::before {
+  opacity: 0.35;
+
+  animation:
+    titleGlitchOne 0.35s steps(2, end);
+}
+
+.competitions-header h1:hover::after {
+  opacity: 0.25;
+
+  animation:
+    titleGlitchTwo 0.35s steps(2, end);
+}
+
+.competitions-subtitle {
+  margin: 28px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: clamp(13px, 1.4vw, 17px);
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.header-system-info {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+
+  margin-top: 28px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.header-system-info span:first-child::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 8px;
+
+  border-radius: 50%;
+
+  background: #c98aff;
+
+  box-shadow:
+    0 0 10px rgba(180, 100, 255, 0.9);
+}
+
+/* ---------------------------------------------------------
+   GRID
+   --------------------------------------------------------- */
+
+.competitions-grid {
+  position: relative;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+/* =========================================================
+   GTA COMPETITION CARD
+   ONLY CARD BACKGROUND CHANGED
+   ========================================================= */
+
+.competition-card {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+
+  position: relative;
+
+  min-height: 410px;
+
+  padding: 38px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border: 1px solid rgba(220, 180, 255, 0.35);
+
+  border-radius: 18px;
+
+  /*
+     GTA-STYLE CITY BACKGROUND
+     Put the generated image at:
+
+     public/competition-card-bg.png
+  */
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 0, 35, 0.15),
+      rgba(5, 0, 15, 0.58)
+    ),
+    url("/competition-card-bg.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.15s ease-out,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  will-change: transform;
+
+  cursor: default;
+
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(145, 45, 255, 0.08);
+}
+
+/* ---------------------------------------------------------
+   DARK OVERLAY
+   Keeps your existing font readable
+   --------------------------------------------------------- */
+
+.competition-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(20, 0, 35, 0.1) 35%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+
+  z-index: 0;
+
+  transition:
+    background 0.35s ease;
+}
+
+.competition-card:hover::before {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 0, 35, 0.08) 0%,
+      rgba(50, 0, 80, 0.12) 40%,
+      rgba(0, 0, 0, 0.62) 100%
+    );
+}
+
+/* ---------------------------------------------------------
+   PURPLE MOUSE GLOW
+   --------------------------------------------------------- */
+
+.competition-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(220, 80, 255, 0.28),
+      rgba(120, 40, 255, 0.1) 35%,
+      transparent 70%
+    );
+
+  filter: blur(35px);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  transition:
+    opacity 0.35s ease;
+}
+
+.competition-card:hover::after {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+.competition-card:hover {
+  border-color:
+    rgba(225, 165, 255, 0.85);
+
+  box-shadow:
+    0 20px 65px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(190, 60, 255, 0.25),
+    0 0 70px rgba(120, 30, 255, 0.15);
+}
+
+/* ---------------------------------------------------------
+   SCAN LINE
+   --------------------------------------------------------- */
+
+.competition-card-scan {
+  position: absolute;
+
+  left: -20%;
+  top: -10%;
+
+  width: 140%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(240, 170, 255, 0.9),
+      transparent
+    );
+
+  opacity: 0;
+
+  transform:
+    rotate(-12deg)
+    translateY(-100px);
+
+  pointer-events: none;
+
+  z-index: 4;
+}
+
+.competition-card:hover .competition-card-scan {
+  opacity: 1;
+
+  animation:
+    cardScan 1.4s ease-in-out infinite;
+}
+
+/* ---------------------------------------------------------
+   CARD GLOW
+   --------------------------------------------------------- */
+
+.competition-card-glow {
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -120px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(225, 140, 255, 0.2);
+
+  box-shadow:
+    0 0 0 30px rgba(180, 70, 255, 0.035),
+    0 0 0 60px rgba(180, 70, 255, 0.02);
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease;
+}
+
+.competition-card:hover .competition-card-glow {
+  transform:
+    scale(1.2)
+    rotate(25deg);
+}
+
+/* ---------------------------------------------------------
+   CORNER HUD ELEMENTS
+   --------------------------------------------------------- */
+
+.competition-card-corners {
+  position: absolute;
+
+  inset: 15px;
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+.corner {
+  position: absolute;
+
+  width: 22px;
+  height: 22px;
+
+  border-color: rgba(230, 170, 255, 0.75);
+
+  border-style: solid;
+
+  transition:
+    width 0.4s ease,
+    height 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.corner.top-left {
+  top: 0;
+  left: 0;
+
+  border-width: 1px 0 0 1px;
+}
+
+.corner.top-right {
+  top: 0;
+  right: 0;
+
+  border-width: 1px 1px 0 0;
+}
+
+.corner.bottom-left {
+  bottom: 0;
+  left: 0;
+
+  border-width: 0 0 1px 1px;
+}
+
+.corner.bottom-right {
+  bottom: 0;
+  right: 0;
+
+  border-width: 0 1px 1px 0;
+}
+
+.competition-card:hover .corner {
+  width: 35px;
+  height: 35px;
+
+  border-color: rgba(245, 210, 255, 1);
+}
+
+/* ---------------------------------------------------------
+   CARD HEADER
+   --------------------------------------------------------- */
+
+.competition-card-header {
+  position: relative;
+
+  z-index: 6;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.competition-card-number {
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #fff;
+
+  text-shadow:
+    0 2px 5px #000;
+}
+
+.competition-card-code {
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 220, 255, 0.65);
+
+  text-shadow:
+    0 2px 5px #000;
+
+  transition:
+    color 0.3s ease;
+}
+
+.competition-card:hover .competition-card-code {
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   CARD CONTENT
+   IMPORTANT:
+   Your existing fonts remain unchanged
+   --------------------------------------------------------- */
+
+.competition-card-content {
+  position: relative;
+
+  z-index: 6;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 35px 0;
+}
+
+.competition-card-index {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: rgba(255, 220, 255, 0.75);
+
+  text-shadow:
+    0 2px 5px #000;
+}
+
+.competition-card-content h2 {
+  position: relative;
+
+  margin: 0 0 15px;
+
+  /*
+     KEEPING YOUR EXISTING FONT SIZE
+     AND INHERITED PRICEDOWN FONT
+  */
+
+  font-size: clamp(38px, 4.3vw, 66px);
+
+  line-height: 0.88;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  color: #fff;
+
+  transition:
+    transform 0.35s ease,
+    letter-spacing 0.35s ease;
+
+  text-shadow:
+    2px 3px 0 #000,
+    0 0 20px rgba(190, 80, 255, 0.4);
+}
+
+.competition-card:hover .competition-card-content h2 {
+  transform: translateX(7px);
+
+  letter-spacing: 2px;
+}
+
+/* ---------------------------------------------------------
+   CARD TITLE GLITCH
+   --------------------------------------------------------- */
+
+.competition-card-content h2::before,
+.competition-card-content h2::after {
+  content: attr(data-text);
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+
+  pointer-events: none;
+
+  opacity: 0;
+}
+
+.competition-card-content h2::before {
+  transform: translateX(-3px);
+
+  color: rgba(255, 100, 230, 0.75);
+}
+
+.competition-card-content h2::after {
+  transform: translateX(3px);
+
+  color: rgba(100, 80, 255, 0.75);
+}
+
+.competition-card:hover
+  .competition-card-content
+  h2::before {
+  opacity: 0.3;
+
+  animation:
+    cardGlitchOne 0.5s steps(2, end) infinite;
+}
+
+.competition-card:hover
+  .competition-card-content
+  h2::after {
+  opacity: 0.25;
+
+  animation:
+    cardGlitchTwo 0.5s steps(2, end) infinite;
+}
+
+/* ---------------------------------------------------------
+   CARD TAG
+   --------------------------------------------------------- */
+
+.competition-card-tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  margin-bottom: 17px;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(235, 180, 255, 0.45);
+
+  background:
+    rgba(40, 0, 60, 0.45);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 235, 255, 0.85);
+
+  text-shadow:
+    0 2px 4px #000;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.competition-card:hover .competition-card-tag {
+  border-color:
+    rgba(255, 210, 255, 0.9);
+
+  background:
+    rgba(100, 20, 150, 0.45);
+
+  color: #fff;
+
+  transform: translateX(5px);
+}
+
+/* ---------------------------------------------------------
+   CARD DESCRIPTION
+   --------------------------------------------------------- */
+
+.competition-card-content p {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  text-shadow:
+    0 2px 5px #000;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.competition-card:hover .competition-card-content p {
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  transform:
+    translateX(5px);
+}
+
+/* ---------------------------------------------------------
+   CARD FOOTER
+   --------------------------------------------------------- */
+
+.competition-card-footer {
+  position: relative;
+
+  z-index: 6;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 20px;
+}
+
+.card-system {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  text-shadow:
+    0 2px 5px #000;
+}
+
+.system-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #e08aff;
+
+  box-shadow:
+    0 0 12px rgba(220, 100, 255, 1),
+    0 0 25px rgba(150, 50, 255, 0.7);
+
+  animation:
+    systemPulse 1.5s ease-in-out infinite;
+}
+
+/* ---------------------------------------------------------
+   CARD ACTIONS
+   --------------------------------------------------------- */
+
+.competition-card-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.competition-card-actions button {
+  min-width: 120px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 13px 17px;
+
+  box-sizing: border-box;
+
+  border-radius: 4px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    gap 0.25s ease;
+}
+
+.competition-card-actions button i {
+  font-size: 16px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.competition-card-actions button:hover {
+  gap: 14px;
+}
+
+.competition-card-actions button:hover i {
+  transform:
+    translate(2px, -2px);
+}
+
+/* INFO BUTTON */
+
+.competition-details {
+  border:
+    1px solid rgba(235, 190, 255, 0.75);
+
+  background:
+    rgba(10, 0, 20, 0.6);
+
+  color: #fff;
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.competition-details:hover {
+  background: #fff;
+
+  border-color: #fff;
+
+  color: #000;
+}
+
+/* REGISTER BUTTON */
+
+.competition-register {
+  border: 1px solid #fff;
+
+  background: #fff;
+
+  color: #000;
+}
+
+.competition-register:hover {
+  background: transparent;
+
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   SECTION FOOTER
+   --------------------------------------------------------- */
+
+.competitions-footer-line {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 45px auto 0;
+
+  padding-top: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(210, 160, 255, 0.15);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: rgba(225, 190, 255, 0.3);
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.competition-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(105, 45, 180, 0.12),
+      transparent 50%
+    ),
+    rgba(0, 0, 0, 0.88);
+
+  z-index: 999999;
+
+  overflow-y: auto;
+
+  animation:
+    modalFadeIn 0.25s ease;
+}
+
+.competition-modal {
+  position: relative;
+
+  width: min(900px, 95vw);
+
+  max-height: 88vh;
+
+  padding: 55px;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(190, 110, 255, 0.08),
+      rgba(255, 255, 255, 0.015)
+    ),
+    #080808;
+
+  color: #fff;
+
+  border: 1px solid rgba(210, 160, 255, 0.3);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.9),
+    0 0 60px rgba(120, 50, 200, 0.1),
+    inset 0 0 50px rgba(190, 110, 255, 0.02);
+
+  transform: none !important;
+
+  animation:
+    modalSlideIn 0.35s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------------------------------------------------------
+   MODAL SCROLLBAR
+   --------------------------------------------------------- */
+
+.competition-modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.competition-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.competition-modal::-webkit-scrollbar-thumb {
+  background: rgba(210, 160, 255, 0.3);
+
+  border-radius: 10px;
+}
+
+/* ---------------------------------------------------------
+   MODAL TOP LINE
+   --------------------------------------------------------- */
+
+.modal-top-line {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+
+  margin-bottom: 30px;
+
+  border-bottom:
+    1px solid rgba(210, 160, 255, 0.14);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: rgba(225, 190, 255, 0.3);
+}
+
+.competition-modal-number {
+  margin-bottom: 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  color: rgba(225, 190, 255, 0.35);
+}
+
+.modal-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: rgba(225, 190, 255, 0.4);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #c98aff;
+
+  box-shadow:
+    0 0 10px rgba(190, 110, 255, 0.9);
+}
+
+.competition-modal h2 {
+  margin: 0;
+
+  padding-right: 50px;
+
+  font-size: clamp(45px, 7vw, 85px);
+
+  line-height: 0.9;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 25px rgba(160, 80, 255, 0.1);
+}
+
+.competition-modal-tag {
+  display: inline-block;
+
+  margin: 22px 0 0;
+
+  padding: 7px 10px;
+
+  border: 1px solid rgba(210, 160, 255, 0.2);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: rgba(225, 190, 255, 0.5);
+}
+
+.competition-modal-description {
+  max-width: 720px;
+
+  margin: 25px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modal-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 35px 0;
+
+  background: rgba(210, 160, 255, 0.15);
+}
+
+.competition-modal h3 {
+  margin: 0 0 25px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  color: rgba(225, 190, 255, 0.65);
+}
+
+.competition-modal ul {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.competition-modal li {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  gap: 10px;
+
+  padding: 15px 0;
+
+  border-bottom:
+    1px solid rgba(210, 160, 255, 0.07);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.competition-modal li:first-child {
+  border-top:
+    1px solid rgba(210, 160, 255, 0.07);
+}
+
+.rule-number {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: rgba(210, 160, 255, 0.3);
+}
+
+.competition-modal-close {
+  position: absolute;
+
+  top: 20px;
+  right: 22px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(210, 160, 255, 0.25);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.competition-modal-close:hover {
+  background: #fff;
+
+  color: #000;
+
+  transform: rotate(90deg);
+}
+
+.competition-modal-done {
+  width: 100%;
+
+  margin-top: 35px;
+
+  padding: 15px;
+
+  border: 1px solid rgba(220, 180, 255, 0.5);
+
+  border-radius: 4px;
+
+  background: transparent;
+
+  color: #fff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.competition-modal-done:hover {
+  background: #fff;
+
+  color: #000;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes cardScan {
+  0% {
+    transform:
+      rotate(-12deg)
+      translateY(-180px);
+  }
+
+  100% {
+    transform:
+      rotate(-12deg)
+      translateY(500px);
+  }
+}
+
+@keyframes systemPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes cardGlitchOne {
+  0% {
+    clip-path: inset(20% 0 70% 0);
+  }
+
+  25% {
+    clip-path: inset(60% 0 10% 0);
+  }
+
+  50% {
+    clip-path: inset(40% 0 35% 0);
+  }
+
+  75% {
+    clip-path: inset(80% 0 5% 0);
+  }
+
+  100% {
+    clip-path: inset(20% 0 70% 0);
+  }
+}
+
+@keyframes cardGlitchTwo {
+  0% {
+    clip-path: inset(70% 0 15% 0);
+  }
+
+  25% {
+    clip-path: inset(10% 0 65% 0);
+  }
+
+  50% {
+    clip-path: inset(45% 0 30% 0);
+  }
+
+  75% {
+    clip-path: inset(5% 0 80% 0);
+  }
+
+  100% {
+    clip-path: inset(70% 0 15% 0);
+  }
+}
+
+@keyframes titleGlitchOne {
+  0% {
+    clip-path: inset(20% 0 70% 0);
+
+    transform:
+      translateX(-3px);
+  }
+
+  50% {
+    clip-path: inset(60% 0 10% 0);
+
+    transform:
+      translateX(3px);
+  }
+
+  100% {
+    clip-path: inset(20% 0 70% 0);
+
+    transform:
+      translateX(-3px);
+  }
+}
+
+@keyframes titleGlitchTwo {
+  0% {
+    clip-path: inset(70% 0 15% 0);
+
+    transform:
+      translateX(3px);
+  }
+
+  50% {
+    clip-path: inset(10% 0 65% 0);
+
+    transform:
+      translateX(-3px);
+  }
+
+  100% {
+    clip-path: inset(70% 0 15% 0);
+
+    transform:
+      translateX(3px);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(0.97) !important;
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1) !important;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .competitions-section {
+    padding: 100px 5vw 80px;
+  }
+
+  .competitions-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .competition-card {
+    min-height: 390px;
+  }
+
+  .competition-modal {
+    padding: 45px 35px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .competitions-section {
+    padding: 85px 20px 65px;
+  }
+
+  .competitions-header {
+    margin-bottom: 55px;
+  }
+
+  .competitions-eyebrow {
+    gap: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .eyebrow-line {
+    width: 25px;
+  }
+
+  .competitions-header h1 {
+    font-size:
+      clamp(48px, 16vw, 75px);
+  }
+
+  .competitions-subtitle {
+    max-width: 320px;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    letter-spacing: 2px;
+  }
+
+  .header-system-info {
+    flex-direction: column;
+
+    gap: 10px;
+
+    font-size: 8px;
+  }
+
+  .competition-card {
+    min-height: 440px;
+
+    padding: 28px 25px;
+
+    border-radius: 14px;
+
+    background-position: center;
+  }
+
+  .competition-card-content {
+    padding: 25px 0;
+  }
+
+  .competition-card-content h2 {
+    font-size:
+      clamp(38px, 13vw, 58px);
+  }
+
+  .competition-card-content p {
+    font-size: 13px;
+  }
+
+  .competition-card-footer {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .card-system {
+    margin-bottom: 5px;
+  }
+
+  .competition-card-actions {
+    width: 100%;
+  }
+
+  .competition-card-actions button {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 13px 10px;
+
+    font-size: 9px;
+  }
+
+  .competitions-footer-line {
+    flex-direction: column;
+
+    gap: 10px;
+
+    font-size: 8px;
+  }
+
+  .competition-modal-overlay {
+    padding: 15px;
+  }
+
+  .competition-modal {
+    width: 100%;
+
+    max-height: 92vh;
+
+    padding: 40px 23px 25px;
+
+    border-radius: 14px;
+  }
+
+  .competition-modal h2 {
+    font-size:
+      clamp(42px, 14vw, 65px);
+  }
+
+  .competition-modal-description {
+    font-size: 14px;
+  }
+
+  .competition-modal li {
+    grid-template-columns:
+      30px 1fr;
+
+    font-size: 13px;
+  }
+
+  .competition-modal-close {
+    top: 14px;
+
+    right: 14px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .competition-card,
+  .competition-card *,
+  .competition-modal,
+  .competition-modal-overlay {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+  .competition-card {
+    transform: none !important;
+  }
+}
