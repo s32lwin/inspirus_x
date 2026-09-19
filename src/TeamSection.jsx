@@ -4,8 +4,11 @@ import React from "react";
 // Avatar component
 // =====================================================
 
-function Avatar({ name }) {
+function Avatar({ name, image }) {
+  const [imgError, setImgError] = React.useState(false);
+
   const initials = name
+    .trim()
     .split(" ")
     .filter(
       (w) =>
@@ -37,17 +40,28 @@ function Avatar({ name }) {
         0
       ) % colors.length;
 
+  const showImage = image && !imgError;
+
   return (
     <div className="team-avatar-wrapper">
       <div
         className="team-avatar"
         style={{
-          backgroundColor: colors[colorIndex],
+          backgroundColor: showImage ? "transparent" : colors[colorIndex],
         }}
       >
-        <span className="team-avatar-initials">
-          {initials}
-        </span>
+        {showImage ? (
+          <img
+            src={image}
+            alt={name}
+            className="team-avatar-img"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <span className="team-avatar-initials">
+            {initials}
+          </span>
+        )}
       </div>
     </div>
   );
@@ -58,10 +72,10 @@ function Avatar({ name }) {
 // Single member card
 // =====================================================
 
-function MemberCard({ name, role }) {
+function MemberCard({ name, role, image }) {
   return (
     <div className="team-card">
-      <Avatar name={name} />
+      <Avatar name={name} image={image} />
 
       <h3 className="team-card-name">
         {name}
@@ -104,6 +118,7 @@ function TeamGroup({ title, icon, members }) {
             key={index}
             name={member.name}
             role={member.role}
+            image={member.image}
           />
         ))}
       </div>
@@ -131,14 +146,17 @@ const teamData = [
       {
         name: "Fr. Wilfred Fernandes",
         role: "Director",
+        image: "/faculty images/Fr-Wilfred-Fernandes.webp",
       },
       {
         name: "Dr. Neena Panandikar",
         role: "Principal, Patron",
+        image: "/faculty images/neena.webp",
       },
       {
         name: "Dr. Gaurang S. Patkar",
         role: "HOD, Convenor",
+        image: "/faculty images/Gaurang_Patkar.webp",
       },
     ],
   },
@@ -156,10 +174,12 @@ const teamData = [
       {
         name: "Prof. Amey Shet Tilve",
         role: "Inspirus Coordinator",
+        image: "/faculty images/amey.webp",
       },
       {
         name: "Prof. Merwyn D'Souza",
         role: "C-CODES Coordinator",
+        image: "/faculty images/Marwyn_Dsouza.webp",
       },
     ],
   },
@@ -175,68 +195,84 @@ const teamData = [
 
     members: [
       {
-        name: "Shrinivas Inamdar",
+        name: "Selwin Oliveira",
         role: "Chairman",
+        image: "/student images/selwin.jpeg",
       },
       {
-        name: "Juveriya Shaikh",
+        name: "Vanessa Fernades",
         role: "Secretary",
+        image: "/student images/Vanessa Fernandes_.jpg",
       },
       {
-        name: "Sydney Dourado",
+        name: "Basil Shaik Mohamad",
         role: "Treasurer",
+        image: "/student images/basil.jpg",
       },
       {
-        name: "Thushar Jithendra",
+        name: "Shrinivas Inamdar",
         role: "Member",
-      },
-      {
-        name: "Narendra Naik",
-        role: "Member",
-      },
-      {
-        name: "Rosanne Rebelo",
-        role: "Member",
-      },
-      {
-        name: "Aman Painginkar",
-        role: "Member",
-      },
-      {
-        name: "Hayden Fernandes",
-        role: "Member",
-      },
-      {
-        name: "Elrich Colaco",
-        role: "Member",
-      },
-      {
-        name: "Shreeshant Upadhye",
-        role: "Member",
-      },
-      {
-        name: "Rushank Natekar",
-        role: "Member",
-      },
-      {
-        name: "Reuel Luis",
-        role: "Member",
-      },
-      {
-        name: "Basil Shaikh",
-        role: "Member",
+        image: "/student images/shrinivas.png",
       },
       {
         name: "Aryan Adelker",
         role: "Member",
+        image: "/student images/Aryan Adelker.webp",
       },
       {
-        name: "P Jayesh Naidu",
+        name: "Devanshi Rami",
         role: "Member",
+        image: "/student images/Devanshi.jpg",
       },
       {
-        name: "Adarsh Maurya",
+        name: "Debbie Fatima Mascarenhas",
         role: "Member",
+        image: "/student images/Debbie Fatima Mascarenhas.jpg",
+      },
+      {
+        name: "Parima Tendulkar",
+        role: "Member",
+        image: "/student images/Parima Tendulkar (TE coordinator).jpg",
+      },
+      {
+        name: "Pavitra Pandurang Nayak",
+        role: "Member",
+        image: "/student images/Pavitra nayak.jpg",
+      },
+      {
+        name: "Shreeshant Upadhye",
+        role: "Member",
+        image: "/student images/Shreeshant Upadhye.jpg",
+      },
+      {
+        name: "Shanaia Martis",
+        role: "Member",
+        image: "/student images/Shanaia Martis.jpg",
+      },
+      {
+        name: "Tanishq Kavlekar",
+        role: "Member",
+        image: "/student images/Tanishq Kavlekar.jpg",
+      },
+      {
+        name: "Arnav Naik Dessai",
+        role: "Member",
+        image: "/student images/arnav.jpeg",
+      },
+      {
+        name: "Devanshu Yelurkar",
+        role: "Member",
+        image: "/student images/Devanshu Yelurkar.jpg",
+      },
+      {
+        name: "Pranita Govekar",
+        role: "Member",
+        image: "/student images/pranita.jpg",
+      },
+      {
+        name: "Prasanna Pednekar",
+        role: "Member",
+        image: "/student images/Prasanna Pednekar_.jpg",
       },
     ],
   },
@@ -254,27 +290,24 @@ const teamData = [
       {
         name: "Prof. Janhavi Naik",
         role: "Faculty In-Charge",
+        image: "/faculty images/Janhavi.webp",
       },
       {
         name: "Mr. Amit Sapkal",
         role: "Faculty In-Charge",
+        image: "/faculty images/AmitSapkal_26.webp",
       },
       {
-        name: "Swapnil Naik",
+        name: "Shreeshant Upadaye",
         role: "Developer",
+        image: "/student images/Shreeshant Upadhye.jpg",
       },
       {
-        name: "Pranav Gauns Dessai",
+        name: "Selwin Oliveira",
         role: "Developer",
-      },
-      {
-        name: "Shivasharanappa Biradar",
-        role: "Developer",
-      },
-      {
-        name: "Atharv Batule",
-        role: "Developer",
-      },
+        image: "/student images/selwin.jpeg",
+      }
+
     ],
   },
 
@@ -289,28 +322,49 @@ const teamData = [
 
     members: [
       {
-        name: "Narendra Naik",
+        name: "Dilkush",
         role: "Lead Designer",
+        image: "/student images/Dilkush_talekar.jpg",
       },
       {
-        name: "Selwin Oliveria",
-        role: null,
+        name: "Soham",
+        role: "Lead Designer",
+        image: "/student images/Soham_A.jpg",
       },
       {
-        name: "Thushar Jithendran",
+        name: "Pranita Govekar",
         role: null,
+        image: "/student images/pranita.jpg",
       },
       {
-        name: "Basil Mohammed",
+        name: "Meera Anthony",
         role: null,
+        image: "/student images/Meera Antony.webp",
       },
       {
-        name: "Shrinivas Inamdar",
+        name: "Khushi",
         role: null,
+        image: "/student images/khushi.jpeg",
       },
       {
-        name: "Lancelen Mascarenhas",
+        name: "Shanaia Martis",
+        role: "Social media head",
+        image: "/student images/Shanaia Martis.jpg"
+      },
+      {
+        name: "Aditya Bingekar",
         role: null,
+        image: "/student images/aditya.jpeg"
+      },
+      {
+        name: "Arnav Naik Dessai",
+        role: null,
+        image: "/student images/arnav.jpeg"
+      },
+      {
+        name: "Rohan Singh",
+        role: null,
+
       },
     ],
   },
@@ -328,30 +382,37 @@ const teamData = [
       {
         name: "Prof. Amey Shet Tilve",
         role: "Faculty In-Charge",
+        image: "/faculty images/amey.webp",
       },
       {
         name: "Prof. Janhavi Naik",
         role: "Faculty In-Charge",
+        image: "/faculty images/Janhavi.webp",
       },
       {
         name: "Mr. Amit Sapkal",
         role: "Faculty In-Charge",
+        image: "/faculty images/AmitSapkal_26.webp",
       },
       {
         name: "Mr. Romeo D'Cruz",
         role: "Faculty In-Charge",
+        image: "/faculty images/RomeoDaCruz.webp",
       },
       {
         name: "Mr. Antonio Nevis",
         role: "Faculty In-Charge",
+        image: "/faculty images/AntonioNoronhaNeves.webp",
       },
       {
-        name: "Aman Painginkar",
+        name: "Reuel Luis",
         role: "Coordinator",
+        image: "/student images/Reuel_Luis.jpg",
       },
       {
-        name: "Vedant Sawant",
+        name: "Analee Martis",
         role: "Coordinator",
+        image: "/student images/Analee Martins SE.jpg",
       },
     ],
   },
@@ -369,18 +430,21 @@ const teamData = [
       {
         name: "Prof. Mithil Parab",
         role: "Faculty In-Charge",
+        image: "/faculty images/Mithil_parab.webp",
       },
       {
-        name: "Prof. Floyd Fernandes",
+        name: "Prof. Duval Gomes",
         role: "Faculty In-Charge",
       },
       {
-        name: "Thushar Jithendra",
+        name: "Rushank Natekar",
         role: "Coordinator",
+        image: "/student images/rushank.jpg",
       },
       {
-        name: "Basil Shaikh",
+        name: "Pranita Govekar",
         role: "Coordinator",
+        image: "/student images/pranita.jpg",
       },
     ],
   },
@@ -398,18 +462,22 @@ const teamData = [
       {
         name: "Prof. Siya Khandeparkar",
         role: "Faculty In-Charge",
+        image: "/faculty images/Siya.webp",
       },
       {
         name: "Mrs. Sandra Mazarello",
         role: "Faculty In-Charge",
+        image: "/faculty images/SandraMazarello.webp",
       },
       {
-        name: "Kshitij Patil",
+        name: "Shaun Fernades",
         role: "Coordinator",
+        image: "/student images/Shaun.png",
       },
       {
-        name: "Shaun Fernandes",
+        name: "Devanshu Yelurkar",
         role: "Coordinator",
+        image: "/student images/Devanshu Yelurkar.jpg",
       },
     ],
   },
@@ -427,18 +495,22 @@ const teamData = [
       {
         name: "Prof. Sweta Rane",
         role: "Faculty In-Charge",
+        image: "/faculty images/Sweta.webp",
       },
       {
         name: "Prof. Christina Barretto",
         role: "Faculty In-Charge",
+        image: "/faculty images/Christina.webp",
       },
       {
-        name: "Sandeep Sawant",
+        name: "Vedhant Sawant",
         role: "Coordinator",
+        image: "/student images/vedhant_.jpg",
       },
       {
-        name: "Megha Gobre",
+        name: "Ishika Sarwardekar",
         role: "Coordinator",
+        image: "/student images/Ishika_.jpg",
       },
     ],
   },
@@ -456,18 +528,22 @@ const teamData = [
       {
         name: "Prof. Manisha Fal Dessai",
         role: "Faculty In-Charge",
+        image: "/faculty images/Manisha.webp",
       },
       {
         name: "Prof. Karishma Tuenkar",
         role: "Faculty In-Charge",
+        image: "/faculty images/Karishma.webp",
       },
       {
-        name: "Atharv Batule",
+        name: "Devanshi Rami",
         role: "Coordinator",
+        image: "/student images/Devanshi.jpg",
       },
       {
-        name: "Shreeshant Upadhye",
+        name: "Mansi Mishra",
         role: "Coordinator",
+        image: "/student images/Mansi Mishra SE.jpg",
       },
     ],
   },
@@ -483,20 +559,24 @@ const teamData = [
 
     members: [
       {
-        name: "Prompt Wars Member 1",
+        name: "Prof. Norman Dias",
         role: "Faculty In-Charge",
+        image: "/faculty images/Norman.webp",
       },
       {
-        name: "Prompt Wars Member 2",
+        name: "Prof. Amey Kerkar",
         role: "Faculty In-Charge",
+        image: "/faculty images/Amey_Kerkar.webp",
       },
       {
-        name: "Prompt Wars Member 3",
+        name: "Shanaia Martis",
         role: "Coordinator",
+        image: "/student images/Shanaia Martis.jpg",
       },
       {
-        name: "Prompt Wars Member 4",
+        name: "Aditya Bingekar",
         role: "Coordinator",
+        image: "/student images/aditya.jpeg",
       },
     ],
   },
@@ -512,20 +592,23 @@ const teamData = [
 
     members: [
       {
-        name: "Blind Coding Member 1",
+        name: "Dr. Amrita Naik",
+        role: "Faculty In-Charge",
+        image: "/faculty images/Amrita_Naik.webp",
+      },
+      {
+        name: "Prof. Vidhya Naik",
         role: "Faculty In-Charge",
       },
       {
-        name: "Blind Coding Member 2",
-        role: "Faculty In-Charge",
+        name: "Parima Tendulkar",
+        role: "Coordinator",
+        image: "/student images/Parima Tendulkar (TE coordinator).jpg",
       },
       {
-        name: "Blind Coding Member 3",
+        name: "Meera Anthony",
         role: "Coordinator",
-      },
-      {
-        name: "Blind Coding Member 4",
-        role: "Coordinator",
+        image: "/student images/Meera Antony.webp",
       },
     ],
   },
@@ -541,16 +624,18 @@ const teamData = [
 
     members: [
       {
-        name: "Dr. Norman Dias",
+        name: "Prof. Duval Gomes",
         role: "Faculty In-Charge",
       },
       {
-        name: "Luke Fernandes",
+        name: "Aryan Adelkar",
         role: "Coordinator",
+        image: "/student images/Aryan Adelker.webp",
       },
       {
-        name: "Nirat Nayak",
+        name: "Arnav Dessai",
         role: "Coordinator",
+        image: "/student images/arnav.jpeg",
       },
     ],
   },
@@ -566,20 +651,24 @@ const teamData = [
 
     members: [
       {
-        name: "Prof. Amey Kerkar",
-        role: "Faculty In-Charge",
-      },
-      {
         name: "Prof. Merwyn D'Souza",
         role: "Faculty In-Charge",
+        image: "/faculty images/Marwyn_Dsouza.webp",
       },
       {
-        name: "Diya Shanbhag",
-        role: "Coordinator",
+        name: "Prof. Floyd Fernandes",
+        role: "Faculty In-Charge",
+        image: "/faculty images/Floyd.webp",
       },
       {
-        name: "Aryan Adelkar",
+        name: "Debbie Mascarenhas",
         role: "Coordinator",
+        image: "/student images/Debbie Fatima Mascarenhas.jpg",
+      },
+      {
+        name: "Amogh Tendulkarr",
+        role: "Coordinator",
+        image: "/student images/Amogh Ulhas Tendulkar_.jpg",
       },
     ],
   },
@@ -597,14 +686,17 @@ const teamData = [
       {
         name: "Prof. Floyd Fernandes",
         role: "Faculty In-Charge",
+        image: "/faculty images/Floyd.webp",
       },
       {
-        name: "Marco Goes",
+        name: "Pavitra Nayak",
         role: "Coordinator",
+        image: "/student images/Pavitra nayak.jpg",
       },
       {
-        name: "Sneha Nazare",
+        name: "Prasanna Pednekar",
         role: "Coordinator",
+        image: "/student images/Prasanna Pednekar_.jpg",
       },
     ],
   },
@@ -617,12 +709,14 @@ const teamData = [
 
 const eventHeads = [
   {
-    name: "Event Head 1",
+    name: "Shreeshant Upadye",
     role: "Event Head",
+    image: "/student images/Shreeshant Upadhye.jpg",
   },
   {
-    name: "Event Head 2",
+    name: "Tanishq Kavlekar",
     role: "Event Head",
+    image: "/student images/Tanishq Kavlekar.jpg",
   },
 ];
 

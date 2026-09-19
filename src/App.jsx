@@ -6,6 +6,7 @@ import "remixicon/fonts/remixicon.css";
 import TeamSection from "./TeamSection";
 import Sidebar from "./Sidebar";
 import CompetitionsSection from "./CompetitionsSection";
+import GallerySection from "./GallerySection";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -160,9 +161,9 @@ function App() {
         <div className="main w-full rotate-[-10deg] scale-[1.7]">
           {/* HERO SECTION */}
           <div
-           id="home"
-           className="landing overflow-hidden relative w-full h-screen bg-black">
-                                                                              
+            id="home"
+            className="landing overflow-hidden relative w-full h-screen bg-black">
+
 
             {/* NAVBAR */}
             <div className="navbar absolute top-0 left-0 z-[15] w-full py-5 px-5 sm:py-8 sm:px-10 flex items-center justify-between pointer-events-none">
@@ -235,8 +236,8 @@ function App() {
 
           {/* ABOUT SECTION */}
           <div
-           id="about"
-           className="w-full min-h-screen flex items-center justify-center bg-black relative overflow-hidden py-16 sm:py-24 px-5 sm:px-10">
+            id="about"
+            className="w-full min-h-screen flex items-center justify-center bg-black relative overflow-hidden py-16 sm:py-24 px-5 sm:px-10">
 
 
             <div className="cntnr flex flex-col lg:flex-row items-center justify-center text-white w-full max-w-7xl mx-auto gap-10 lg:gap-16">
@@ -252,51 +253,33 @@ function App() {
               <div className="rg w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left py-4 sm:py-8 lg:py-16">
 
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-none uppercase">
-                  Still Running,
+                  Inspirus,
                 </h1>
 
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-none uppercase text-yellow-400 mt-1 sm:mt-2">
-                  Not Hunting
-                </h1>
+
 
                 <p className="mt-6 sm:mt-8 text-sm sm:text-base lg:text-lg text-neutral-300 font-[Helvetica_Now_Display] leading-relaxed max-w-xl">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Distinctio possimus, asperiores nam, omnis inventore nesciunt
-                  a architecto eveniet saepe, ducimus necessitatibus at
-                  voluptate.
+                  FORGED BY C-CODES AND THE DEPARTMENT OF COMPUTER ENGINEERING, THIS FLAGSHIP EVENT UNITES BRILLIANT MINDS FROM GOA AND BEYOND.
+                  A CLASH OF INNOVATION, SKILL, AND CREATIVITY FOR GLORY, HONOR, AND REWARDS WORTHY OF CHAMPIONS
                 </p>
 
-                <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-neutral-400 font-[Helvetica_Now_Display] leading-relaxed max-w-xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  eius illum fugit eligendi nesciunt quia similique velit
-                  excepturi soluta tenetur illo repellat consectetur laborum
-                  eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
-                  autem sapiente.
-                </p>
 
-                <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-neutral-400 font-[Helvetica_Now_Display] leading-relaxed max-w-xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  eius illum fugit eligendi nesciunt quia similique velit
-                  excepturi soluta tenetur illo repellat consectetur laborum
-                  eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
-                  autem sapiente.
-                </p>
 
-                <button className="bg-yellow-500 hover:bg-yellow-400 active:scale-95 transition-all duration-300 px-8 py-4 sm:px-10 sm:py-5 text-black mt-8 sm:mt-10 text-xl sm:text-3xl uppercase font-bold cursor-pointer">
-                  Download Now
-                </button>
+
               </div>
             </div>
           </div>
 
           {/* COMPETITIONS SECTION */}
           <CompetitionsSection />
-          
+
+          {/* GALLERY SECTION */}
+          <GallerySection />
 
           {/* TEAM SECTION */}
-          
+
           <div id="teams">
-           <TeamSection />
+            <TeamSection />
           </div>
         </div>
       )}

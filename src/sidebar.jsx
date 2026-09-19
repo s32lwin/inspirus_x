@@ -50,6 +50,10 @@ const Sidebar = ({ isOpen, onClose }) => {
               COMPETITIONS
             </button>
 
+            <button onClick={() => handleNavigation("gallery")}>
+              GALLERY
+            </button>
+
             <button onClick={() => handleNavigation("teams")}>
               TEAMS
             </button>

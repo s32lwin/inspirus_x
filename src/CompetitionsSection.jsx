@@ -8,6 +8,7 @@ const competitions = [
     tag: "24 HOUR HACKATHON",
     description:
       "Build, innovate and solve real-world problems in an intense 24-hour offline hackathon.",
+    registerLink: "https://forms.gle/s1Dw2q6awuEGfeALA",
     rules: [
       "The competition is conducted offline for 24 hours.",
       "Each team must have exactly 3 members.",
@@ -27,6 +28,7 @@ const competitions = [
     tag: "DEBUG • ALGORITHM • C++",
     description:
       "Put your programming and debugging skills to the test through a competitive coding challenge.",
+    registerLink: "https://forms.gle/wBXZ9woAfVauFNCcA",
     rules: [
       "Each team must have exactly 2 members.",
       "A maximum of 18 teams can participate.",
@@ -46,6 +48,7 @@ const competitions = [
     tag: "APTITUDE • LOGIC • C/C++",
     description:
       "Test your aptitude, logical reasoning and programming knowledge against other teams.",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeOprlwAWLU87d7i_CD4sJ_EFNTtzkHMIDqAXfUYJaz9_TKpQ/viewform?usp=sharing&ouid=103062752765685690684",
     rules: [
       "Each team must have exactly 2 members.",
       "The competition focuses on C/C++, aptitude, logical reasoning and programming.",
@@ -65,6 +68,7 @@ const competitions = [
     tag: "UI/UX • FIGMA • PROTOTYPING",
     description:
       "Transform ideas into responsive and interactive digital experiences using Figma.",
+    registerLink: "https://forms.gle/yHwCf5HrzWfE9KYu8",
     rules: [
       "Participants may be from higher secondary, undergraduate or diploma programs.",
       "Each team can have a maximum of 2 members.",
@@ -84,6 +88,7 @@ const competitions = [
     tag: "CONTENT • REELS • CREATIVITY",
     description:
       "Create an engaging short-form reel that captures the spirit and energy of Inspirus.",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScT7qaA62gVwQdWf-ER806uSqBltC3dgt90T8pbpu6xKEoZyA/viewform",
     rules: [
       "The reel should promote the spirit of Inspirus.",
       "The maximum duration is 1 minute.",
@@ -103,6 +108,7 @@ const competitions = [
     tag: "AI • PROMPT ENGINEERING",
     description:
       "Compete through creative and effective prompt engineering using the AI tools specified for each round.",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSet3O1lWiFE2OxOAG9GdA64zEa9axSZhxNmuk2pg5D7-sT4zA/viewform?usp=publish-editor",
     rules: [
       "Each team must consist of 2 members.",
       "Participation is limited according to the event capacity.",
@@ -122,6 +128,7 @@ const competitions = [
     tag: "QUIZ • KNOWLEDGE • TEAMWORK",
     description:
       "Challenge your knowledge across a wide range of topics in an offline team quiz.",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfeS-w4UhS4nMvHKKFlaxuhF5x-600lsq93KE76veEQid8FCA/viewform?usp=publish-editor",
     rules: [
       "The competition is conducted offline.",
       "Each team must have 2 members.",
@@ -141,6 +148,7 @@ const competitions = [
     tag: "C/C++ • LOGIC • CODING",
     description:
       "Test your programming ability without relying on visual access to your code.",
+    registerLink: "https://docs.google.com/forms/d/1xjlQdqf8DKt7OQNqwnZRKZPhk4lXNauxUPFDIkvYz-g/edit",
     rules: [
       "Each team must have 2 members from the same college.",
       "A maximum of 20 teams can participate.",
@@ -160,6 +168,7 @@ const competitions = [
     tag: "MYSTERY • LOGIC • TEAMWORK",
     description:
       "Work together, uncover hidden clues and solve the mystery before time runs out.",
+    registerLink: "https://forms.gle/cDJRV8aHxJZU7U1b9",
     rules: [
       "Each team must consist of 3 members.",
       "Participants must complete the online registration process.",
@@ -180,6 +189,7 @@ const competitions = [
     tag: "PHOTOGRAPHY • STORY • CREATIVITY",
     description:
       "Capture a compelling moment and turn it into a photograph with a story.",
+    registerLink: "https://forms.gle/99FPnMgKB2m1QDz46",
     rules: [
       "The competition is conducted online.",
       "Participation is individual.",
@@ -358,7 +368,7 @@ function CompetitionCard({ competition, onInfo }) {
             <i className="ri-arrow-right-up-line" />
           </button>
 
-          <button type="button" className="competition-register">
+          <button type="button" className="competition-register" onClick={() => window.open(competition.registerLink, '_blank')}>
             <span>REGISTER</span>
             <i className="ri-arrow-right-line" />
           </button>
