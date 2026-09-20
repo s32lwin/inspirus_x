@@ -364,7 +364,7 @@ const teamData = [
       {
         name: "Rohan Singh",
         role: null,
-
+        image: "/student images/rohan.PNG"
       },
     ],
   },
@@ -435,6 +435,7 @@ const teamData = [
       {
         name: "Prof. Duval Gomes",
         role: "Faculty In-Charge",
+        image: "/faculty images/duval.png"
       },
       {
         name: "Rushank Natekar",
@@ -626,6 +627,7 @@ const teamData = [
       {
         name: "Prof. Duval Gomes",
         role: "Faculty In-Charge",
+        image: "/faculty images/duval.png"
       },
       {
         name: "Aryan Adelkar",
