@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
 import TeamSection from "./TeamSection";
-import Sidebar from "./Sidebar";
+import Sidebar from "./sidebar";
 import CompetitionsSection from "./CompetitionsSection";
 import GallerySection from "./GallerySection";
 
