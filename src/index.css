@@ -104,10 +104,10 @@ body {
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-  justify-items: center;
+  justify-content: center;
 }
 
 .team-card {
@@ -116,7 +116,8 @@ body {
   border-radius: 16px;
   padding: 28px 18px 22px;
   text-align: center;
-  width: 100%;
+  width: auto;
+  flex: 1 1 220px;
   max-width: 260px;
   transition:
     transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -193,6 +194,19 @@ body {
   line-height: 1.3;
 }
 
+.team-card-whatsapp {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: #25d366;
+  font-size: 1.35rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.team-card-whatsapp:hover {
+  color: #5be58a;
+  transform: scale(1.12);
+}
+
 .team-card-role {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 0.82rem;
@@ -251,11 +265,11 @@ body {
   }
 
   .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap: 16px;
   }
 
   .team-card {
+    flex-basis: 170px;
     padding: 22px 14px 18px;
     border-radius: 14px;
   }
@@ -285,12 +299,12 @@ body {
 
 @media (max-width: 640px) {
   .team-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     width: 100%;
   }
 
   .team-card {
+    flex: 0 1 calc(50% - 6px);
     max-width: 100%;
     padding: 18px 8px 14px;
     border-radius: 12px;
@@ -323,8 +337,11 @@ body {
 
 @media (max-width: 360px) {
   .team-grid {
-    grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .team-card {
+    flex-basis: 100%;
   }
 }
 
@@ -2467,7 +2484,7 @@ html {
 /* FOOTER */
 .event-detail-footer {
   display: flex;
-  flex-direction: column;
+  align-items: stretch;
   gap: 16px;
   margin-top: 50px;
   padding-top: 30px;
@@ -2475,7 +2492,7 @@ html {
 }
 
 .footer-register-btn {
-  width: 100%;
+  flex: 1 1 auto;
   padding: 20px;
   background: linear-gradient(135deg, rgba(190, 110, 255, 0.35), rgba(105, 45, 180, 0.25));
   border: 1px solid rgba(220, 180, 255, 0.6);
@@ -2501,7 +2518,8 @@ html {
 }
 
 .footer-back-btn {
-  width: 100%;
+  flex: 0 0 auto;
+  min-width: 220px;
   padding: 16px;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2518,6 +2536,16 @@ html {
   background: #fff;
   color: #000;
   border-color: #fff;
+}
+
+@media (max-width: 600px) {
+  .event-detail-footer {
+    flex-direction: column;
+  }
+
+  .footer-back-btn {
+    min-width: 0;
+  }
 }
 
 @media (max-width: 900px) {
