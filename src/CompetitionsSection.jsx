@@ -50,13 +50,13 @@ const competitions = [
       {
         name: "Reuel Luis",
         role: "Student Coordinator",
-        image: "/student images/Reuel_Luis.jpg",
+        image: "/student images/Reuel_Luis.webp",
         phone: "+91 9359587415"
       },
       {
         name: "Analee Martins",
         role: "Student Coordinator",
-        image: "/student images/Analee Martins SE.jpg",
+        image: "/student images/Analee Martins SE.webp",
         phone: "+91 9373843024"
       }
     ],
@@ -104,13 +104,13 @@ const competitions = [
       {
         name: "Shaun Fernandes",
         role: "Student Coordinator",
-        image: "/student images/Shaun.png",
+        image: "/student images/Shaun.webp",
         phone: "+91 9359936029"
       },
       {
         name: "Devanshu Yelurkar",
         role: "Student Coordinator",
-        image: "/student images/Devanshu Yelurkar.jpg",
+        image: "/student images/Devanshu Yelurkar.webp",
         phone: "+91 9373814674"
       }
     ],
@@ -156,13 +156,13 @@ const competitions = [
       {
         name: "Devanshi Rami",
         role: "Student Coordinator",
-        image: "/student images/Devanshi.jpg",
+        image: "/student images/Devanshi.webp",
         phone: "+91 88064 32239"
       },
       {
         name: "Mansi Mishra",
         role: "Student Coordinator",
-        image: "/student images/Mansi Mishra SE.jpg",
+        image: "/student images/Mansi Mishra SE.webp",
         phone: "+91 74998 42448"
       }
     ],
@@ -202,19 +202,19 @@ const competitions = [
     registrationDeadline: "To be announced",
     facultyCoordinators: [
       { name: "Prof. Mithil Parab", role: "Faculty In-Charge", image: "/faculty images/Mithil_parab.webp" },
-      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.png" }
+      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.webp" }
     ],
     coordinators: [
       {
         name: "Rushank Natekar",
         role: "Student Coordinator",
-        image: "/student images/rushank.jpg",
+        image: "/student images/rushank.webp",
         phone: "+91 9022656976"
       },
       {
         name: "Pranita Govekar",
         role: "Student Coordinator",
-        image: "/student images/pranita.jpg",
+        image: "/student images/pranita.webp",
         phone: "+91 9284183785"
       }
     ],
@@ -263,13 +263,13 @@ const competitions = [
       {
         name: "Pavitra Nayak",
         role: "Student Coordinator",
-        image: "/student images/Pavitra nayak.jpg",
+        image: "/student images/Pavitra nayak.webp",
         phone: "+91 9529231516"
       },
       {
         name: "Prasanna Pednekar",
         role: "Student Coordinator",
-        image: "/student images/Prasanna Pednekar_.jpg",
+        image: "/student images/Prasanna Pednekar_.webp",
         phone: "+91 9404427450"
       }
     ],
@@ -321,13 +321,13 @@ const competitions = [
       {
         name: "Shanaia Martis",
         role: "Student Coordinator",
-        image: "/student images/Shanaia Martis.jpg",
+        image: "/student images/Shanaia Martis.webp",
         phone: "+91 9356966736"
       },
       {
         name: "Aditya Bingekar",
         role: "Student Coordinator",
-        image: "/student images/aditya.jpeg",
+        image: "/student images/aditya.webp",
         phone: "+91 9356950853"
       }
     ],
@@ -376,13 +376,13 @@ const competitions = [
       {
         name: "Vedhant Sawant",
         role: "Student Coordinator",
-        image: "/student images/vedhant_.jpg",
+        image: "/student images/vedhant_.webp",
         phone: "+91 9373594972"
       },
       {
         name: "Ishika Sarwardekar",
         role: "Student Coordinator",
-        image: "/student images/Ishika_.jpg",
+        image: "/student images/Ishika_.webp",
         phone: "+91 9284196477"
       }
     ],
@@ -480,13 +480,13 @@ const competitions = [
       {
         name: "Debbie Mascarenhas",
         role: "Student Coordinator",
-        image: "/student images/Debbie Fatima Mascarenhas.jpg",
+        image: "/student images/Debbie Fatima Mascarenhas.webp",
         phone: "+91 98765 43226"
       },
       {
         name: "Amogh Tendulkar",
         role: "Student Coordinator",
-        image: "/student images/Amogh Ulhas Tendulkar_.jpg",
+        image: "/student images/Amogh Ulhas Tendulkar_.webp",
         phone: "+91 98765 43227"
       }
     ],
@@ -525,7 +525,7 @@ const competitions = [
     dateTimeVenue: "Date: To be announced | Time: Online Submission | Venue: Campus Grounds / Online",
     registrationDeadline: "To be announced",
     facultyCoordinators: [
-      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.png" }
+      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.webp" }
     ],
     coordinators: [
       {
@@ -537,7 +537,7 @@ const competitions = [
       {
         name: "Arnav Dessai",
         role: "Student Coordinator",
-        image: "/student images/arnav.jpeg",
+        image: "/student images/arnav.webp",
         phone: "+91 9356738893"
       }
     ],

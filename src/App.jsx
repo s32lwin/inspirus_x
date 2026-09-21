@@ -148,7 +148,7 @@ function App() {
           </defs>
 
           <image
-            href="./bg.png"
+            href="./bg.webp"
             width="100%"
             height="100%"
             preserveAspectRatio="xMidYMid slice"
@@ -190,13 +190,13 @@ function App() {
 
               <img
                 className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover"
-                src="./bg.png"
+                src="./bg.webp"
                 alt="Sky"
               />
 
               <img
                 className="absolute scale-[1.8] rotate-[-3deg] bg top-0 left-0 w-full h-full object-cover"
-                src="./assets/bg.png"
+                src="./assets/bg.webp"
                 alt="City"
               />
 
@@ -208,7 +208,7 @@ function App() {
 
               <img
                 className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2 scale-[3] rotate-[-20deg] max-w-none h-[75vh] sm:h-[85vh] lg:h-[95vh] object-contain pointer-events-none"
-                src="./fore.png"
+                src="./fore.webp"
                 alt="Character"
               />
             </div>
@@ -227,7 +227,7 @@ function App() {
               <div className="order-1 sm:order-2 sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2">
                 <img
                   className="h-[36px] sm:h-[50px] md:h-[55px] w-auto object-contain"
-                  src="./ps5.png"
+                  src="./ps5.webp"
                   alt="PlayStation 5 & Xbox"
                 />
               </div>
@@ -245,7 +245,7 @@ function App() {
               <div className="limg relative w-full lg:w-1/2 flex items-center justify-center">
                 <img
                   className="w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[520px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-                  src="./imag.png"
+                  src="./imag.webp"
                   alt="Artwork"
                 />
               </div>

@@ -1,40 +1,41 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 
 const carouselData = [
   {
     title: "EVENT HIGHLIGHTS",
     tag: "GALLERY // 01",
     images: [
-      { src: "/gallery/IMG_20251010_120907558.jpg", alt: "Highlight 1" },
-      { src: "/gallery/IMG_6800.JPG", alt: "Highlight 2" },
-      { src: "/gallery/IMG_6807.JPG", alt: "Highlight 3" },
-      { src: "/gallery/IMG_6808.JPG", alt: "Highlight 4" },
-      { src: "/gallery/IMG_6815.JPG", alt: "Highlight 5" },
-      { src: "/gallery/IMG_6816.JPG", alt: "Highlight 6" },
+      { src: "/gallery/IMG_20251010_120907558.webp", alt: "Highlight 1" },
+      { src: "/gallery/IMG_6800.webp", alt: "Highlight 2" },
+      { src: "/gallery/IMG_6807.webp", alt: "Highlight 3" },
+      { src: "/gallery/IMG_6808.webp", alt: "Highlight 4" },
+      { src: "/gallery/IMG_6815.webp", alt: "Highlight 5" },
+      { src: "/gallery/IMG_6816.webp", alt: "Highlight 6" },
     ],
   },
   {
     title: "COMPETITIONS",
     tag: "GALLERY // 02",
     images: [
-      { src: "/gallery/IMG_6961.JPG", alt: "Competition 1" },
-      { src: "/gallery/IMG_6976.JPG", alt: "Competition 2" },
-      { src: "/gallery/IMG_7913.JPG", alt: "Competition 3" },
-      { src: "/gallery/IMG_7914.JPG", alt: "Competition 4" },
-      { src: "/gallery/IMG_7946.JPG", alt: "Competition 5" },
-      { src: "/gallery/IMG_8109.JPG", alt: "Competition 6" },
+      { src: "/gallery/IMG_6961.webp", alt: "Competition 1" },
+      { src: "/gallery/IMG_6976.webp", alt: "Competition 2" },
+      { src: "/gallery/IMG_7913.webp", alt: "Competition 3" },
+      { src: "/gallery/IMG_7914.webp", alt: "Competition 4" },
+      { src: "/gallery/IMG_7946.webp", alt: "Competition 5" },
+      { src: "/gallery/IMG_8109.webp", alt: "Competition 6" },
     ],
   },
   {
     title: "CELEBRATIONS",
     tag: "GALLERY // 03",
     images: [
-      { src: "/gallery/IMG_8216.JPG", alt: "Celebration 1" },
-      { src: "/gallery/IMG_8264.JPG", alt: "Celebration 2" },
-      { src: "/gallery/IMG_8284.JPG", alt: "Celebration 3" },
-      { src: "/gallery/IMG_8340.JPG", alt: "Celebration 4" },
-      { src: "/gallery/IMG_8530.JPG", alt: "Celebration 5" },
-      { src: "/gallery/IMG_8539.JPG", alt: "Celebration 6" },
+      { src: "/gallery/IMG_8216.webp", alt: "Celebration 1" },
+      { src: "/gallery/IMG_8264.webp", alt: "Celebration 2" },
+      { src: "/gallery/IMG_8284.webp", alt: "Celebration 3" },
+      { src: "/gallery/IMG_8340.webp", alt: "Celebration 4" },
+      { src: "/gallery/IMG_8530.webp", alt: "Celebration 5" },
+      { src: "/gallery/IMG_8539.webp", alt: "Celebration 6" },
     ],
   },
 ];
@@ -233,49 +234,51 @@ const GallerySection = () => {
         </div>
       </section>
 
-      {/* Lightbox */}
-      {lightboxImage && (
-        <div className="gallery-lightbox" onClick={closeLightbox}>
-          <div
-            className="gallery-lightbox-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="gallery-lightbox-close"
-              onClick={closeLightbox}
-              aria-label="Close lightbox"
+      {/* Lightbox — rendered via portal to escape .main transform */}
+      {lightboxImage &&
+        createPortal(
+          <div className="gallery-lightbox" onClick={closeLightbox}>
+            <div
+              className="gallery-lightbox-content"
+              onClick={(e) => e.stopPropagation()}
             >
-              ×
-            </button>
+              <button
+                className="gallery-lightbox-close"
+                onClick={closeLightbox}
+                aria-label="Close lightbox"
+              >
+                ×
+              </button>
 
-            <button
-              className="gallery-lightbox-nav gallery-lightbox-prev"
-              onClick={goPrev}
-              aria-label="Previous image"
-            >
-              ‹
-            </button>
+              <button
+                className="gallery-lightbox-nav gallery-lightbox-prev"
+                onClick={goPrev}
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
 
-            <img
-              src={allImages[lightboxIndex].src}
-              alt={allImages[lightboxIndex].alt}
-              className="gallery-lightbox-image"
-            />
+              <img
+                src={allImages[lightboxIndex].src}
+                alt={allImages[lightboxIndex].alt}
+                className="gallery-lightbox-image"
+              />
 
-            <button
-              className="gallery-lightbox-nav gallery-lightbox-next"
-              onClick={goNext}
-              aria-label="Next image"
-            >
-              ›
-            </button>
+              <button
+                className="gallery-lightbox-nav gallery-lightbox-next"
+                onClick={goNext}
+                aria-label="Next image"
+              >
+                ›
+              </button>
 
-            <div className="gallery-lightbox-counter">
-              {lightboxIndex + 1} / {allImages.length}
+              <div className="gallery-lightbox-counter">
+                {lightboxIndex + 1} / {allImages.length}
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </>
   );
 };

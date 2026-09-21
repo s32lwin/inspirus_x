@@ -786,7 +786,7 @@ html {
      GTA-STYLE CITY BACKGROUND
      Put the generated image at:
 
-     public/competition-card-bg.png
+     public/competition-card-bg.webp
   */
 
   background:
@@ -795,7 +795,7 @@ html {
       rgba(20, 0, 35, 0.15),
       rgba(5, 0, 15, 0.58)
     ),
-    url("/competition-card-bg.png");
+    url("/competition-card-bg.webp");
 
   background-size: cover;
 
@@ -2761,6 +2761,7 @@ html {
   inset: 0;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition:
     opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -2770,6 +2771,7 @@ html {
 .liquid-glass-slide.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: scale(1);
 }
 
