@@ -190,7 +190,7 @@ function App() {
 
               <img
                 className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover"
-                src="./sky.png"
+                src="./bg.png"
                 alt="Sky"
               />
 
