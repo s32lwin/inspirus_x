@@ -849,6 +849,17 @@ function EventDetailPage({ competition, onBack }) {
                 <CoordinatorAvatar name={coord.name} image={coord.image} />
                 <div className="coordinator-info">
                   <h4>{coord.name}</h4>
+                  {coord.phone && (
+                    <a
+                      className="team-card-whatsapp"
+                      href={`https://wa.me/${coord.phone.replace(/\D/g, "")}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Contact ${coord.name} on WhatsApp`}
+                    >
+                      <i className="ri-whatsapp-line" aria-hidden="true" />
+                    </a>
+                  )}
                   <span className="coordinator-role">{coord.role}</span>
                   <a href={`tel:${coord.phone}`} className="coordinator-phone">
                     <i className="ri-phone-line" />
