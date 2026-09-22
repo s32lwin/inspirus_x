@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 
 // =====================================================
 // Avatar component
@@ -202,42 +202,26 @@ const teamData = [
       {
         name: "Selwin Oliveira",
         role: "Chairman",
-<<<<<<< HEAD
         image: "/student images/selwin.webp",
-=======
-        image: "/student images/selwin.jpeg",
         phone: "8080368628",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Vanessa Fernades",
         role: "Secretary",
-<<<<<<< HEAD
         image: "/student images/Vanessa Fernandes_.webp",
-=======
-        image: "/student images/Vanessa Fernandes_.jpg",
         phone: "9623690833",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Basil Shaik Mohamad",
         role: "Treasurer",
-<<<<<<< HEAD
         image: "/student images/basil.webp",
-=======
-        image: "/student images/basil.jpg",
         phone: "7709594659",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Shrinivas Inamdar",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/shrinivas.webp",
-=======
-        image: "/student images/shrinivas.png",
         phone: "7038823805",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Aryan Adelker",
@@ -248,108 +232,68 @@ const teamData = [
       {
         name: "Devanshi Rami",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Devanshi.webp",
-=======
-        image: "/student images/Devanshi.jpg",
         phone: "8806432239",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Debbie Fatima Mascarenhas",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Debbie Fatima Mascarenhas.webp",
-=======
-        image: "/student images/Debbie Fatima Mascarenhas.jpg",
         phone: "9209231065",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Parima Tendulkar",
         role: "Member",
-        image: "/student images/Parima Tendulkar (TE coordinator).jpg",
+        image: "/student images/Parima Tendulkar (TE coordinator).webp",
         phone: "9404930645",
       },
       {
         name: "Pavitra Pandurang Nayak",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Pavitra nayak.webp",
-=======
-        image: "/student images/Pavitra nayak.jpg",
         phone: "9529231516",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Shreeshant Upadhye",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Shreeshant Upadhye.webp",
-=======
-        image: "/student images/Shreeshant Upadhye.jpg",
         phone: "8600852734",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Shanaia Martis",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Shanaia Martis.webp",
-=======
-        image: "/student images/Shanaia Martis.jpg",
         phone: "9356966736",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Tanishq Kavlekar",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Tanishq Kavlekar.webp",
-=======
-        image: "/student images/Tanishq Kavlekar.jpg",
         phone: "9373843024",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Arnav Naik Dessai",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/arnav.webp",
-=======
-        image: "/student images/arnav.jpeg",
         phone: "9356738893",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Devanshu Yelurkar",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Devanshu Yelurkar.webp",
-=======
-        image: "/student images/Devanshu Yelurkar.jpg",
         phone: "9373814674",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Pranita Govekar",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/pranita.webp",
-=======
-        image: "/student images/pranita.jpg",
         phone: "9284183785",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Prasanna Pednekar",
         role: "Member",
-<<<<<<< HEAD
         image: "/student images/Prasanna Pednekar_.webp",
-=======
-        image: "/student images/Prasanna Pednekar_.jpg",
         phone: "9404427450",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
@@ -377,28 +321,20 @@ const teamData = [
       {
         name: "Shreeshant Upadaye",
         role: "Developer",
-<<<<<<< HEAD
         image: "/student images/Shreeshant Upadhye.webp",
-=======
-        image: "/student images/Shreeshant Upadhye.jpg",
         phone: "8600852734",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Selwin Oliveira",
         role: "Developer",
-<<<<<<< HEAD
         image: "/student images/selwin.webp",
-=======
-        image: "/student images/selwin.jpeg",
         phone: "8080368628",
       },
       {
         name: "Tanishq Kavlekar",
         role: "Developer",
-        image: "/student images/Tanishq Kavlekar.jpg",
+        image: "/student images/Tanishq Kavlekar.webp",
         phone: "9373843024",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       }
     ],
   },
@@ -416,32 +352,20 @@ const teamData = [
       {
         name: "Dilkush",
         role: "Lead Designer",
-<<<<<<< HEAD
         image: "/student images/Dilkush_talekar.webp",
-=======
-        image: "/student images/Dilkush_talekar.jpg",
         phone: " 8788165715",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Soham",
         role: "Lead Designer",
-<<<<<<< HEAD
         image: "/student images/Soham_A.webp",
-=======
-        image: "/student images/Soham_A.jpg",
         phone: "7840974855",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Pranita Govekar",
         role: null,
-<<<<<<< HEAD
         image: "/student images/pranita.webp",
-=======
-        image: "/student images/pranita.jpg",
         phone: "9284183785",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Meera Anthony",
@@ -452,59 +376,39 @@ const teamData = [
       {
         name: "Khushi",
         role: null,
-<<<<<<< HEAD
         image: "/student images/khushi.webp",
-=======
-        image: "/student images/khushi.jpeg",
         phone: "8766785936",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Shanaia Martis",
         role: "Social media head",
-<<<<<<< HEAD
-        image: "/student images/Shanaia Martis.webp"
-=======
-        image: "/student images/Shanaia Martis.jpg",
+        image: "/student images/Shanaia Martis.webp",
         phone: "9356966736",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Aditya Bingekar",
         role: null,
-<<<<<<< HEAD
-        image: "/student images/aditya.webp"
-=======
-        image: "/student images/aditya.jpeg",
+        image: "/student images/aditya.webp",
         phone: "9356950853",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Arnav Naik Dessai",
         role: null,
-<<<<<<< HEAD
-        image: "/student images/arnav.webp"
-=======
-        image: "/student images/arnav.jpeg",
+        image: "/student images/arnav.webp",
         phone: "9356738893",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Rohan Singh",
         role: null,
-<<<<<<< HEAD
-        image: "/student images/rohan.webp"
-=======
-        image: "/student images/rohan.PNG",
+        image: "/student images/rohan.webp",
         phone: "8830478073",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — INSPIRATHON
+  // EVENT TEAM ÔÇö INSPIRATHON
   // ===================================================
 
   {
@@ -540,29 +444,21 @@ const teamData = [
       {
         name: "Reuel Luis",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Reuel_Luis.webp",
-=======
-        image: "/student images/Reuel_Luis.jpg",
         phone: "9359587415",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Analee Martis",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Analee Martins SE.webp",
-=======
-        image: "/student images/Analee Martins SE.jpg",
         phone: "8999294903",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — TECHNOMORPH
+  // EVENT TEAM ÔÇö TECHNOMORPH
   // ===================================================
 
   {
@@ -583,29 +479,21 @@ const teamData = [
       {
         name: "Rushank Natekar",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/rushank.webp",
-=======
-        image: "/student images/rushank.jpg",
         phone: "9022656976",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Pranita Govekar",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/pranita.webp",
-=======
-        image: "/student images/pranita.jpg",
         phone: "9284183785",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — CODECLASH
+  // EVENT TEAM ÔÇö CODECLASH
   // ===================================================
 
   {
@@ -626,29 +514,21 @@ const teamData = [
       {
         name: "Shaun Fernades",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Shaun.webp",
-=======
-        image: "/student images/Shaun.png",
         phone: "9359936029",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Devanshu Yelurkar",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Devanshu Yelurkar.webp",
-=======
-        image: "/student images/Devanshu Yelurkar.jpg",
         phone: "9373814674",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — EXQUIZITE
+  // EVENT TEAM ÔÇö EXQUIZITE
   // ===================================================
 
   {
@@ -669,29 +549,21 @@ const teamData = [
       {
         name: "Vedhant Sawant",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/vedhant_.webp",
-=======
-        image: "/student images/vedhant_.jpg",
         phone: "9373594972",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Ishika Sarwardekar",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Ishika_.webp",
-=======
-        image: "/student images/Ishika_.jpg",
         phone: "9284196477",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — RETRIEVAL SAGES
+  // EVENT TEAM ÔÇö RETRIEVAL SAGES
   // ===================================================
 
   {
@@ -712,29 +584,21 @@ const teamData = [
       {
         name: "Devanshi Rami",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Devanshi.webp",
-=======
-        image: "/student images/Devanshi.jpg",
         phone: "8806432239",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Mansi Mishra",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Mansi Mishra SE.webp",
-=======
-        image: "/student images/Mansi Mishra SE.jpg",
         phone: "7499842448",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — PROMPT WARS
+  // EVENT TEAM ÔÇö PROMPT WARS
   // ===================================================
 
   {
@@ -755,29 +619,21 @@ const teamData = [
       {
         name: "Shanaia Martis",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Shanaia Martis.webp",
-=======
-        image: "/student images/Shanaia Martis.jpg",
         phone: "9356966736",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Aditya Bingekar",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/aditya.webp",
-=======
-        image: "/student images/aditya.jpeg",
         phone: "9356950853",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — BLIND CODING
+  // EVENT TEAM ÔÇö BLIND CODING
   // ===================================================
 
   {
@@ -797,7 +653,7 @@ const teamData = [
       {
         name: "Parima Tendulkar",
         role: "Coordinator",
-        image: "/student images/Parima Tendulkar (TE coordinator).jpg",
+        image: "/student images/Parima Tendulkar (TE coordinator).webp",
         phone: "9404930645",
       },
       {
@@ -811,7 +667,7 @@ const teamData = [
 
 
   // ===================================================
-  // EVENT TEAM — FRAMED
+  // EVENT TEAM ÔÇö FRAMED
   // ===================================================
 
   {
@@ -833,19 +689,15 @@ const teamData = [
       {
         name: "Arnav Dessai",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/arnav.webp",
-=======
-        image: "/student images/arnav.jpeg",
         phone: "9356738893",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — VEIL OF SECRETS
+  // EVENT TEAM ÔÇö VEIL OF SECRETS
   // ===================================================
 
   {
@@ -866,29 +718,21 @@ const teamData = [
       {
         name: "Debbie Mascarenhas",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Debbie Fatima Mascarenhas.webp",
-=======
-        image: "/student images/Debbie Fatima Mascarenhas.jpg",
         phone: "9209231065",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Amogh Tendulkarr",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Amogh Ulhas Tendulkar_.webp",
-=======
-        image: "/student images/Amogh Ulhas Tendulkar_.jpg",
         phone: "9923515005",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
 
 
   // ===================================================
-  // EVENT TEAM — REEL IT FEEL IT
+  // EVENT TEAM ÔÇö REEL IT FEEL IT
   // ===================================================
 
   {
@@ -904,22 +748,14 @@ const teamData = [
       {
         name: "Pavitra Nayak",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Pavitra nayak.webp",
-=======
-        image: "/student images/Pavitra nayak.jpg",
         phone: "9529231516",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
       {
         name: "Prasanna Pednekar",
         role: "Coordinator",
-<<<<<<< HEAD
         image: "/student images/Prasanna Pednekar_.webp",
-=======
-        image: "/student images/Prasanna Pednekar_.jpg",
         phone: "9404427450",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
       },
     ],
   },
@@ -932,31 +768,21 @@ const teamData = [
 
 const eventHeads = [
   {
-<<<<<<< HEAD
-    name: "Shreeshant Upadye",
-    role: "Event Head",
-    image: "/student images/Shreeshant Upadhye.webp",
-=======
     name: "Prof. Amey Shet Tilve",
     role: "Faculty Event Head",
     image: "/faculty images/amey.webp",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
   },
   {
     name: "Tanishq Kavlekar",
     role: "Event Head",
-<<<<<<< HEAD
     image: "/student images/Tanishq Kavlekar.webp",
-=======
-    image: "/student images/Tanishq Kavlekar.jpg",
     phone: "9373843024",
   },
   {
     name: "Shreeshant Upadye",
     role: "Event Head",
-    image: "/student images/Shreeshant Upadhye.jpg",
+    image: "/student images/Shreeshant Upadhye.webp",
     phone: "8600852734",
->>>>>>> 7279eb7a71c8bcd4dae780c9cf8fe1b0a60ba43c
   },
 ];
 
@@ -1013,7 +839,7 @@ function TeamSection() {
       </div>
 
 
-      {/* EVENT HEADS — BEFORE INSPIRATHON */}
+      {/* EVENT HEADS ÔÇö BEFORE INSPIRATHON */}
 
       <TeamGroup
         title="Event Heads"

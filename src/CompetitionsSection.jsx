@@ -7,18 +7,29 @@ const generalRulesData = {
   contactPolicy: "Only Student Coordinator contact numbers are provided. Faculty contact numbers are NOT to be mentioned or contacted for event queries.",
   cappingPolicy: "Event capping (total team limits & per-college capping) is explicitly specified under each event's details. Once capping is reached, registrations will close.",
   offlineRegistration: "Events offering offline/spot registration require participants to report at least 30 minutes before event start. Spot entries depend strictly on slot availability.",
-  registrationDeadline: "Registration End Date: To be announced.",
+  registrationDeadline: "5th October 2026, on or before 5:00 PM",
   prizeMoneyAndSchedule: "Prize Money, Date, Time & Venue banners are provided for each event (to be updated shortly).",
   rules: [
-    "Participants must present a valid College/School ID card during reporting and registration.",
-    "HSSC students are eligible for all events EXCEPT Inspirathon (24-Hour Hackathon).",
+    "Registration is free of cost for all events, but preferably, all teams should register online on our website on or before 5:00 pm, 5th October 2026.",
+    "Last date for Registration for Inspirathon will be on 5th October 2026.",
+    "Kindly check the Registration deadlines of each event mentioned on our brochure.",
+    "For submission of reels, kindly follow the deadlines mentioned on our brochure.",
+    "All events have online registrations.",
+    "Certain events have limited participation per college, as mentioned for the individual events in the brochure.",
+    "Late registration will not be accepted, and offline registration of most events will happen only if maximum participation isn't reached.",
+    "All participants will receive e-certificates, except winners of each event.",
+    "Participants should upload images of their respective College ID cards onto the registration forms of the respective events they want to take part in.",
+    "Participants will have to carry their ID cards on the day of the event.",
+    "All events will start at the designated time allocated.",
+    "All online submissions should be made before the deadline (sufficient buffer time will be provided to upload submissions to account for connectivity issues) and teams with late submissions will not be entertained.",
+    "Clarifications of any kind should be sorted out with the respective event coordinators before the start of the event.",
+    "The decisions of the coordinators and the judges are final and binding to all.",
+    "Upon any malpractices, the participant/team will be disqualified.",
+    "Winners will be provided a form to fill and give details for the prize money transfer.",
+    "Winners are requested to come to college on the day of the valedictory function (10th October 2026 at 3pm) to collect prizes and certificates.",
     "Mixed-college teams are permitted ONLY if explicitly stated under the specific event's rules.",
     "Only Student Coordinator numbers are listed for event queries; faculty contact numbers are strictly prohibited.",
-    "Total participation limits and college capping rules are strictly enforced for each event.",
     "Offline/spot registrations (where applicable) are strictly subject to seat availability on a first-come, first-served basis.",
-    "Decisions made by the event judges and organizing committee will be final and binding.",
-    "Any form of plagiarism, malpractice, or misconduct will result in immediate team disqualification.",
-    "Participants must report to the designated venue at least 30 minutes before their event start time.",
     "Organizers reserve the right to alter event schedules, timelines, or rules if necessary."
   ]
 };
@@ -427,7 +438,7 @@ const competitions = [
       {
         name: "Parima Tendulkar",
         role: "Student Coordinator",
-        image: "/student images/Parima Tendulkar (TE coordinator).jpg",
+        image: "/student images/Parima Tendulkar (TE coordinator).webp",
         phone: "+91 9404930645"
       },
       {
@@ -565,6 +576,267 @@ const competitions = [
     ],
   },
 ];
+
+// ─── SCHEDULE DATA ────────────────────────────────────────────────────────────
+const scheduleData = {
+  days: [
+    {
+      label: "15TH OCT",
+      rows: [
+        {
+          location: "AUDITORIUM 2nd FLOOR",
+          slots: [
+            { start: "9am", end: "9.30am", label: "INAUGURATION", color: "teal", colspan: 3 }
+          ]
+        },
+        {
+          location: "C-11 Lab",
+          slots: [
+            { start: "9am", end: "5pm", label: "REEL IT FEEL IT (REEL MAKING) – SUBMISSION ENDS ON 5TH OCTOBER", color: "purple", colspan: 7 }
+          ]
+        },
+        {
+          location: "SE CIVIL CLASSROOM",
+          slots: [
+            { start: "9am", end: "9.30am", label: "", color: "none", colspan: 1 },
+            { start: "9.30am", end: "12pm", label: "REGISTRATION", color: "pink", colspan: 3 }
+          ]
+        },
+        {
+          location: "C-11 Lab",
+          slots: [
+            { start: "12pm", end: "5pm", label: "FRAMED (ONLINE)", color: "orange", colspan: 4 }
+          ]
+        },
+        {
+          location: "C4 & C9 Lab",
+          slots: [
+            { start: "10am", end: "3pm", label: "TECHNOMORPH (UI/UX Designing)", color: "yellow", colspan: 4 }
+          ]
+        },
+        {
+          location: "C5 AND C6 LAB",
+          slots: [
+            { start: "10am", end: "3pm", label: "CODE BEYOND SIGHT (Blind Coding)", color: "yellow", colspan: 4 }
+          ]
+        },
+        {
+          location: "C2, C3 LAB",
+          slots: [
+            { start: "11am", end: "2pm", label: "CODECLASH (CODE FIESTA)", color: "yellow", colspan: 3 }
+          ]
+        },
+        {
+          location: "AUDITORIUM (2nd FLOOR)",
+          slots: [
+            { start: "9.30am", end: "5pm", label: "INSPIRATHON (24 HOURS)", color: "yellow", colspan: 6 }
+          ]
+        },
+        {
+          location: "C19 LAB (1st FLOOR), SEMINAR HALL – I (1st FLOOR)",
+          slots: [
+            { start: "1pm", end: "3.30pm", label: "EXQUIZITE (QUIZ)", color: "yellow", colspan: 3 }
+          ]
+        }
+      ]
+    },
+    {
+      label: "16TH OCT",
+      rows: [
+        {
+          location: "AUDITORIUM (2nd FLOOR)",
+          slots: [
+            { start: "9am", end: "1pm", label: "INSPIRATHON (24 HOURS)", color: "yellow", colspan: 4 }
+          ]
+        },
+        {
+          location: "C8 Lab",
+          slots: [
+            { start: "9.30am", end: "11am", label: "FRAMED ONLINE SUBMISSION", color: "pink", colspan: 2 }
+          ]
+        },
+        {
+          location: "C1, C2 LAB",
+          slots: [
+            { start: "9.30am", end: "1pm", label: "RETRIEVAL SAGES (LOGICAL RESONING & CODING)", color: "yellow", colspan: 4 }
+          ]
+        },
+        {
+          location: "C3, C4 LAB",
+          slots: [
+            { start: "9.30am", end: "1pm", label: "VEIL OF SECRETS (Escape Room)", color: "yellow", colspan: 4 }
+          ]
+        },
+        {
+          location: "C5, C6 LAB",
+          slots: [
+            { start: "9.30am", end: "1pm", label: "PROMPT WARS", color: "yellow", colspan: 4 }
+          ]
+        },
+        {
+          location: "SE CIVIL CLASSROOM",
+          slots: [
+            { start: "9am", end: "9.30am", label: "REGISTRATION", color: "pink", colspan: 1 }
+          ]
+        },
+        {
+          location: "AUDITORIUM (2nd FLOOR)",
+          slots: [
+            { start: "3.30pm", end: "5pm", label: "VALEDICTORY FUNCTION", color: "teal", colspan: 2 }
+          ]
+        }
+      ]
+    }
+  ],
+  timeSlots: [
+    "9am–9.30am",
+    "9.30am–10am",
+    "10am–11am",
+    "11am–12pm",
+    "12pm–1pm",
+    "1pm–2pm",
+    "2pm–3pm",
+    "3pm–4pm",
+    "3.30pm–5pm"
+  ]
+};
+
+const COLOR_MAP = {
+  teal:   { bg: "#00897b", text: "#fff" },
+  purple: { bg: "#7e57c2", text: "#fff" },
+  pink:   { bg: "#d4739a", text: "#fff" },
+  orange: { bg: "#ef6c00", text: "#fff" },
+  yellow: { bg: "#f9a825", text: "#111" },
+  none:   { bg: "transparent", text: "transparent" },
+};
+
+function ScheduleModal({ onClose }) {
+  const days = scheduleData.days;
+  const timeSlots = scheduleData.timeSlots;
+
+  const modal = (
+    <div className="competition-modal-overlay" onClick={onClose}>
+      <div
+        className="schedule-modal"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          className="competition-modal-close"
+          onClick={onClose}
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        <div className="schedule-modal-header">
+          <div className="modal-top-line">
+            <span>INSPIRUS 2K26</span>
+            <span>EVENT SCHEDULE</span>
+          </div>
+          <h2 className="schedule-modal-title">INSPIRUS 10 SCHEDULE</h2>
+        </div>
+
+        <div className="schedule-scroll-wrap">
+          <table className="schedule-table">
+            <thead>
+              <tr>
+                <th className="sch-th sch-days-col">DAYS</th>
+                <th className="sch-th sch-loc-col">LOCATION</th>
+                {timeSlots.map((ts, i) => (
+                  <th key={i} className="sch-th sch-time-col">{ts}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {days.map((day) =>
+                day.rows.map((row, ri) => {
+                  const colors = {
+                    teal: { bg: "#00897b", text: "#fff" },
+                    purple: { bg: "#7e57c2", text: "#fff" },
+                    pink: { bg: "#d4739a", text: "#fff" },
+                    orange: { bg: "#ef6c00", text: "#fff" },
+                    yellow: { bg: "#f9a825", text: "#111" },
+                    none: { bg: "transparent", text: "transparent" },
+                  };
+
+                  // Build full 9-column row
+                  const cells = [];
+                  let colIdx = 0;
+                  row.slots.forEach((slot, si) => {
+                    // Add empty cells before this slot if there's a gap
+                    const slotStartIdx = timeSlots.findIndex(ts => ts.startsWith(slot.start));
+                    while (colIdx < slotStartIdx) {
+                      cells.push(<td key={`empty-${colIdx}`} className="sch-td" />);
+                      colIdx++;
+                    }
+                    const c = colors[slot.color] || colors.yellow;
+                    cells.push(
+                      <td
+                        key={si}
+                        colSpan={slot.colspan}
+                        className="sch-td sch-event-cell"
+                        style={{ background: c.bg, color: c.text }}
+                      >
+                        {slot.label}
+                      </td>
+                    );
+                    colIdx += slot.colspan;
+                  });
+                  // Fill remaining
+                  while (colIdx < timeSlots.length) {
+                    cells.push(<td key={`fill-${colIdx}`} className="sch-td" />);
+                    colIdx++;
+                  }
+
+                  return (
+                    <tr key={`${day.label}-${ri}`}>
+                      {ri === 0 && (
+                        <td
+                          className="sch-td sch-day-label"
+                          rowSpan={day.rows.length}
+                        >
+                          {day.label}
+                        </td>
+                      )}
+                      <td className="sch-td sch-location">{row.location}</td>
+                      {cells}
+                    </tr>
+                  );
+                })
+              )}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="schedule-legend">
+          {Object.entries(COLOR_MAP).filter(([k]) => k !== "none").map(([key, val]) => (
+            <div key={key} className="legend-item">
+              <span className="legend-dot" style={{ background: val.bg }} />
+              <span className="legend-label" style={{ color: val.text === "#111" ? "#ccc" : val.text }}>
+                {key === "teal" && "Ceremony"}
+                {key === "purple" && "Online Submission"}
+                {key === "pink" && "Registration / Submission"}
+                {key === "orange" && "Online Event"}
+                {key === "yellow" && "Competition"}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <button
+          type="button"
+          className="competition-modal-done"
+          onClick={onClose}
+        >
+          CLOSE SCHEDULE
+        </button>
+      </div>
+    </div>
+  );
+
+  return createPortal(modal, document.body);
+}
 
 function GeneralRulesModal({ onClose }) {
   const modal = (
@@ -1105,6 +1377,7 @@ function CompetitionCard({ competition, onInfo }) {
 export default function CompetitionsSection() {
   const [selectedCompetition, setSelectedCompetition] = useState(null);
   const [showGeneralRules, setShowGeneralRules] = useState(false);
+  const [showSchedule, setShowSchedule] = useState(false);
 
   return (
     <>
@@ -1138,6 +1411,15 @@ export default function CompetitionsSection() {
               <i className="ri-file-text-line" />
               <span>GENERAL RULES</span>
             </button>
+
+            <button
+              type="button"
+              className="schedule-btn"
+              onClick={() => setShowSchedule(true)}
+            >
+              <i className="ri-calendar-schedule-line" />
+              <span>SCHEDULE</span>
+            </button>
           </div>
         </div>
 
@@ -1159,6 +1441,10 @@ export default function CompetitionsSection() {
 
       {showGeneralRules && (
         <GeneralRulesModal onClose={() => setShowGeneralRules(false)} />
+      )}
+
+      {showSchedule && (
+        <ScheduleModal onClose={() => setShowSchedule(false)} />
       )}
 
       {selectedCompetition && (

@@ -180,7 +180,7 @@ function App() {
                 </div>
 
                 <h3 className="text-2xl sm:text-4xl leading-none text-white tracking-wider">
-                  Rockstar
+                  C-CODES
                 </h3>
               </div>
             </div>
@@ -202,7 +202,7 @@ function App() {
 
               <div className="text text-white flex flex-col items-center gap-3 absolute top-20 sm:top-24 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg] w-full px-4 text-center pointer-events-none">
                 <h1 className="text-[16vw] sm:text-[13vw] md:text-[10vw] lg:text-[11rem] xl:text-[12rem] leading-none uppercase tracking-wide drop-shadow-[0_10px_25px_rgba(0,0,0,0.8)] select-none">
-                  inspirus
+                  inspirus-X
                 </h1>
               </div>
 
@@ -243,17 +243,23 @@ function App() {
             <div className="cntnr flex flex-col lg:flex-row items-center justify-center text-white w-full max-w-7xl mx-auto gap-10 lg:gap-16">
 
               <div className="limg relative w-full lg:w-1/2 flex items-center justify-center">
-                <img
-                  className="w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[520px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-                  src="./imag.webp"
-                  alt="Artwork"
-                />
+                <video
+                  className="w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[520px] h-auto rounded-2xl object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+                  src="/assets/i_1.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/assets/i_1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
 
               <div className="rg w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left py-4 sm:py-8 lg:py-16">
 
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-none uppercase">
-                  Inspirus,
+                  Inspirus
                 </h1>
 
 
