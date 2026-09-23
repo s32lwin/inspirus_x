@@ -5,6 +5,14 @@ const Sidebar = ({ isOpen, onClose }) => {
     onClose();
 
     setTimeout(() => {
+      if (sectionId === "home") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        return;
+      }
+
       const section = document.getElementById(sectionId);
 
       if (section) {

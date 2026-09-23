@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 
 // =====================================================
 // Avatar component
@@ -84,7 +84,7 @@ function MemberCard({ name, role, image, phone = "" }) {
       {phone && (
         <a
           className="team-card-whatsapp"
-          href={`https://wa.me/91${phone}`}
+          href={`https://wa.me/91${phone.replace(/\D/g, '').replace(/^91/, '')}`}
           target="_blank"
           rel="noreferrer"
           aria-label={`Contact ${name} on WhatsApp`}
@@ -319,7 +319,7 @@ const teamData = [
         image: "/faculty images/AmitSapkal_26.webp",
       },
       {
-        name: "Shreeshant Upadaye",
+        name: "Shreeshant Upadhye",
         role: "Developer",
         image: "/student images/Shreeshant Upadhye.webp",
         phone: "8600852734",
@@ -448,7 +448,7 @@ const teamData = [
         phone: "9359587415",
       },
       {
-        name: "Analee Martis",
+        name: "Analee Martins",
         role: "Coordinator",
         image: "/student images/Analee Martins SE.webp",
         phone: "8999294903",
@@ -779,7 +779,7 @@ const eventHeads = [
     phone: "9373843024",
   },
   {
-    name: "Shreeshant Upadye",
+    name: "Shreeshant Upadhye",
     role: "Event Head",
     image: "/student images/Shreeshant Upadhye.webp",
     phone: "8600852734",
