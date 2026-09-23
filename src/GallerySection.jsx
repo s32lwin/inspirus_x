@@ -182,29 +182,33 @@ export default function GallerySection() {
     return () => clearInterval(interval);
   }, [isAutoPlaying, isHovered, lightboxIndex, goNext]);
 
-  // Scroll active thumbnail into center view in the main carousel filmstrip
+  // Scroll active thumbnail into center view in the main carousel filmstrip WITHOUT scrolling the window
   useEffect(() => {
     if (thumbRailRef.current) {
       const activeThumb = thumbRailRef.current.querySelector(".filmstrip-thumb.active");
       if (activeThumb) {
-        activeThumb.scrollIntoView({
+        const rail = thumbRailRef.current;
+        const targetScrollLeft =
+          activeThumb.offsetLeft - rail.clientWidth / 2 + activeThumb.offsetWidth / 2;
+        rail.scrollTo({
+          left: Math.max(0, targetScrollLeft),
           behavior: "smooth",
-          block: "nearest",
-          inline: "center",
         });
       }
     }
   }, [currentIndex]);
 
-  // Scroll active thumbnail into center view in the lightbox thumbnail strip
+  // Scroll active thumbnail into center view in the lightbox thumbnail strip WITHOUT scrolling the window
   useEffect(() => {
     if (lightboxIndex !== null && lightboxThumbRailRef.current) {
       const activeThumb = lightboxThumbRailRef.current.querySelector(".lightbox-thumb.active");
       if (activeThumb) {
-        activeThumb.scrollIntoView({
+        const rail = lightboxThumbRailRef.current;
+        const targetScrollLeft =
+          activeThumb.offsetLeft - rail.clientWidth / 2 + activeThumb.offsetWidth / 2;
+        rail.scrollTo({
+          left: Math.max(0, targetScrollLeft),
           behavior: "smooth",
-          block: "nearest",
-          inline: "center",
         });
       }
     }
