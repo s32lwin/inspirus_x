@@ -47,8 +47,11 @@ const competitions = [
     dateTimeVenue: "Date: 15 & 16 October 2026 | Timing: 15th October 10:00 AM to 16th October 1:00 PM (24 Hours Hackathon) | Mode: Offline | Venue: Auditorium (2nd Floor)",
     registrationDeadline: "1st October 2026 at 5:00 PM",
     facultyCoordinators: [
-      { name: "Prof. Amey Tilve", role: "Faculty In-Charge", image: "/faculty images/amey.webp" },
-      { name: "Prof. Janhavi Tilve", role: "Faculty In-Charge", image: "/faculty images/Janhavi.webp" }
+      { name: "Prof. Amey Shet Tilve", role: "Faculty In-Charge", image: "/faculty images/amey.webp" },
+      { name: "Prof. Janhavi Naik", role: "Faculty In-Charge", image: "/faculty images/Janhavi.webp" },
+      { name: "Mr. Amit Sapkal", role: "Staff Incharge", image: "/faculty images/AmitSapkal_26.webp" },
+      { name: "Mr. Romeo D'Cruz", role: "Staff Incharge", image: "/faculty images/RomeoDaCruz.webp" },
+      { name: "Mr. Antonio Nevis", role: "Staff Incharge", image: "/faculty images/AntonioNoronhaNeves.webp" }
     ],
     coordinators: [
       {
@@ -133,8 +136,8 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 1:00 PM to 4:00 PM | Mode: Offline | Venue: C2, C3 Lab (2nd Floor)",
     registrationDeadline: "1st October 2026 at 5:00 PM (or upon 18 confirmed teams)",
     facultyCoordinators: [
-      { name: "Asst. Prof. Siya Khandeparkar", role: "Faculty In-Charge", image: "/faculty images/Siya.webp" },
-      { name: "Mrs. Sandra Mazarello", role: "Faculty In-Charge", image: "/faculty images/SandraMazarello.webp" }
+      { name: "Prof. Siya Khandeparkar", role: "Faculty In-Charge", image: "/faculty images/Siya.webp" },
+      { name: "Mrs. Sandra Mazarello", role: "Staff Incharge", image: "/faculty images/SandraMazarello.webp" }
     ],
     coordinators: [
       {
@@ -666,8 +669,8 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 11:00 AM to 3:00 PM | Mode: Offline | Venue: C5 and C6 Lab (DBCE)",
     registrationDeadline: "1st October 2026 at 11:59 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
-      { name: "Prof. Amrita Naik", role: "Faculty In-Charge", image: "/faculty images/Amrita_Naik.webp" },
-      { name: "Prof. Vidhya N", role: "Faculty In-Charge" }
+      { name: "Prof. Dr. Amrita Naik", role: "Faculty In-Charge", image: "/faculty images/Amrita_Naik.webp" },
+      { name: "Prof. Vidhya Naik", role: "Faculty In-Charge" }
     ],
     coordinators: [
       {
@@ -750,8 +753,8 @@ const competitions = [
     dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C3, C4 Lab (DBCE)",
     registrationDeadline: "1st October 2026 at 5:00 PM",
     facultyCoordinators: [
-      { name: "Asst. Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" },
-      { name: "Asst. Prof. Merwyn D'Souza", role: "Faculty In-Charge", image: "/faculty images/Marwyn_Dsouza.webp" }
+      { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" },
+      { name: "Prof. Merwyn D'Souza", role: "Faculty In-Charge", image: "/faculty images/Marwyn_Dsouza.webp" }
     ],
     coordinators: [
       {
@@ -1339,7 +1342,7 @@ function EventDetailPage({ competition, onBack }) {
                   </div>
                   <div className="coordinator-info">
                     <h4 className="coordinator-name">{coord.name}</h4>
-                    <span className="coordinator-role faculty-badge">Faculty In-Charge</span>
+                    <span className="coordinator-role faculty-badge">{coord.role || "Faculty In-Charge"}</span>
                     {cleanPhone && (
                       <a
                         href={`https://wa.me/91${cleanPhone}`}

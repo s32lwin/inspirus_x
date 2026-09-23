@@ -159,7 +159,7 @@ const teamData = [
         image: "/faculty images/neena.webp",
       },
       {
-        name: "Dr. Gaurang S. Patkar",
+        name: "Prof. Dr. Gaurang S. Patkar",
         role: "HOD, Convenor",
         image: "/faculty images/Gaurang_Patkar.webp",
       },
@@ -315,7 +315,7 @@ const teamData = [
       },
       {
         name: "Mr. Amit Sapkal",
-        role: "Faculty In-Charge",
+        role: "Staff Incharge",
         image: "/faculty images/AmitSapkal_26.webp",
       },
       {
@@ -428,17 +428,17 @@ const teamData = [
       },
       {
         name: "Mr. Amit Sapkal",
-        role: "Faculty In-Charge",
+        role: "Staff Incharge",
         image: "/faculty images/AmitSapkal_26.webp",
       },
       {
         name: "Mr. Romeo D'Cruz",
-        role: "Faculty In-Charge",
+        role: "Staff Incharge",
         image: "/faculty images/RomeoDaCruz.webp",
       },
       {
         name: "Mr. Antonio Nevis",
-        role: "Faculty In-Charge",
+        role: "Staff Incharge",
         image: "/faculty images/AntonioNoronhaNeves.webp",
       },
       {
@@ -508,7 +508,7 @@ const teamData = [
       },
       {
         name: "Mrs. Sandra Mazarello",
-        role: "Faculty In-Charge",
+        role: "Staff Incharge",
         image: "/faculty images/SandraMazarello.webp",
       },
       {
@@ -607,7 +607,7 @@ const teamData = [
 
     members: [
       {
-        name: "Prof. Norman Dias",
+        name: "Prof. Dr. Norman Dias",
         role: "Faculty In-Charge",
         image: "/faculty images/Norman.webp",
       },
@@ -642,7 +642,7 @@ const teamData = [
 
     members: [
       {
-        name: "Dr. Amrita Naik",
+        name: "Prof. Dr. Amrita Naik",
         role: "Faculty In-Charge",
         image: "/faculty images/Amrita_Naik.webp",
       },
