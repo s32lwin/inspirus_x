@@ -159,7 +159,7 @@ const teamData = [
         image: "/faculty images/neena.webp",
       },
       {
-        name: "Prof. Dr. Gaurang S. Patkar",
+        name: "Dr. Gaurang S. Patkar",
         role: "HOD, Convenor",
         image: "/faculty images/Gaurang_Patkar.webp",
       },
@@ -607,7 +607,7 @@ const teamData = [
 
     members: [
       {
-        name: "Prof. Dr. Norman Dias",
+        name: "Dr. Norman Dias",
         role: "Faculty In-Charge",
         image: "/faculty images/Norman.webp",
       },
@@ -642,7 +642,7 @@ const teamData = [
 
     members: [
       {
-        name: "Prof. Dr. Amrita Naik",
+        name: "Dr. Amrita Naik",
         role: "Faculty In-Charge",
         image: "/faculty images/Amrita_Naik.webp",
       },

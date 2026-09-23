@@ -501,7 +501,7 @@ const competitions = [
     registrationDeadline: "1st October 2026 at 5:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Amey Kerkar", role: "Faculty In-Charge", image: "/faculty images/Amey_Kerkar.webp" },
-      { name: "Prof. Dr. Norman Dias", role: "Faculty In-Charge", image: "/faculty images/Norman.webp" }
+      { name: "Dr. Norman Dias", role: "Faculty In-Charge", image: "/faculty images/Norman.webp" }
     ],
     coordinators: [
       {
@@ -669,7 +669,7 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 11:00 AM to 3:00 PM | Mode: Offline | Venue: C5 and C6 Lab (DBCE)",
     registrationDeadline: "1st October 2026 at 11:59 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
-      { name: "Prof. Dr. Amrita Naik", role: "Faculty In-Charge", image: "/faculty images/Amrita_Naik.webp" },
+      { name: "Dr. Amrita Naik", role: "Faculty In-Charge", image: "/faculty images/Amrita_Naik.webp" },
       { name: "Prof. Vidhya Naik", role: "Faculty In-Charge" }
     ],
     coordinators: [
