@@ -58,6 +58,13 @@ body {
   will-change: transform;
 }
 
+.hero-sky-layer,
+.hero-bg-layer,
+.hero-character-scroll,
+.hero-text-scroll {
+  will-change: transform, opacity;
+}
+
 .scroll-to-enter-pill {
   user-select: none;
   touch-action: manipulation;

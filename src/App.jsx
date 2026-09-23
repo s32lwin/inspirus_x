@@ -391,15 +391,15 @@ function App() {
 
             {/* SCROLL TO ENTER PILL BUTTON */}
             <div
-              className="scroll-to-enter-pill absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 z-40 pointer-events-auto cursor-pointer"
+              className="scroll-to-enter-pill absolute bottom-20 sm:bottom-14 md:bottom-12 left-1/2 -translate-x-1/2 z-40 pointer-events-auto cursor-pointer"
               onClick={handleScrollToEnter}
             >
-              <div className="flex items-center gap-2.5 sm:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-black/85 border border-white/20 backdrop-blur-md shadow-[0_0_30px_rgba(231,76,60,0.4)] hover:border-red-500 hover:shadow-[0_0_40px_rgba(231,76,60,0.8)] hover:scale-105 active:scale-95 transition-all duration-300 group">
-                <i className="ri-mouse-line text-lg text-red-500 animate-bounce group-hover:scale-110 transition-transform"></i>
-                <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-white uppercase select-none font-[Helvetica_Now_Display]">
+              <div className="flex items-center gap-2.5 sm:gap-3 px-6 py-3 sm:px-7 sm:py-3.5 rounded-full bg-black/90 border border-white/25 backdrop-blur-lg shadow-[0_0_35px_rgba(255,42,109,0.5),0_10px_30px_rgba(0,0,0,0.9)] hover:border-[#ff2a6d] hover:shadow-[0_0_45px_rgba(255,42,109,0.85)] hover:scale-105 active:scale-95 transition-all duration-300 group">
+                <i className="ri-mouse-line text-lg sm:text-xl text-[#ff2a6d] animate-bounce group-hover:scale-110 transition-transform"></i>
+                <span className="text-xs sm:text-sm font-extrabold tracking-[0.22em] text-white uppercase select-none font-[Helvetica_Now_Display]">
                   SCROLL TO ENTER
                 </span>
-                <i className="ri-arrow-down-line text-base text-red-500 animate-pulse"></i>
+                <i className="ri-arrow-down-line text-base sm:text-lg text-[#ff2a6d] animate-pulse"></i>
               </div>
             </div>
           </div>
