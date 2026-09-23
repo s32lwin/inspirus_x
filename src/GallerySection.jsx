@@ -1,279 +1,540 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 
-const carouselData = [
+export const galleryItems = [
   {
-    title: "EVENT HIGHLIGHTS",
-    tag: "GALLERY // 01",
-    images: [
-      { src: "/gallery/IMG_20251010_120907558.webp", alt: "Highlight 1" },
-      { src: "/gallery/IMG_6800.webp", alt: "Highlight 2" },
-      { src: "/gallery/IMG_6807.webp", alt: "Highlight 3" },
-      { src: "/gallery/IMG_6808.webp", alt: "Highlight 4" },
-      { src: "/gallery/IMG_6815.webp", alt: "Highlight 5" },
-      { src: "/gallery/IMG_6816.webp", alt: "Highlight 6" },
-    ],
+    id: 1,
+    src: "/gallery/IMG_20251010_120907558.webp",
+    alt: "Inaugural Ceremony & Stage Kickoff",
+    title: "Inaugural Ceremony & Stage Kickoff",
+    number: "01",
   },
   {
-    title: "COMPETITIONS",
-    tag: "GALLERY // 02",
-    images: [
-      { src: "/gallery/IMG_6961.webp", alt: "Competition 1" },
-      { src: "/gallery/IMG_6976.webp", alt: "Competition 2" },
-      { src: "/gallery/IMG_7913.webp", alt: "Competition 3" },
-      { src: "/gallery/IMG_7914.webp", alt: "Competition 4" },
-      { src: "/gallery/IMG_7946.webp", alt: "Competition 5" },
-      { src: "/gallery/IMG_8109.webp", alt: "Competition 6" },
-    ],
+    id: 2,
+    src: "/gallery/IMG_6800.webp",
+    alt: "Arena Gathering & Welcome",
+    title: "Arena Gathering & Welcome",
+    number: "02",
   },
   {
-    title: "CELEBRATIONS",
-    tag: "GALLERY // 03",
-    images: [
-      { src: "/gallery/IMG_8216.webp", alt: "Celebration 1" },
-      { src: "/gallery/IMG_8264.webp", alt: "Celebration 2" },
-      { src: "/gallery/IMG_8284.webp", alt: "Celebration 3" },
-      { src: "/gallery/IMG_8340.webp", alt: "Celebration 4" },
-      { src: "/gallery/IMG_8530.webp", alt: "Celebration 5" },
-      { src: "/gallery/IMG_8539.webp", alt: "Celebration 6" },
-    ],
+    id: 3,
+    src: "/gallery/IMG_6807.webp",
+    alt: "Auditorium Energy & Keynotes",
+    title: "Auditorium Energy & Keynotes",
+    number: "03",
+  },
+  {
+    id: 4,
+    src: "/gallery/IMG_6808.webp",
+    alt: "Dignitaries & Faculty Panel",
+    title: "Dignitaries & Faculty Panel",
+    number: "04",
+  },
+  {
+    id: 5,
+    src: "/gallery/IMG_6815.webp",
+    alt: "Lighting the Inaugural Lamp",
+    title: "Lighting the Inaugural Lamp",
+    number: "05",
+  },
+  {
+    id: 6,
+    src: "/gallery/IMG_6816.webp",
+    alt: "Inspirus Flagship Reveal",
+    title: "Inspirus Flagship Reveal",
+    number: "06",
+  },
+  {
+    id: 7,
+    src: "/gallery/IMG_6961.webp",
+    alt: "24-Hour Inspirathon Hackathon",
+    title: "24-Hour Inspirathon Hackathon",
+    number: "07",
+  },
+  {
+    id: 8,
+    src: "/gallery/IMG_6976.webp",
+    alt: "Intense Coding Arena Battles",
+    title: "Intense Coding Arena Battles",
+    number: "08",
+  },
+  {
+    id: 9,
+    src: "/gallery/IMG_7913.webp",
+    alt: "UI/UX Design Sprint Reviews",
+    title: "UI/UX Design Sprint Reviews",
+    number: "09",
+  },
+  {
+    id: 10,
+    src: "/gallery/IMG_7914.webp",
+    alt: "Prompt Engineering & Logic War",
+    title: "Prompt Engineering & Logic War",
+    number: "10",
+  },
+  {
+    id: 11,
+    src: "/gallery/IMG_7946.webp",
+    alt: "Blind Coding Terminal Focus",
+    title: "Blind Coding Terminal Focus",
+    number: "11",
+  },
+  {
+    id: 12,
+    src: "/gallery/IMG_8109.webp",
+    alt: "ExQuizite Rapid Trivia Arena",
+    title: "ExQuizite Rapid Trivia Arena",
+    number: "12",
+  },
+  {
+    id: 13,
+    src: "/gallery/IMG_8216.webp",
+    alt: "Victory Moments & Trophy Lift",
+    title: "Victory Moments & Trophy Lift",
+    number: "13",
+  },
+  {
+    id: 14,
+    src: "/gallery/IMG_8264.webp",
+    alt: "Prize Distribution Ceremony",
+    title: "Prize Distribution Ceremony",
+    number: "14",
+  },
+  {
+    id: 15,
+    src: "/gallery/IMG_8284.webp",
+    alt: "Team Triumphs & Certificates",
+    title: "Team Triumphs & Certificates",
+    number: "15",
+  },
+  {
+    id: 16,
+    src: "/gallery/IMG_8340.webp",
+    alt: "Valedictory High Spirits",
+    title: "Valedictory High Spirits",
+    number: "16",
+  },
+  {
+    id: 17,
+    src: "/gallery/IMG_8530.webp",
+    alt: "Grand Finale Celebrations",
+    title: "Grand Finale Celebrations",
+    number: "17",
+  },
+  {
+    id: 18,
+    src: "/gallery/IMG_8539.webp",
+    alt: "Organizing Committee Memories",
+    title: "Organizing Committee Memories",
+    number: "18",
   },
 ];
 
-// Combine all images flat for Lightbox view option
-const allImages = carouselData.flatMap((c) => c.images);
-
-const SingleGlassCarousel = ({ category, onImageClick }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+export default function GallerySection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  const nextSlide = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % category.images.length);
-  }, [category.images.length]);
+  const thumbRailRef = useRef(null);
+  const lightboxThumbRailRef = useRef(null);
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const touchEndX = useRef(0);
+  const touchEndY = useRef(0);
 
-  const prevSlide = useCallback(() => {
-    setActiveIndex(
-      (prev) => (prev - 1 + category.images.length) % category.images.length
-    );
-  }, [category.images.length]);
+  const total = galleryItems.length;
 
-  // Auto-play feature when not hovered
-  useEffect(() => {
-    if (isHovered) return;
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [isHovered, nextSlide]);
+  const goNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % total);
+  }, [total]);
 
-  return (
-    <div
-      className="liquid-glass-card"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Liquid glass shine highlight overlay */}
-      <div className="liquid-glass-shine" />
-      <div className="liquid-glass-glow" />
+  const goPrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + total) % total);
+  }, [total]);
 
-      {/* Header info */}
-      <div className="liquid-glass-header">
-        <span className="liquid-glass-tag">{category.tag}</span>
-        <h3 className="liquid-glass-title">{category.title}</h3>
-      </div>
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
 
-      {/* Image Container */}
-      <div className="liquid-glass-image-wrapper">
-        {category.images.map((img, idx) => (
-          <div
-            key={idx}
-            className={`liquid-glass-slide ${
-              idx === activeIndex ? "active" : ""
-            }`}
-            onClick={() => onImageClick(img)}
-          >
-            <img src={img.src} alt={img.alt} loading="lazy" />
-            <div className="liquid-glass-slide-overlay">
-              <span className="liquid-glass-zoom-btn">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                  <line x1="11" y1="8" x2="11" y2="14" />
-                  <line x1="8" y1="11" x2="14" y2="11" />
-                </svg>
-                VIEW FULL
-              </span>
-            </div>
-          </div>
-        ))}
-
-        {/* Carousel Navigation Arrows */}
-        <button
-          className="liquid-glass-nav-btn prev"
-          onClick={(e) => {
-            e.stopPropagation();
-            prevSlide();
-          }}
-          aria-label="Previous image"
-        >
-          ‹
-        </button>
-        <button
-          className="liquid-glass-nav-btn next"
-          onClick={(e) => {
-            e.stopPropagation();
-            nextSlide();
-          }}
-          aria-label="Next image"
-        >
-          ›
-        </button>
-      </div>
-
-      {/* Footer Dots Navigation */}
-      <div className="liquid-glass-footer">
-        <div className="liquid-glass-dots">
-          {category.images.map((_, idx) => (
-            <button
-              key={idx}
-              className={`liquid-glass-dot ${
-                idx === activeIndex ? "active" : ""
-              }`}
-              onClick={() => setActiveIndex(idx)}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
-        </div>
-        <div className="liquid-glass-counter">
-          {String(activeIndex + 1).padStart(2, "0")} /{" "}
-          {String(category.images.length).padStart(2, "0")}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const GallerySection = () => {
-  const [lightboxImage, setLightboxImage] = useState(null);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
-
-  const openLightbox = (img) => {
-    const idx = allImages.findIndex((i) => i.src === img.src);
-    setLightboxIndex(idx >= 0 ? idx : 0);
-    setLightboxImage(img);
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
     document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
-    setLightboxImage(null);
+    setLightboxIndex(null);
     document.body.style.overflow = "";
   };
 
-  const goNext = useCallback(() => {
-    setLightboxIndex((prev) => (prev + 1) % allImages.length);
-  }, []);
+  const nextLightbox = useCallback(() => {
+    setLightboxIndex((prev) => (prev + 1) % total);
+  }, [total]);
 
-  const goPrev = useCallback(() => {
-    setLightboxIndex(
-      (prev) => (prev - 1 + allImages.length) % allImages.length
-    );
-  }, []);
+  const prevLightbox = useCallback(() => {
+    setLightboxIndex((prev) => (prev - 1 + total) % total);
+  }, [total]);
 
+  // Auto-play timer (Fast 2.0s speed)
   useEffect(() => {
-    if (!lightboxImage) return;
+    if (!isAutoPlaying || isHovered || lightboxIndex !== null) return;
+    const interval = setInterval(goNext, 2000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, isHovered, lightboxIndex, goNext]);
 
-    const handleKey = (e) => {
-      if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowRight") goNext();
-      if (e.key === "ArrowLeft") goPrev();
+  // Scroll active thumbnail into center view in the main carousel filmstrip
+  useEffect(() => {
+    if (thumbRailRef.current) {
+      const activeThumb = thumbRailRef.current.querySelector(".filmstrip-thumb.active");
+      if (activeThumb) {
+        activeThumb.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    }
+  }, [currentIndex]);
+
+  // Scroll active thumbnail into center view in the lightbox thumbnail strip
+  useEffect(() => {
+    if (lightboxIndex !== null && lightboxThumbRailRef.current) {
+      const activeThumb = lightboxThumbRailRef.current.querySelector(".lightbox-thumb.active");
+      if (activeThumb) {
+        activeThumb.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    }
+  }, [lightboxIndex]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (lightboxIndex !== null) {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") nextLightbox();
+        if (e.key === "ArrowLeft") prevLightbox();
+      } else {
+        if (e.key === "ArrowRight") goNext();
+        if (e.key === "ArrowLeft") goPrev();
+      }
     };
 
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [lightboxImage, goNext, goPrev]);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxIndex, nextLightbox, prevLightbox, goNext, goPrev]);
+
+  // Touch Swipe Handlers for Main Carousel
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = e.targetTouches[0].clientX;
+    touchStartY.current = e.targetTouches[0].clientY;
+    touchEndY.current = e.targetTouches[0].clientY;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+    touchEndY.current = e.targetTouches[0].clientY;
+  };
+
+  const handleTouchEnd = () => {
+    const diffX = touchStartX.current - touchEndX.current;
+    const diffY = touchStartY.current - touchEndY.current;
+    // Only trigger horizontal swipe if deltaX > deltaY
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
+      if (diffX > 0) {
+        goNext();
+      } else {
+        goPrev();
+      }
+    }
+  };
+
+  // Touch Swipe Handlers for Lightbox
+  const handleLightboxTouchEnd = () => {
+    const diffX = touchStartX.current - touchEndX.current;
+    const diffY = touchStartY.current - touchEndY.current;
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
+      if (diffX > 0) {
+        nextLightbox();
+      } else {
+        prevLightbox();
+      }
+    }
+  };
+
+  // Helper to compute relative circular offset from current index (-total/2 to +total/2)
+  const getOffset = (index) => {
+    let diff = index - currentIndex;
+    while (diff > total / 2) diff -= total;
+    while (diff < -total / 2) diff += total;
+    return diff;
+  };
+
+  // Get semantic position class name
+  const getPositionClass = (offset) => {
+    if (offset === 0) return "slide-pos-0 active-slide";
+    if (offset === 1) return "slide-pos-p1 right-slide";
+    if (offset === -1) return "slide-pos-m1 left-slide";
+    if (offset === 2) return "slide-pos-p2 right-slide";
+    if (offset === -2) return "slide-pos-m2 left-slide";
+    return "slide-pos-hidden";
+  };
 
   return (
     <>
       <section id="gallery" className="gallery-section">
-        {/* Background grid */}
+        {/* Background grid and glows */}
         <div className="gallery-background-grid" />
+        <div className="gallery-ambient-glow" />
 
-        {/* Header */}
+        {/* Section Header */}
         <div className="gallery-header">
           <div className="gallery-eyebrow">
             <span className="eyebrow-line" />
-            <span>EXCLUSIVES</span>
+            <span>INSPIRUS ARCHIVES</span>
             <span className="eyebrow-line" />
           </div>
 
           <h1 data-text="GALLERY">GALLERY</h1>
 
           <p className="gallery-subtitle">
-            FEATURING 3 INTERACTIVE LIQUID GLASS CAROUSELS
+            RELIVE THE INTENSITY, INNOVATION, AND GLORY OF INSPIRUS
           </p>
         </div>
 
-        {/* 3 Carousels in 1 Row */}
-        <div className="liquid-glass-carousel-row">
-          {carouselData.map((cat, i) => (
-            <SingleGlassCarousel
-              key={i}
-              category={cat}
-              onImageClick={openLightbox}
+        {/* 3D Carousel Stage */}
+        <div
+          className="cyber-carousel-container"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Main 3D Track */}
+          <div className="cyber-carousel-stage">
+            {galleryItems.map((item, index) => {
+              const offset = getOffset(index);
+              const isCenter = offset === 0;
+              const isVisible = Math.abs(offset) <= 2;
+
+              if (!isVisible) return null;
+
+              const posClass = getPositionClass(offset);
+
+              return (
+                <div
+                  key={item.id}
+                  className={`cyber-carousel-slide ${posClass}`}
+                  style={{
+                    zIndex: 10 - Math.abs(offset),
+                  }}
+                  onClick={() => {
+                    if (isCenter) {
+                      openLightbox(currentIndex);
+                    } else {
+                      goToSlide(index);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={item.title}
+                >
+                  <div className="cyber-slide-card">
+                    {/* Media */}
+                    <div className="cyber-slide-media">
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="cyber-slide-img"
+                        loading={Math.abs(offset) <= 1 ? "eager" : "lazy"}
+                      />
+                      <div className="cyber-slide-shine" />
+                    </div>
+
+                    {/* Corner Cyber Accents */}
+                    <div className="cyber-slide-corners">
+                      <span className="corner top-left" />
+                      <span className="corner top-right" />
+                      <span className="corner bottom-left" />
+                      <span className="corner bottom-right" />
+                    </div>
+
+                    {/* Number Badge */}
+                    <div className="cyber-slide-badge">
+                      <span>#{item.number}</span>
+                    </div>
+
+                    {/* Expand icon on hover (no text captions) */}
+                    {isCenter && (
+                      <div className="cyber-slide-expand-hint">
+                        <i className="ri-fullscreen-line" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            type="button"
+            className="carousel-nav-btn prev"
+            onClick={goPrev}
+            aria-label="Previous Slide"
+          >
+            <i className="ri-arrow-left-s-line" />
+          </button>
+
+          <button
+            type="button"
+            className="carousel-nav-btn next"
+            onClick={goNext}
+            aria-label="Next Slide"
+          >
+            <i className="ri-arrow-right-s-line" />
+          </button>
+        </div>
+
+        {/* Carousel HUD Controls & Progress */}
+        <div className="carousel-hud-bar">
+          <div className="hud-status">
+            <span className="hud-dot" />
+            <span className="hud-text">
+              PHOTO {String(currentIndex + 1).padStart(2, "0")} /{" "}
+              {String(total).padStart(2, "0")}
+            </span>
+          </div>
+
+          <div className="hud-progress-track">
+            <div
+              className={`hud-progress-fill ${
+                isAutoPlaying && !isHovered ? "running" : "paused"
+              }`}
+              key={currentIndex}
             />
-          ))}
+          </div>
+
+          <button
+            type="button"
+            className="hud-play-toggle"
+            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+            aria-label={isAutoPlaying ? "Pause Auto-Slide" : "Play Auto-Slide"}
+          >
+            <i className={isAutoPlaying ? "ri-pause-fill" : "ri-play-fill"} />
+            <span>{isAutoPlaying ? "FAST AUTOPLAY" : "PAUSED"}</span>
+          </button>
+        </div>
+
+        {/* Thumbnails Filmstrip Rail */}
+        <div className="carousel-filmstrip-wrap">
+          <div className="carousel-filmstrip" ref={thumbRailRef}>
+            {galleryItems.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                className={`filmstrip-thumb ${
+                  index === currentIndex ? "active" : ""
+                }`}
+                onClick={() => goToSlide(index)}
+                aria-label={`Jump to photo ${item.number}`}
+              >
+                <img src={item.src} alt={item.alt} />
+                <span className="filmstrip-idx">#{item.number}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Lightbox — rendered via portal to escape .main transform */}
-      {lightboxImage &&
+      {/* Fullscreen Lightbox Modal */}
+      {lightboxIndex !== null &&
         createPortal(
           <div className="gallery-lightbox" onClick={closeLightbox}>
             <div
-              className="gallery-lightbox-content"
+              className="gallery-lightbox-modal"
               onClick={(e) => e.stopPropagation()}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleLightboxTouchEnd}
             >
-              <button
-                className="gallery-lightbox-close"
-                onClick={closeLightbox}
-                aria-label="Close lightbox"
-              >
-                ×
-              </button>
+              {/* Lightbox Topbar */}
+              <div className="lightbox-topbar">
+                <div className="lightbox-meta">
+                  <span className="lightbox-badge">
+                    MOMENT #{galleryItems[lightboxIndex].number}
+                  </span>
+                  <h3 className="lightbox-title">
+                    {galleryItems[lightboxIndex].title}
+                  </h3>
+                </div>
 
-              <button
-                className="gallery-lightbox-nav gallery-lightbox-prev"
-                onClick={goPrev}
-                aria-label="Previous image"
-              >
-                ‹
-              </button>
+                <div className="lightbox-actions">
+                  <span className="lightbox-counter">
+                    {String(lightboxIndex + 1).padStart(2, "0")} /{" "}
+                    {String(galleryItems.length).padStart(2, "0")}
+                  </span>
+                  <button
+                    type="button"
+                    className="lightbox-close-btn"
+                    onClick={closeLightbox}
+                    aria-label="Close Lightbox"
+                  >
+                    ×
+                  </button>
+                </div>
+              </div>
 
-              <img
-                src={allImages[lightboxIndex].src}
-                alt={allImages[lightboxIndex].alt}
-                className="gallery-lightbox-image"
-              />
+              {/* Lightbox Stage */}
+              <div className="lightbox-stage">
+                <button
+                  type="button"
+                  className="lightbox-nav-btn prev"
+                  onClick={prevLightbox}
+                  aria-label="Previous Image"
+                >
+                  <i className="ri-arrow-left-s-line" />
+                </button>
 
-              <button
-                className="gallery-lightbox-nav gallery-lightbox-next"
-                onClick={goNext}
-                aria-label="Next image"
-              >
-                ›
-              </button>
+                <div className="lightbox-image-wrap">
+                  <img
+                    src={galleryItems[lightboxIndex].src}
+                    alt={galleryItems[lightboxIndex].alt}
+                    className="gallery-lightbox-image"
+                  />
+                </div>
 
-              <div className="gallery-lightbox-counter">
-                {lightboxIndex + 1} / {allImages.length}
+                <button
+                  type="button"
+                  className="lightbox-nav-btn next"
+                  onClick={nextLightbox}
+                  aria-label="Next Image"
+                >
+                  <i className="ri-arrow-right-s-line" />
+                </button>
+              </div>
+
+              {/* Lightbox Thumbnail Strip */}
+              <div className="lightbox-thumbnails-strip" ref={lightboxThumbRailRef}>
+                {galleryItems.map((item, idx) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    className={`lightbox-thumb ${
+                      idx === lightboxIndex ? "active" : ""
+                    }`}
+                    onClick={() => setLightboxIndex(idx)}
+                    aria-label={`View photo ${idx + 1}`}
+                  >
+                    <img src={item.src} alt={item.alt} />
+                    <span className="thumb-idx">#{item.number}</span>
+                  </button>
+                ))}
               </div>
             </div>
           </div>,
@@ -281,6 +542,5 @@ const GallerySection = () => {
         )}
     </>
   );
-};
+}
 
-export default GallerySection;

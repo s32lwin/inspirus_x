@@ -277,7 +277,7 @@ const competitions = [
       {
         main: "Round 1: THE UNSCRAMBLE (30 Points — 30 Minutes)",
         sub: [
-          "Task: Complete a preliminary computer-based test consisting of 30 questions covering Data Structures, Algorithms, and Basic Logical Aptitude.",
+          "Task: Complete a preliminary test consisting of 30 questions covering Data Structures, Algorithms, and Basic Logical Aptitude.",
           "Duration: 30 Minutes.",
           "Scoring: 30 Points.",
           "Negative Marking: There is no negative marking. Unanswered questions receive 0 points.",
@@ -287,43 +287,11 @@ const competitions = [
         ]
       },
       {
-        main: "Round 2: THE BRAIN POWER (20 Points — 32 Minutes)",
+        main: "Round 2-4",
         sub: [
-          "Task: A C/C++ code-swap challenge designed to test programming logic, debugging, and the ability to understand and modify another participant's code.",
-          "Initial Coding: Each participant receives a different problem and gets 15 minutes to write their solution.",
-          "Code Swap: Participants get 2 minutes to swap their code. No communication is allowed during the swap.",
-          "Final Coding: Participants get another 15 minutes to continue working on the swapped code.",
-          "Scoring: 20 Points in total (5 Points: Program passes provided test cases but fails blind test cases; 10 Points: Program passes both provided and blind test cases).",
-          "Submission: Participants must inform the designated organizer when their program is complete. This will be recorded as the official submission time.",
-          "Advancement: Teams will be shortlisted based on their score and completion time."
-        ]
-      },
-      {
-        main: "Round 3: THE PERPLEXITY (20 Points — 30 Minutes)",
-        sub: [
-          "Task: A non-coding logical reasoning and word-search challenge designed to test observation, deduction, problem-solving, and speed.",
-          "Teamwork: Both participants work together throughout the round.",
-          "Challenge: Teams must solve 10 logical questions and identify the corresponding answers hidden within the word-search puzzle.",
-          "Scoring: 20 Points (2 Points per correct answer × 10 questions).",
-          "Negative Marking: No negative marking.",
-          "Submission: Answers must be clearly marked before submission. Once submitted, the solution cannot be changed or resubmitted.",
-          "Speed: Teams completing the challenge correctly in the shortest time will receive preference where applicable.",
-          "Advancement: Teams will be shortlisted based on their score and completion time."
-        ]
-      },
-      {
-        main: "Round 4: THE ULTIMATE ENDGAME (50 Points — 60 Minutes)",
-        sub: [
-          "Task: Both participants work together to solve an advanced competitive-programming problem involving multiple constraints.",
-          "Scoring: 50 Points.",
-          "Testing: Solutions will be evaluated against both visible and blind test cases.",
-          "1st Winner: The first team to successfully pass both the visible and blind test cases.",
-          "2nd Winner: The next team to successfully submit a valid solution.",
-          "Blind Test Failure: A solution that passes the visible test cases but fails the blind test cases will not qualify for ranking based on its original completion time.",
-          "Correction Opportunity: If the first blind test case fails, the team receives one opportunity to fix and resubmit.",
-          "Important: The previous completion time will be reset after a failed submission. No extra time will be provided.",
-          "Final Submission: After the second submission, the team must leave the hall immediately.",
-          "If No Team Fully Solves: Final evaluation will be based on the number of test cases passed and the overall correctness and quality of the submitted code."
+          "Detailed rules for Rounds 2 to 4 will be announced by the coordinators on the spot.",
+          "Participants are required to follow the instructions given by the coordinators.",
+          "Any clarifications or rule-related decisions made by the coordinators on the spot will be final."
         ]
       },
       {
@@ -519,14 +487,14 @@ const competitions = [
     tag: "AI • PROMPT ENGINEERING",
     tagline: "Prompt. Engineer. Excel.",
     description:
-      "Test your fundamental understanding and practical prompt engineering mastery across multi-modal AI tasks covering conceptual quizzes, movie concepts, Leonardo.Ai visual generation, reverse-engineering, and single-prompt ChatGPT website development.",
+      "Prompt Wars is an exciting AI and Prompt Engineering competition that challenges participants to think creatively, communicate effectively with AI, and craft powerful prompts under time constraints.",
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSet3O1lWiFE2OxOAG9GdA64zEa9axSZhxNmuk2pg5D7-sT4zA/viewform?usp=publish-editor",
-    eligibility: "Students pursuing HSSC, Undergraduate, and Diploma programmes from professional and non-professional institutions.",
-    teamPolicy: "Each team must consist of 2 participants.",
+    eligibility: "College Students (Higher Secondary, Undergraduate, and Diploma students from professional and non-professional institutions).",
+    teamPolicy: "2 participants per team. Cross college teams are allowed.",
     cappingInfo: "Only the first 20 teams to register for the event will be eligible to participate on a first-come, first-served basis.",
     offlineReg: "Spot registration permitted at venue 30 minutes before event if seats remain available.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Venue: C5 & C6 Lab (DBCE)",
+    dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
     registrationDeadline: "1st October 2026 at 5:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Amey Kerkar", role: "Faculty In-Charge", image: "/faculty images/Amey_Kerkar.webp" },
@@ -547,56 +515,57 @@ const competitions = [
       }
     ],
     judgingCriteria: [
-      "Round 1 (Prompt IQ): 20–25 MCQs on AI fundamentals & prompt optimization without AI tools (Top 10 teams advance).",
-      "Round 2 Task 1 (Movie Maker - 30 Marks): Prompt Quality & Structure (8), Creativity & Originality (7), Adherence to Requirements (6), Quality of Final Output (5), Effective Use of AI (4).",
-      "Round 2 Task 2 (Image Generator - 30 Marks via Leonardo.Ai): Prompt Quality & Specificity (8), Accuracy & Requirement Fulfilment (8), Visual Quality (6), Creativity (5), Effective Optimization (3).",
-      "Round 2 Task 3 (Guess My Prompt - 40 Marks via Leonardo.Ai): Similarity to Target Output (15), Prompt Construction (10), Iteration & Improvement (8), Attention to Detail (4), Efficiency (3).",
-      "Round 3 (One-Prompt Website - 100 Marks via ChatGPT): Requirement Fulfilment (25), Prompt Quality & Structure (20), Functionality (20), UI/UX & Visual Design (15), Creativity & Originality (10), Technical Quality (5), Effective Use of the Single Prompt (5)."
+      "Round 1: Initial AI challenge testing creativity, prompt-engineering skills, and adherence to requirements (Top 10 teams qualify).",
+      "Round 2: Two surprise mini-challenges evaluated on combined score (Top 5 teams qualify).",
+      "Round 3: Final AI challenge determining winning teams (Tie-breaker conducted if required).",
+      "Evaluation & Decisions: The organizers' decision regarding evaluation, elimination, and tie-breakers is final."
     ],
     rules: [
       {
-        main: "General Rules",
+        main: "Pre-requisites & Team Eligibility",
         sub: [
-          "Each team must consist of 2 participants.",
+          "Pre-requisites: Familiarity with commonly used AI tools.",
+          "Eligibility: College Students.",
+          "Team Members: 2 participants per team. Cross college teams are allowed.",
+          "Capping: Only the first 20 teams to register for the event will be eligible to participate."
+        ]
+      },
+      {
+        main: "General Instructions",
+        sub: [
+          "Each team must consist of 2 participants. Cross college teams are allowed.",
           "Only the first 20 teams to register for the event will be eligible to participate.",
           "Participants must use only the computer systems provided by the college throughout the competition.",
           "Use of personal laptops, mobile phones, tablets, or any other personal devices is strictly prohibited.",
           "Participants may use only the AI tools specifically permitted for each round.",
           "Participants must follow the time limits and instructions provided by the organizers.",
           "Any use of unauthorized AI tools, external assistance, personal devices, or other unfair means may result in disqualification.",
-          "All teams must follow the same tool/model requirements wherever specified to ensure fair evaluation.",
-          "Round 1 will be an elimination round consisting of a quiz based on AI-related topics. The quiz must be answered without the use of AI. Only the teams that qualify from Round 1 will proceed to Round 2.",
-          "The details, rules, tasks, and requirements for Round 2 and Round 3 will be announced on the spot by the organizers."
+          "All teams must follow the same tool, model, and generation settings wherever specified to ensure fair evaluation.",
+          "All task details and instructions will be announced on the spot by the organizers.",
+          "Round 1 will eliminate 10 teams, with the remaining teams qualifying for Round 2 based on their performance.",
+          "Round 2 will eliminate 5 teams, with the top 5 teams qualifying for Round 3.",
+          "The organizers' decision regarding evaluation and elimination will be final."
         ]
       },
       {
-        main: "Round 1: PROMPT IQ (Elimination Round)",
+        main: "Round 1",
         sub: [
-          "Objective: To test participants' fundamental understanding of Artificial Intelligence and Prompt Engineering before entering the practical rounds.",
-          "Format: Multiple-Choice Questions (MCQs), 20–25 questions, 1 mark per question.",
-          "Time limit: 20 minutes.",
-          "AI Tools: Not Allowed.",
-          "Topics May Include: Prompt Engineering Basics, Zero-shot and Few-shot Prompting, Role Prompting, Context and Constraints, AI Hallucinations, AI-generated Content, LLM Basics, Prompt Optimization, Output Formatting, Reasoning and Problem-Solving.",
-          "Advancement: Only 10 teams to be selected for round 2."
+          "All participating teams will compete in an initial AI challenge designed to test their creativity, prompt-engineering skills, and ability to follow given requirements.",
+          "Top 10 teams will qualify for the next round."
         ]
       },
       {
-        main: "Round 2: PROMPT STUDIO (Total Marks: 100)",
+        main: "Round 2",
         sub: [
-          "Objective: A practical prompt-engineering round consisting of THREE mini-challenges. Participants will be judged on how effectively they construct and use prompts, rather than simply on the final AI-generated content.",
-          "TASK 1 — MOVIE MAKER (30 Marks, 15 Mins): Each team will be given a common theme or scenario. Teams must use AI to create a short movie concept/script (Title, Main Characters, Genre, Story, Dialogue). Judged on: Prompt Quality (8), Creativity (7), Adherence (6), Output Quality (5), Effective Use of AI (4).",
-          "TASK 2 — IMAGE GENERATOR (30 Marks, 15 Mins): Designated Tool: Leonardo.Ai. Common scene with 3–4 mandatory elements. All teams use same platform/settings. Judged on: Prompt Quality (8), Accuracy (8), Visual Quality (6), Creativity (5), Optimization (3).",
-          "TASK 3 — GUESS MY PROMPT (40 Marks, 15 Mins): Designated Tool: Leonardo.Ai (output only). Shown AI image without original prompt, construct prompt reproducing target within limited attempts. Judged on: Similarity (15), Prompt Construction (10), Iteration (8), Attention to Detail (4), Efficiency (3).",
-          "Advancement: Only top 5 Teams advance to round 3 after Round 2 elimination."
+          "Teams will face two surprise mini-challenges.",
+          "Based on their combined scores in both challenges, the top 5 teams will qualify for the next round."
         ]
       },
       {
-        main: "Round 3: ONE-PROMPT WEBSITE (100 Marks — 15 Minutes)",
+        main: "Round 3",
         sub: [
-          "Objective: Teams must generate a complete and functional website using ONE prompt, while staying within the specified word limit and satisfying all given requirements.",
-          "Rules: Each team gets ONE prompt only. Maximum Prompt Length: 250 words. Designated AI Tool: ChatGPT (Standard model).",
-          "Strictly Not Allowed: No second prompt, no follow-up prompts, no editing or modifying the submitted prompt, no manually editing the generated code, no manually fixing the generated website, no external assistance.",
-          "Judging Criteria (100 Marks): Requirement Fulfilment (25), Prompt Quality & Structure (20), Functionality (20), UI/UX & Visual Design (15), Creativity & Originality (10), Technical Quality (5), Effective Use of the Single Prompt (5)."
+          "The qualifying teams will compete in a final AI challenge.",
+          "In the event of a tie, a tie-breaker may be conducted as decided by the organizers."
         ]
       }
     ]
@@ -1654,11 +1623,6 @@ function CompetitionCard({ competition, onInfo }) {
       </div>
 
       <div className="competition-card-footer">
-        <div className="card-system">
-          <span className="system-dot" />
-          <span>ONLINE</span>
-        </div>
-
         <div className="competition-card-actions">
           <button
             type="button"
