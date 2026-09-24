@@ -7,6 +7,8 @@ import TeamSection from "./TeamSection";
 import Sidebar from "./sidebar";
 import CompetitionsSection from "./CompetitionsSection";
 import GallerySection from "./GallerySection";
+import Footer from "./Footer";
+import CustomCursor from "./CustomCursor";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -256,6 +258,9 @@ function App() {
 
   return (
     <>
+      {/* Custom Blue Neon Cursor */}
+      <CustomCursor />
+
       {/* Sidebar */}
       <Sidebar
         isOpen={sidebarOpen}
@@ -451,6 +456,9 @@ function App() {
         <div id="teams">
           <TeamSection />
         </div>
+
+        {/* SITE FOOTER */}
+        <Footer />
       </div>
     </>
   );

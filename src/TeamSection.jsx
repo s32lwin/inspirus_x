@@ -300,36 +300,6 @@ const teamData = [
 
 
   // ===================================================
-  // EVENT HEADS
-  // ===================================================
-
-  {
-    title: "Event Heads",
-    icon: "\u{1F451}",
-
-    members: [
-      {
-        name: "Prof. Amey Shet Tilve",
-        role: "Faculty Event Head",
-        image: "/faculty images/amey.webp",
-      },
-      {
-        name: "Tanishq Kavlekar",
-        role: "Event Head",
-        image: "/student images/Tanishq Kavlekar.webp",
-        phone: "9373843024",
-      },
-      {
-        name: "Shreeshant Upadhye",
-        role: "Event Head",
-        image: "/student images/Shreeshant Upadhye.webp",
-        phone: "8600852734",
-      },
-    ],
-  },
-
-
-  // ===================================================
   // WEBSITE TEAM
   // ===================================================
 
@@ -793,6 +763,31 @@ const teamData = [
 
 
 // =====================================================
+// EVENT HEADS
+// =====================================================
+
+const eventHeads = [
+  {
+    name: "Prof. Amey Shet Tilve",
+    role: "Faculty Event Head",
+    image: "/faculty images/amey.webp",
+  },
+  {
+    name: "Tanishq Kavlekar",
+    role: "Event Head",
+    image: "/student images/Tanishq Kavlekar.webp",
+    phone: "9373843024",
+  },
+  {
+    name: "Shreeshant Upadhye",
+    role: "Event Head",
+    image: "/student images/Shreeshant Upadhye.webp",
+    phone: "8600852734",
+  },
+];
+
+
+// =====================================================
 // MAIN TEAM SECTION
 // =====================================================
 
@@ -817,10 +812,10 @@ function TeamSection() {
       </div>
 
 
-      {/* LEADERSHIP / FACULTY / COUNCIL / EVENT HEADS / WEBSITE / DESIGN */}
+      {/* LEADERSHIP / FACULTY / COUNCIL / WEBSITE / DESIGN */}
 
       {teamData
-        .slice(0, 6)
+        .slice(0, 5)
         .map((group, index) => (
           <TeamGroup
             key={index}
@@ -844,29 +839,26 @@ function TeamSection() {
       </div>
 
 
+      {/* EVENT HEADS — BEFORE INSPIRATHON */}
+
+      <TeamGroup
+        title="Event Heads"
+        members={eventHeads}
+      />
+
+
       {/* EVENT TEAMS */}
 
       {teamData
-        .slice(6)
+        .slice(5)
         .map((group, index) => (
           <TeamGroup
-            key={index + 6}
+            key={index + 5}
             title={group.title}
             icon={group.icon}
             members={group.members}
           />
         ))}
-
-
-      {/* FOOTER */}
-
-      <div className="team-footer">
-
-        <p className="team-footer-text font-[Helvetica_Now_Display]">
-          Inspirus-X &mdash; Don Bosco College of Engineering, Fatorda, Goa
-        </p>
-
-      </div>
 
     </div>
   );

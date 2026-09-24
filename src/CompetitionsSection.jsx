@@ -1329,7 +1329,7 @@ function EventDetailPage({ competition, onBack }) {
         <div className="detail-nav-brand">
           <span>INSPIRUS 2K26</span>
           <span className="detail-separator">//</span>
-          <span className="detail-event-tag">EVENT_{competition.number}</span>
+          <span className="detail-event-tag">{competition.category.toUpperCase()}</span>
         </div>
 
         <button
@@ -1350,7 +1350,6 @@ function EventDetailPage({ competition, onBack }) {
         </div>
 
         <div className="hero-meta">
-          <span className="hero-event-number">EVENT #{competition.number}</span>
           <span className="hero-event-category">{competition.category.toUpperCase()}</span>
         </div>
 
@@ -1369,17 +1368,17 @@ function EventDetailPage({ competition, onBack }) {
           </div>
 
           <div className="coordinators-grid">
-            {/* Faculty Coordinator Cards */}
-            {competition.facultyCoordinators && competition.facultyCoordinators.map((coord, idx) => {
+            {/* Student Coordinator Cards (First) */}
+            {competition.coordinators && competition.coordinators.map((coord, idx) => {
               const cleanPhone = coord.phone ? coord.phone.replace(/\D/g, '').replace(/^91/, '') : '';
               return (
-                <div key={`faculty-${idx}`} className="coordinator-card faculty-card">
+                <div key={`student-${idx}`} className="coordinator-card">
                   <div className="coordinator-avatar-wrap">
                     <CoordinatorAvatar name={coord.name} image={coord.image} />
                   </div>
                   <div className="coordinator-info">
                     <h4 className="coordinator-name">{coord.name}</h4>
-                    <span className="coordinator-role faculty-badge">{coord.role || "Faculty In-Charge"}</span>
+                    <span className="coordinator-role student-badge">Student Coordinator</span>
                     {cleanPhone && (
                       <a
                         href={`https://wa.me/91${cleanPhone}`}
@@ -1398,17 +1397,17 @@ function EventDetailPage({ competition, onBack }) {
               );
             })}
 
-            {/* Student Coordinator Cards */}
-            {competition.coordinators && competition.coordinators.map((coord, idx) => {
+            {/* Faculty Coordinator Cards (Second) */}
+            {competition.facultyCoordinators && competition.facultyCoordinators.map((coord, idx) => {
               const cleanPhone = coord.phone ? coord.phone.replace(/\D/g, '').replace(/^91/, '') : '';
               return (
-                <div key={`student-${idx}`} className="coordinator-card">
+                <div key={`faculty-${idx}`} className="coordinator-card faculty-card">
                   <div className="coordinator-avatar-wrap">
                     <CoordinatorAvatar name={coord.name} image={coord.image} />
                   </div>
                   <div className="coordinator-info">
                     <h4 className="coordinator-name">{coord.name}</h4>
-                    <span className="coordinator-role student-badge">Student Coordinator</span>
+                    <span className="coordinator-role faculty-badge">{coord.role || "Faculty In-Charge"}</span>
                     {cleanPhone && (
                       <a
                         href={`https://wa.me/91${cleanPhone}`}
@@ -1620,8 +1619,17 @@ function CompetitionCard({ competition, onInfo }) {
     <article
       className="competition-card"
       style={style}
+      onClick={() => onInfo(competition)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onInfo(competition);
+        }
+      }}
     >
       <div className="competition-card-glow" />
       <div className="competition-card-scan" />
@@ -1667,13 +1675,23 @@ function CompetitionCard({ competition, onInfo }) {
           <button
             type="button"
             className="competition-details"
-            onClick={() => onInfo(competition)}
+            onClick={(e) => {
+              e.stopPropagation();
+              onInfo(competition);
+            }}
           >
             <span>INFO</span>
             <i className="ri-arrow-right-up-line" />
           </button>
 
-          <button type="button" className="competition-register" onClick={() => window.open(competition.registerLink, '_blank')}>
+          <button
+            type="button"
+            className="competition-register"
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(competition.registerLink, '_blank');
+            }}
+          >
             <span>REGISTER</span>
             <i className="ri-arrow-right-line" />
           </button>
