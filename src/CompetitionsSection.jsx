@@ -3,19 +3,19 @@ import { createPortal } from "react-dom";
 
 const generalRulesData = {
   eligibility: "HSSC (11th & 12th), Undergraduate, and Diploma students from recognized institutions are eligible to participate (with specific eligibility criteria defined per event).",
-  teamPolicy: "Inter-college / mixed-institution teams are permitted ONLY where explicitly stated in the respective event rules (e.g., Inspirathon, Technomorph). Where mixed teams are not allowed, all members must belong to the same institution.",
+  teamPolicy: "Inter-college / mixed-institution teams are permitted ONLY where explicitly stated in the respective event rules (e.g., Inspirathon, Technomorph, etc.). Where mixed teams are not allowed, all members must belong to the same institution.",
   contactPolicy: "For queries and assistance, contact the respective Student Coordinators listed for each event. Faculty in-charge members are NOT to be contacted directly for event queries.",
   cappingPolicy: "Event registrations operate on a strict First-Come, First-Served (FCFS) basis. Once the maximum team limit or per-college capping is reached, registrations will immediately close.",
   offlineRegistration: "Spot/Offline registrations (where offered) require reporting at least 30 minutes before the scheduled start and are strictly subject to remaining slot availability.",
-  registrationDeadline: "Online registrations close on 1st October 2026 on or before 5:00 PM (or earlier if event capping is reached).",
-  prizeMoneyAndSchedule: "Prizes include cash awards and official merit certificates for winners. All eligible participants receive official participation certificates.",
+  registrationDeadline: "Online registrations close on 10th October 2026 on or before 5:00 PM (Except Inspirathon & Reel It Feel It - refer to respective event rules).",
+  prizeMoneyAndSchedule: "Prizes include cash awards and official merit certificates for winners. All eligible participants receive official participation e-certificates.",
   rules: [
-    "Registration is free of cost for all events. All teams should register online on our website on or before 5:00 PM, 1st October 2026.",
+    "Registration is free of cost for all events. All teams should register online on our website on or before 5:00 PM, 10th October 2026 (Except Inspirathon & Reel It Feel It - refer to respective event rules).",
     "Registrations for all events are accepted on a strict First-Come, First-Served (FCFS) basis until event capacity is reached.",
     "Participants must upload clear images of their valid institutional ID cards during online registration and must carry original physical ID cards on the day of the event.",
     "For online submission events (such as Reel It Feel It and Framed), submissions must strictly adhere to the communicated deadlines and format criteria.",
-    "Students pursuing High School, HSSC (11th & 12th), Undergraduate, and Diploma programmes from professional and non-professional institutions are eligible as per individual event rules.",
-    "Mixed-college teams are permitted ONLY if explicitly stated under the specific event rules (e.g., Inspirathon, Technomorph). Where mixed teams are not permitted, all team members must strictly belong to the same college/institution.",
+    "Students pursuing HSSC (11th & 12th), Undergraduate, and Diploma programmes from professional and non-professional institutions are eligible as per individual event rules.",
+    "Mixed-college teams are permitted ONLY if explicitly stated under the specific event rules (e.g., Inspirathon, Technomorph, etc.). Where mixed teams are not permitted, all team members must strictly belong to the same college/institution.",
     "Participants must report to their designated labs/venues at least 30 minutes before the scheduled start time.",
     "Use of unauthorized external aids, web browsing, AI tools (unless explicitly permitted), cheating, or plagiarized code/designs will result in immediate disqualification.",
     "All electronic devices, smartwatches, and unauthorized gadgets must be stored outside venues where restricted by coordinators.",
@@ -43,8 +43,8 @@ const competitions = [
     teamPolicy: "3 Members compulsorily per team. Cross college teams are allowed (teams with members from different colleges).",
     cappingInfo: "Capped at 12 teams total (3 problem statements × 4 teams = 12 teams). Preliminary elimination round on 5th Oct if registrations exceed 12 by 1st Oct deadline.",
     offlineReg: "Online pre-registration mandatory on FCFS basis. Offline/spot registration is NOT available for Inspirathon.",
-    prizeMoney: "3 Winners (one for each problem statement) + Official Certificates",
-    dateTimeVenue: "Date: 15 & 16 October 2026 | Timing: 15th October 10:00 AM to 16th October 1:00 PM (24 Hours Hackathon) | Mode: Offline | Venue: Auditorium (2nd Floor)",
+    prizeMoney: "₹3,000 each prize money for individual winner in each problem statement (3 Winners Total) + Official Merit Certificates",
+    dateTimeVenue: "Date: 15 & 16 October 2026 | Timing: 15th October 10:00 AM to 16th October 10:00 AM (24 Hours Hackathon, followed by judging) | Mode: Offline | Venue: Auditorium (2nd Floor)",
     registrationDeadline: "1st October 2026 at 5:00 PM",
     facultyCoordinators: [
       { name: "Prof. Amey Shet Tilve", role: "Faculty In-Charge", image: "/faculty images/amey.webp" },
@@ -82,10 +82,10 @@ const competitions = [
           "Teams can use any programming language or software of their choice.",
           "Teams have to carry their own laptops/hardware.",
           "Problem statements will NOT be released online; instead, they will be given to teams on the day of the hackathon (15th of October), at the competition venue itself at 9:30 AM. Details of how the problem statement is to be chosen will be informed at the venue.",
-          "There will be a total of 3 problem statements. One problem statement can be chosen by a maximum of 4 teams (3 problem statements × 4 teams = 12 teams total). There will be 3 winners, one for each problem statement.",
+          "There will be a total of 3 problem statements. One problem statement can be chosen by a maximum of 4 teams (3 problem statements × 4 teams = 12 teams total). There will be 3 winners, one for each problem statement (₹3,000 prize money each).",
           "Teams have to report at the venue strictly by 9:00 AM on 15th October.",
           "Wi-Fi access and power points/Extensions will be made available at the venue.",
-          "The Hackathon will begin at 10:00 AM on 15th October and will end at 10:00 AM on 16th October. The teams are free to take breaks in between.",
+          "The Hackathon will begin at 10:00 AM on 15th October and will end at 10:00 AM on 16th October, followed by judging and project presentations. The teams are free to take breaks in between.",
           "The teams will not be provided with any additional accommodation.",
           "Teams are not allowed to leave the venue until the end of the hackathon.",
           "Mid-Challenge Tasks: During the 24-hour hackathon, surprise mini-tasks or checkpoints will be announced. Teams must complete these within the given time to win extra points for final evaluation.",
@@ -134,7 +134,7 @@ const competitions = [
     offlineReg: "Spot/Offline registration available at venue desk 30 minutes prior to event start, subject to slot availability.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 15 October 2026 | Time: 1:00 PM to 4:00 PM | Mode: Offline | Venue: C2, C3 Lab (2nd Floor)",
-    registrationDeadline: "1st October 2026 at 5:00 PM (or upon 18 confirmed teams)",
+    registrationDeadline: "10th October 2026 at 05:00 PM (or upon 18 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Siya Khandeparkar", role: "Faculty In-Charge", image: "/faculty images/Siya.webp" },
       { name: "Mrs. Sandra Mazarello", role: "Staff Incharge", image: "/faculty images/SandraMazarello.webp" }
@@ -165,6 +165,7 @@ const competitions = [
         sub: [
           "Team Structure: Exactly 2 participants per team.",
           "Capacity Cap: Strictly capped at 18 teams (first-come, first-served basis). Any number of teams per college may register until the cap is reached.",
+          "Registration: Online registrations close on 10th October 2026 at 5:00 PM (or upon 18 confirmed teams).",
           "Prerequisites: Proficiency in C++, debugging fundamentals, and algorithmic problem solving.",
           "Reporting Time: All teams must report to the designated lab 30 minutes prior to event commencement.",
           "Allowed Materials: Participants must bring their own stationery. Paper for rough work will be provided on-site. Books, physical reference notes, digital storage devices, mobile phones or external aids are strictly prohibited during the competition.",
@@ -227,7 +228,7 @@ const competitions = [
     offlineReg: "Offline spot registration available 30 minutes before event begins if slots remain available.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C1, C2 Lab (DBCE)",
-    registrationDeadline: "1st October 2026 at 5:00 PM (or upon 20 confirmed teams)",
+    registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Manisha Fal Dessai", role: "Faculty In-Charge", image: "/faculty images/Manisha.webp" },
       { name: "Prof. Karishma Tuenkar", role: "Faculty In-Charge", image: "/faculty images/Karishma.webp" }
@@ -323,7 +324,7 @@ const competitions = [
     offlineReg: "Online registration preferred. Spot registration subject to available lab PCs.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 15 October 2026 | Time: 10:00 AM to 4:00 PM (Design: 10:00 AM–1:30 PM, Presentations: Afternoon) | Venue: C4 & C9 Lab",
-    registrationDeadline: "1st October 2026 at 11:59 PM (or upon 20 confirmed teams)",
+    registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Mithil Parab", role: "Faculty In-Charge", image: "/faculty images/Mithil_parab.webp" },
       { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.webp" }
@@ -360,7 +361,7 @@ const competitions = [
           "Prerequisites: A general familiarity with Figma is required.",
           "Team Composition: A maximum of 2 members is allowed per team. Participants in the same team do not need to be from the same institution.",
           "Registration: Registration will be conducted through an online form on a first-come, first-serve basis.",
-          "The registration form will close at 11:59 PM on the deadline, or earlier if the maximum number of 20 teams is reached.",
+          "The registration form will close at 5:00 PM on 10th October 2026, or earlier if the maximum number of 20 teams is reached.",
           "After successfully submitting the registration form, participants will receive a confirmation email on their registered email address.",
           "There is no restriction on the number of teams from a single institution. Inter-institution teams are allowed and are welcome."
         ]
@@ -404,18 +405,18 @@ const competitions = [
     number: "05",
     category: "non-technical",
     name: "Reel It Feel It",
-    tag: "CONTENT • REELS • CREATIVITY",
-    tagline: "Snap emotions into motion.",
+    tag: "CONTENT • REEL MAKING • CREATIVITY",
+    tagline: "Promote the INSPIRUS Event in Your Own Creative Way",
     description:
-      "Promote the INSPIRUS Event in your own creative way! Create reels that capture hearts and hype, showcasing your storytelling and video editing skills.",
+      "Promote the INSPIRUS Event in your own creative way! Take inspiration from existing trends, create engaging vertical reels, and showcase your storytelling and editing skills.",
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScT7qaA62gVwQdWf-ER806uSqBltC3dgt90T8pbpu6xKEoZyA/viewform",
-    eligibility: "Open for High school students, College students, Degree colleges, and Professional and non-professional institutions.",
-    teamPolicy: "1–2 members per team. If 2 members, then both members must be from the same institute. 2–3 teams per college.",
-    cappingInfo: "2 to 3 teams per college. Open participation across registered institutions.",
+    eligibility: "The competition is open to College Students, Degree College Students, Professional Institutions, and Non-Professional Institutions.",
+    teamPolicy: "2–3 teams per college/institute. Each team must have 1–2 official participants. If a team has 2 official participants, both must belong to the same institute. More people may appear in the reel, but only the registered 1–2 people will be considered official participants/team members.",
+    cappingInfo: "2–3 teams per college/institute. Open participation across registered institutions.",
     offlineReg: "Online entry submission. Participants post reel on Instagram and collaborate with @inspirus.reels.",
-    prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 15 October 2026 | Time: Online Submission | Mode: Online Mode",
-    registrationDeadline: "1st October 2026 at 11:59 PM",
+    prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
+    dateTimeVenue: "Date: Last date for submission 5th October 2026 | Time: 11:59 PM | Mode: Online | Venue: NA",
+    registrationDeadline: "5th October 2026 at 05:00 PM",
     facultyCoordinators: [
       { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" }
     ],
@@ -434,50 +435,51 @@ const competitions = [
       }
     ],
     judgingCriteria: [
-      "Creativity & Innovation (20 points)",
-      "Relevance to Theme (15 points)",
-      "Technical Quality - Editing/Audio/Visuals (15 points)",
-      "Originality (15 points)",
-      "Presentation & Aesthetics (10 points)",
-      "Clarity of Message (10 points)",
-      "Engagement - Likes/Comments (10 points: 1 pt per 50 likes & unique comments)",
-      "Impact (5 points)"
+      "Creativity & Innovation – 20 points",
+      "Relevance to Theme – 15 points",
+      "Technical Quality (Editing, Audio & Visuals) – 15 points",
+      "Originality – 15 points",
+      "Presentation & Aesthetics – 10 points",
+      "Clarity of Message – 10 points",
+      "Impact – 5 points"
     ],
     rules: [
       {
         main: "General Rules & Regulations",
         sub: [
-          "Theme: Promote the INSPIRUS Event in your own creative way.",
-          "Inspiration can be drawn from existing trends online, but plagiarized content will result in disqualification.",
+          "Participants can take inspiration from existing trends online, but copying or plagiarizing content is strictly prohibited and may lead to disqualification.",
           "Any derogatory remarks, name-calling, or regional slang targeting any person or community are strictly prohibited.",
-          "The use of offensive or inappropriate language/actions will lead to immediate disqualification.",
-          "The video should not exceed 1 minute.",
-          "Participants must submit only one reel; multiple entries will lead to disqualification.",
-          "The video should be made vertically (9:16 aspect ratio preferred).",
-          "At most 2 members, or just 1. If 2 members, then both members must be from the same institute.",
-          "Participants may use only commonly used social media platforms such as Instagram, Facebook, X (Twitter), LinkedIn, WhatsApp, and Snapchat.",
-          "Participants must not use bots, fake accounts, paid likes, engagement groups, or any other unfair methods to increase engagement; doing so may result in disqualification or deduction of marks, depending on the judges’ decision."
+          "The use of offensive or inappropriate language, gestures, or actions will lead to immediate disqualification.",
+          "The video must not exceed 1 minute.",
+          "Each team can submit only one reel. Multiple entries from the same team will lead to disqualification.",
+          "The reel must be made in vertical format (9:16 aspect ratio preferred).",
+          "Each team can have 1 or 2 official participants. If there are 2, both must be from the same institute. Additional people may appear in the reel, but they will not be considered official team members.",
+          "Participants may use commonly used social media platforms such as Instagram, Facebook, X (Twitter), LinkedIn, WhatsApp, and Snapchat."
         ]
       },
       {
-        main: "Procedure & Submission",
+        main: "Theme",
+        sub: [
+          "“Promote the INSPIRUS Event in Your Own Creative Way”"
+        ]
+      },
+      {
+        main: "Procedure",
         sub: [
           "After successful registration, participants must post their reel on their Instagram account (after adding the entry details template).",
-          "Participants must post the reel on their Instagram account, add @inspirus.reels as a collaborator, and include the entry number and participant name in the caption along with #inspirus2k26 and tag @inspirus10.",
-          "Entries will be judged based on the criteria mentioned, as well as the number of likes and comments on the reel (1 point is given for every 50 likes and unique comments, capped at 10 points).",
-          "The number of likes and comments as of the official cutoff date and time will be considered."
+          "Participants must post the reel on their Instagram account, add @inspirus.reels as a collaborator, and include the entry number and participant name in the caption along with #inspirus2k26 and tag @inspirusx.",
+          "Entries will be judged based on the criteria mentioned."
         ]
       },
       {
-        main: "Judging Criteria (Total: 100 points)",
+        main: "Judging Criteria (Total: 100 Points)",
         sub: [
           "Creativity & Innovation – 20 points",
           "Relevance to Theme – 15 points",
-          "Technical Quality (Editing/Audio/Visuals) – 15 points",
+          "Technical Quality (Editing, Audio & Visuals) – 15 points",
           "Originality – 15 points",
           "Presentation & Aesthetics – 10 points",
           "Clarity of Message – 10 points",
-          "Engagement (Likes/Comments) – 10 points",
           "Impact – 5 points"
         ]
       }
@@ -498,7 +500,7 @@ const competitions = [
     offlineReg: "Spot registration permitted at venue 30 minutes before event if seats remain available.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
-    registrationDeadline: "1st October 2026 at 5:00 PM (or upon 20 confirmed teams)",
+    registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Amey Kerkar", role: "Faculty In-Charge", image: "/faculty images/Amey_Kerkar.webp" },
       { name: "Dr. Norman Dias", role: "Faculty In-Charge", image: "/faculty images/Norman.webp" }
@@ -528,7 +530,6 @@ const competitions = [
         main: "Pre-requisites & Team Eligibility",
         sub: [
           "Pre-requisites: Familiarity with commonly used AI tools.",
-          "Eligibility: College Students.",
           "Team Members: 2 participants per team. Cross college teams are allowed.",
           "Capping: Only the first 20 teams to register for the event will be eligible to participate."
         ]
@@ -588,7 +589,7 @@ const competitions = [
     offlineReg: "On-spot registrations: Maximum 5 additional teams on the spot (provided the 6-team-per-college limit is not exceeded).",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 15 October 2026 | Time: 1:00 PM – 5:00 PM | Venue: Preliminary round: C19 Lab (1st floor), Main round: Seminar hall 1 (1st floor)",
-    registrationDeadline: "1st October 2026 at 5:00 PM (or upon 40 confirmed regular teams)",
+    registrationDeadline: "10th October 2026 at 05:00 PM (or upon 40 confirmed regular teams)",
     facultyCoordinators: [
       { name: "Prof. Sweta Morajkar", role: "Faculty In-Charge", image: "/faculty images/Sweta.webp" },
       { name: "Prof. Christina Barretto", role: "Faculty In-Charge", image: "/faculty images/Christina.webp" }
@@ -665,12 +666,12 @@ const competitions = [
     teamPolicy: "Teams consist of 2 partners. All team members must be from the same college (interdepartmental teams allowed). There is no restriction on the number of teams per college.",
     cappingInfo: "Participation is limited to a maximum of 20 teams on a first-come, first-serve basis.",
     offlineReg: "Spot registration available at venue 30 minutes prior to event start, subject to slot availability.",
-    prizeMoney: "1st Place: Cash Prize + Certificate | 2nd Place: Cash Prize + Certificate",
+    prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 15 October 2026 | Time: 11:00 AM to 3:00 PM | Mode: Offline | Venue: C5 and C6 Lab (DBCE)",
-    registrationDeadline: "1st October 2026 at 11:59 PM (or upon 20 confirmed teams)",
+    registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Dr. Amrita Naik", role: "Faculty In-Charge", image: "/faculty images/Amrita_Naik.webp" },
-      { name: "Prof. Vidhya Naik", role: "Faculty In-Charge" }
+      { name: "Prof. Vidhya N.", role: "Faculty In-Charge" }
     ],
     coordinators: [
       {
@@ -751,7 +752,7 @@ const competitions = [
     offlineReg: "Online registration mandatory. No spot/offline registration.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C3, C4 Lab (DBCE)",
-    registrationDeadline: "1st October 2026 at 5:00 PM",
+    registrationDeadline: "10th October 2026 at 05:00 PM",
     facultyCoordinators: [
       { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" },
       { name: "Prof. Merwyn D'Souza", role: "Faculty In-Charge", image: "/faculty images/Marwyn_Dsouza.webp" }
@@ -835,7 +836,7 @@ const competitions = [
     offlineReg: "Limited offline registrations valid on event day from designated reporting time.",
     prizeMoney: "1st: ₹1,000 + Certificate | 2nd: ₹500 + Certificate",
     dateTimeVenue: "Date: 15 & 16 October 2026 | 15th Oct: 1:00 PM to 5:00 PM (C-11 Lab / Online) | 16th Oct: 9:30 AM to 11:00 AM Online Submission (C8 Lab)",
-    registrationDeadline: "1st October 2026 at 11:30 AM (Online)",
+    registrationDeadline: "10th October 2026 at 05:00 PM",
     facultyCoordinators: [
       { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.webp" }
     ],
@@ -852,12 +853,6 @@ const competitions = [
         image: "/student images/arnav.webp",
         phone: "+91 9356738893"
       }
-    ],
-    judgingCriteria: [
-      "Creativity/Originality",
-      "Portrayal of topic",
-      "Narrative depth (Story within the picture)",
-      "Aesthetic appeal/Visual impact"
     ],
     rules: [
       {

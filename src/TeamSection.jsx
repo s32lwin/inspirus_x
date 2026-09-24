@@ -129,7 +129,7 @@ const teamData = [
       },
       {
         name: "Dr. Neena Panandikar",
-        role: "Principal, Patron",
+        role: "Principal",
         image: "/faculty images/neena.webp",
       },
       {
@@ -621,7 +621,7 @@ const teamData = [
         image: "/faculty images/Amrita_Naik.webp",
       },
       {
-        name: "Prof. Vidhya Naik",
+        name: "Prof. Vidhya N.",
         role: "Faculty In-Charge",
       },
       {
