@@ -44,7 +44,7 @@ const competitions = [
     cappingInfo: "Capped at 12 teams total (3 problem statements × 4 teams = 12 teams). Preliminary elimination round on 5th Oct if registrations exceed 12 by 1st Oct deadline.",
     offlineReg: "Online pre-registration mandatory on FCFS basis. Offline/spot registration is NOT available for Inspirathon.",
     prizeMoney: "₹3,000 each prize money for individual winner in each problem statement (3 Winners Total) + Official Merit Certificates",
-    dateTimeVenue: "Date: 15 & 16 October 2026 | Timing: 15th October 10:00 AM to 16th October 10:00 AM (24 Hours Hackathon, followed by judging) | Mode: Offline | Venue: Auditorium (2nd Floor)",
+    dateTimeVenue: "Date: 15 & 16 October 2026 | Timing: 15th October 09:00 AM to 16th October 01:00 PM (24 Hours Hackathon with Judgment) | Mode: Offline | Venue: Auditorium (2nd Floor)",
     registrationDeadline: "1st October 2026 at 5:00 PM",
     facultyCoordinators: [
       { name: "Prof. Amey Shet Tilve", role: "Faculty In-Charge", image: "/faculty images/amey.webp" },
@@ -85,7 +85,7 @@ const competitions = [
           "There will be a total of 3 problem statements. One problem statement can be chosen by a maximum of 4 teams (3 problem statements × 4 teams = 12 teams total). There will be 3 winners, one for each problem statement (₹3,000 prize money each).",
           "Teams have to report at the venue strictly by 9:00 AM on 15th October.",
           "Wi-Fi access and power points/Extensions will be made available at the venue.",
-          "The Hackathon will begin at 10:00 AM on 15th October and will end at 10:00 AM on 16th October, followed by judging and project presentations. The teams are free to take breaks in between.",
+          "The Hackathon will commence at 09:00 AM on 15th October and will run through 16th October, concluding at 01:00 PM with project presentations and final judgment. The teams are free to take breaks in between.",
           "The teams will not be provided with any additional accommodation.",
           "Teams are not allowed to leave the venue until the end of the hackathon.",
           "Mid-Challenge Tasks: During the 24-hour hackathon, surprise mini-tasks or checkpoints will be announced. Teams must complete these within the given time to win extra points for final evaluation.",
@@ -133,7 +133,7 @@ const competitions = [
     cappingInfo: "Strictly capped at 18 teams (first-come, first-served basis). Any number of teams per college may register until the cap is reached.",
     offlineReg: "Spot/Offline registration available at venue desk 30 minutes prior to event start, subject to slot availability.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 15 October 2026 | Time: 1:00 PM to 4:00 PM | Mode: Offline | Venue: C2, C3 Lab (2nd Floor)",
+    dateTimeVenue: "Date: 15 October 2026 | Time: 12:00 PM to 04:00 PM | Mode: Offline | Venue: C2, C3 Lab (2nd Floor)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 18 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Siya Khandeparkar", role: "Faculty In-Charge", image: "/faculty images/Siya.webp" },
@@ -227,7 +227,7 @@ const competitions = [
     cappingInfo: "A maximum of 20 teams will be accepted on a First Come, First Served basis.",
     offlineReg: "Offline spot registration available 30 minutes before event begins if slots remain available.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C1, C2 Lab (DBCE)",
+    dateTimeVenue: "Date: 16 October 2026 | Time: 09:30 AM to 01:00 PM | Mode: Offline | Venue: C1, C2 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Manisha Fal Dessai", role: "Faculty In-Charge", image: "/faculty images/Manisha.webp" },
@@ -323,7 +323,7 @@ const competitions = [
     cappingInfo: "Participation is limited to a maximum of 20 teams on a first-come, first-serve basis. There is no restriction on the number of teams from a single institution.",
     offlineReg: "Online registration preferred. Spot registration subject to available lab PCs.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 15 October 2026 | Time: 10:00 AM to 4:00 PM (Design: 10:00 AM–1:30 PM, Presentations: Afternoon) | Venue: C4 & C9 Lab",
+    dateTimeVenue: "Date: 15 October 2026 | Time: 10:00 AM to 04:00 PM | Mode: Offline | Venue: C4, C9 Lab",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Mithil Parab", role: "Faculty In-Charge", image: "/faculty images/Mithil_parab.webp" },
@@ -415,8 +415,8 @@ const competitions = [
     cappingInfo: "2–3 teams per college/institute. Open participation across registered institutions.",
     offlineReg: "Online entry submission. Participants post reel on Instagram and collaborate with @inspirus.reels.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: Last date for submission 5th October 2026 | Time: 11:59 PM | Mode: Online | Venue: NA",
-    registrationDeadline: "5th October 2026 at 05:00 PM",
+    dateTimeVenue: "Date: Submission Deadline: 8th October 2026 | Time: 11:59 PM | Mode: Online Mode | Venue: Online (Instagram @inspirus.reels)",
+    registrationDeadline: "6th October 2026 at 05:00 PM",
     facultyCoordinators: [
       { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" }
     ],
@@ -467,7 +467,7 @@ const competitions = [
         main: "Procedure",
         sub: [
           "After successful registration, participants must post their reel on their Instagram account (after adding the entry details template).",
-          "Participants must post the reel on their Instagram account, add @inspirus.reels as a collaborator, and include the entry number and participant name in the caption along with #inspirus2k26 and tag @inspirusx.",
+          "Participants must post the reel on their Instagram account, add @inspirus.reels as a collaborator, and include the entry number and participant name in the caption along with #inspirus2k26 and tag @inspirus.reels.",
           "Entries will be judged based on the criteria mentioned."
         ]
       },
@@ -499,7 +499,7 @@ const competitions = [
     cappingInfo: "Only the first 20 teams to register for the event will be eligible to participate on a first-come, first-served basis.",
     offlineReg: "Spot registration permitted at venue 30 minutes before event if seats remain available.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
+    dateTimeVenue: "Date: 16 October 2026 | Time: 09:30 AM to 01:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Prof. Amey Kerkar", role: "Faculty In-Charge", image: "/faculty images/Amey_Kerkar.webp" },
@@ -588,7 +588,7 @@ const competitions = [
     cappingInfo: "Maximum 45 participating teams (40 regular online registrations + up to 5 on-spot registrations). Limit of 6 teams per college on FCFS basis.",
     offlineReg: "On-spot registrations: Maximum 5 additional teams on the spot (provided the 6-team-per-college limit is not exceeded).",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 15 October 2026 | Time: 1:00 PM – 5:00 PM | Venue: Preliminary round: C19 Lab (1st floor), Main round: Seminar hall 1 (1st floor)",
+    dateTimeVenue: "Date: 15 October 2026 | Time: 01:00 PM to 05:00 PM | Mode: Offline | Venue: Preliminary Round: C19 Lab (1st Floor) | Main Round: Seminar Hall 1 (1st Floor)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 40 confirmed regular teams)",
     facultyCoordinators: [
       { name: "Prof. Sweta Morajkar", role: "Faculty In-Charge", image: "/faculty images/Sweta.webp" },
@@ -667,7 +667,7 @@ const competitions = [
     cappingInfo: "Participation is limited to a maximum of 20 teams on a first-come, first-serve basis.",
     offlineReg: "Spot registration available at venue 30 minutes prior to event start, subject to slot availability.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 15 October 2026 | Time: 11:00 AM to 3:00 PM | Mode: Offline | Venue: C5 and C6 Lab (DBCE)",
+    dateTimeVenue: "Date: 15 October 2026 | Time: 11:00 AM to 03:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
       { name: "Dr. Amrita Naik", role: "Faculty In-Charge", image: "/faculty images/Amrita_Naik.webp" },
@@ -751,7 +751,7 @@ const competitions = [
     cappingInfo: "Maximum participation capped on a first-come, first-served basis.",
     offlineReg: "Online registration mandatory. No spot/offline registration.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 16 October 2026 | Time: 9:30 AM to 1:00 PM | Mode: Offline | Venue: C3, C4 Lab (DBCE)",
+    dateTimeVenue: "Date: 16 October 2026 | Time: 09:30 AM to 01:00 PM | Mode: Offline | Venue: C3, C4 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM",
     facultyCoordinators: [
       { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" },
@@ -832,10 +832,10 @@ const competitions = [
     registerLink: "https://forms.gle/99FPnMgKB2m1QDz46",
     eligibility: "Students from higher secondary schools, undergraduate and diploma holders from professional and non-professional institutions.",
     teamPolicy: "1 participant (Solo entry).",
-    cappingInfo: "Open participation on FCFS basis. Limited offline registrations also valid on event day.",
-    offlineReg: "Limited offline registrations valid on event day from designated reporting time.",
+    cappingInfo: "Open participation on FCFS basis. Online submission.",
+    offlineReg: "Online Submission event via Google Form.",
     prizeMoney: "1st: ₹1,000 + Certificate | 2nd: ₹500 + Certificate",
-    dateTimeVenue: "Date: 15 & 16 October 2026 | 15th Oct: 1:00 PM to 5:00 PM (C-11 Lab / Online) | 16th Oct: 9:30 AM to 11:00 AM Online Submission (C8 Lab)",
+    dateTimeVenue: "Date: 15 & 16 October 2026 | Mode: Online Mode | Venue: Online Submission (Google Form)",
     registrationDeadline: "10th October 2026 at 05:00 PM",
     facultyCoordinators: [
       { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.webp" }
@@ -900,70 +900,70 @@ const competitions = [
 // ─── SCHEDULE DATA ────────────────────────────────────────────────────────────
 const scheduleData = {
   timeSlots: [
-    "9am–9.30am",
-    "9.30am–10am",
-    "10am–11am",
-    "11am–12pm",
-    "12pm–1pm",
-    "1pm–2pm",
-    "2pm–3pm",
-    "3pm–4pm",
-    "3.30pm–5pm"
+    "9:00am–9:30am",
+    "9:30am–10:00am",
+    "10:00am–11:00am",
+    "11:00am–12:00pm",
+    "12:00pm–1:00pm",
+    "1:00pm–2:00pm",
+    "2:00pm–3:00pm",
+    "3:00pm–4:00pm",
+    "3:30pm–5:00pm"
   ],
   days: [
     {
       label: "15TH OCT",
       rows: [
         {
-          location: "AUDITORIUM 2nd FLOOR",
+          location: "AUDITORIUM (2nd FLOOR)",
           slots: [
-            { colStart: 1, colspan: 1, label: "INAUGURATION", color: "teal" }
-          ]
-        },
-        {
-          location: "C-11 Lab",
-          slots: [
-            { colStart: 0, colspan: 9, label: "REEL IT FEEL IT (REEL MAKING) - SUBMISSION ENDS ON 5TH OCTOBER", color: "purple" }
-          ]
-        },
-        {
-          location: "SE CIVIL CLASSROOM",
-          slots: [
-            { colStart: 1, colspan: 4, label: "REGISTRATION", color: "pink" }
-          ]
-        },
-        {
-          location: "C-11 Lab",
-          slots: [
-            { colStart: 5, colspan: 4, label: "FRAMED (ONLINE)", color: "purple" }
-          ]
-        },
-        {
-          location: "C4 & C9 Lab",
-          slots: [
-            { colStart: 2, colspan: 6, label: "TECHNOMORPH (UI/UX Designing)", color: "yellow" }
-          ]
-        },
-        {
-          location: "C5 AND C6 LAB",
-          slots: [
-            { colStart: 3, colspan: 4, label: "CODE BEYOND SIGHT (Blind Coding)", color: "yellow" }
-          ]
-        },
-        {
-          location: "C2, C3 LAB",
-          slots: [
-            { colStart: 5, colspan: 3, label: "CODECLASH (CODE FIESTA)", color: "yellow" }
+            { colStart: 1, colspan: 1, label: "INAUGURATION (9:30 AM – 10:00 AM)", color: "teal" }
           ]
         },
         {
           location: "AUDITORIUM (2nd FLOOR)",
           slots: [
-            { colStart: 2, colspan: 7, label: "INSPIRATHON (24 HOURS)", color: "yellow" }
+            { colStart: 0, colspan: 9, label: "INSPIRATHON (24 HOURS HACKATHON)", color: "yellow" }
           ]
         },
         {
-          location: "C19 LAB (1st FLOOR) , SEMINAR HALL - I (1st FLOOR)",
+          location: "SE CIVIL CLASSROOM",
+          slots: [
+            { colStart: 0, colspan: 4, label: "REGISTRATION DESK", color: "pink" }
+          ]
+        },
+        {
+          location: "ONLINE",
+          slots: [
+            { colStart: 0, colspan: 9, label: "REEL IT FEEL IT (ONLINE - SUBMISSION BY 8TH OCT, 11:59 PM)", color: "purple" }
+          ]
+        },
+        {
+          location: "ONLINE",
+          slots: [
+            { colStart: 0, colspan: 9, label: "FRAMED (ONLINE SUBMISSION)", color: "purple" }
+          ]
+        },
+        {
+          location: "C4, C9 LAB",
+          slots: [
+            { colStart: 2, colspan: 6, label: "TECHNOMORPH (UI/UX DESIGNING)", color: "yellow" }
+          ]
+        },
+        {
+          location: "C5, C6 LAB",
+          slots: [
+            { colStart: 3, colspan: 4, label: "CODE BEYOND SIGHT (BLIND CODING)", color: "yellow" }
+          ]
+        },
+        {
+          location: "C2, C3 LAB",
+          slots: [
+            { colStart: 4, colspan: 4, label: "CODE CLASH (CODE FIESTA)", color: "yellow" }
+          ]
+        },
+        {
+          location: "C19 LAB & SEMINAR HALL 1 (1st FLOOR)",
           slots: [
             { colStart: 5, colspan: 4, label: "EXQUIZITE (QUIZ)", color: "yellow" }
           ]
@@ -974,45 +974,45 @@ const scheduleData = {
       label: "16TH OCT",
       rows: [
         {
-          location: "AUDITORIUM (2nd FLOOR)",
+          location: "SE CIVIL CLASSROOM",
           slots: [
-            { colStart: 0, colspan: 5, label: "INSPIRATHON (24 HOURS)", color: "yellow" }
+            { colStart: 0, colspan: 2, label: "REGISTRATION DESK", color: "pink" }
           ]
         },
         {
-          location: "C8 Lab",
+          location: "AUDITORIUM (2nd FLOOR)",
           slots: [
-            { colStart: 1, colspan: 2, label: "FRAMED ONLINE SUBMISSION", color: "purple" }
+            { colStart: 0, colspan: 5, label: "INSPIRATHON (CONCLUDES 1:00 PM WITH JUDGMENT)", color: "yellow" }
           ]
         },
         {
           location: "C1, C2 LAB",
           slots: [
-            { colStart: 1, colspan: 4, label: "RETRIEVAL SAGES (LOGICAL RESONING & CODING)", color: "yellow" }
+            { colStart: 1, colspan: 4, label: "RETRIEVAL SAGES (LOGICAL REASONING & CODING)", color: "yellow" }
           ]
         },
         {
           location: "C3, C4 LAB",
           slots: [
-            { colStart: 1, colspan: 4, label: "VEIL OF SECRETS (Escape Room)", color: "yellow" }
+            { colStart: 1, colspan: 4, label: "VEIL OF SECRETS (ESCAPE ROOM)", color: "yellow" }
           ]
         },
         {
           location: "C5, C6 LAB",
           slots: [
-            { colStart: 1, colspan: 4, label: "PROMPT WARS", color: "yellow" }
+            { colStart: 1, colspan: 4, label: "PROMPT WARS (AI ENGINEERING)", color: "yellow" }
           ]
         },
         {
-          location: "SE CIVIL CLASSROOM",
+          location: "ONLINE",
           slots: [
-            { colStart: 0, colspan: 2, label: "REGISTRATION", color: "pink" }
+            { colStart: 0, colspan: 5, label: "FRAMED (ONLINE SUBMISSION)", color: "purple" }
           ]
         },
         {
           location: "AUDITORIUM (2nd FLOOR)",
           slots: [
-            { colStart: 8, colspan: 1, label: "VALEDICTORY FUNCTION", color: "teal" }
+            { colStart: 8, colspan: 1, label: "VALEDICTORY FUNCTION (3:30 PM – 5:00 PM)", color: "teal" }
           ]
         }
       ]
