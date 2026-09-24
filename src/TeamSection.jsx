@@ -19,37 +19,11 @@ function Avatar({ name, image }) {
     .slice(0, 2)
     .join("");
 
-  const gradients = [
-    "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)", // Deep Indigo
-    "linear-gradient(135deg, #0f172a 0%, #0284c7 100%)", // Cyber Sky
-    "linear-gradient(135deg, #134e4a 0%, #0d9488 100%)", // Deep Teal
-    "linear-gradient(135deg, #311042 0%, #7c3aed 100%)", // Deep Violet
-    "linear-gradient(135deg, #1e293b 0%, #3b82f6 100%)", // Slate to Royal Blue
-    "linear-gradient(135deg, #083344 0%, #06b6d4 100%)", // Ocean Cyan
-    "linear-gradient(135deg, #2e1065 0%, #9333ea 100%)", // Cyber Purple
-    "linear-gradient(135deg, #064e3b 0%, #059669 100%)", // Emerald Glow
-    "linear-gradient(135deg, #1e1e24 0%, #6366f1 100%)", // Dark Indigo
-    "linear-gradient(135deg, #172554 0%, #38bdf8 100%)", // Midnight Blue
-  ];
-
-  const colorIndex =
-    name
-      .split("")
-      .reduce(
-        (a, c) => a + c.charCodeAt(0),
-        0
-      ) % gradients.length;
-
   const showImage = image && !imgError;
 
   return (
     <div className="team-avatar-wrapper">
-      <div
-        className="team-avatar"
-        style={{
-          background: showImage ? "transparent" : gradients[colorIndex],
-        }}
-      >
+      <div className="team-avatar">
         {showImage ? (
           <img
             src={image}

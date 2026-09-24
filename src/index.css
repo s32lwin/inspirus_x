@@ -367,13 +367,25 @@ body {
   margin: 0 auto 14px;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(135deg, #a855f7, #3b82f6);
+  background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
   box-shadow: 0 4px 18px rgba(168, 85, 247, 0.3);
-  transition: box-shadow 0.3s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    filter 0.35s ease;
+  position: relative;
 }
 
-.team-card:hover .team-avatar-wrapper {
-  box-shadow: 0 4px 26px rgba(168, 85, 247, 0.55);
+.team-card:hover .team-avatar-wrapper,
+.team-avatar-wrapper:hover {
+  transform: scale(1.07) rotate(2deg);
+  background: linear-gradient(135deg, #ff2a6d 0%, #c084fc 50%, #00e5ff 100%);
+  box-shadow:
+    0 0 20px rgba(255, 42, 109, 0.6),
+    0 0 35px rgba(0, 229, 255, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.4));
 }
 
 .team-avatar {
@@ -385,7 +397,12 @@ body {
   justify-content: center;
   border: 3px solid #0a0a0a;
   overflow: hidden;
-  background: #160f24;
+  background: #181528; /* Solid plain dark cyber-studio background that matches all portraits */
+  transition: border-color 0.35s ease, background-color 0.35s ease;
+}
+
+.team-card:hover .team-avatar {
+  border-color: #0c0915;
 }
 
 .team-avatar-img {
@@ -395,7 +412,7 @@ body {
   object-position: center;
   border-radius: 50%;
   display: block;
-  transition: transform 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .team-card:hover .team-avatar-img {
