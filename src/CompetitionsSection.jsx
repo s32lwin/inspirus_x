@@ -590,7 +590,7 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 1:00 PM – 5:00 PM | Venue: Preliminary round: C19 Lab (1st floor), Main round: Seminar hall 1 (1st floor)",
     registrationDeadline: "1st October 2026 at 5:00 PM (or upon 40 confirmed regular teams)",
     facultyCoordinators: [
-      { name: "Prof. Sweta Rane", role: "Faculty In-Charge", image: "/faculty images/Sweta.webp" },
+      { name: "Prof. Sweta Morajkar", role: "Faculty In-Charge", image: "/faculty images/Sweta.webp" },
       { name: "Prof. Christina Barretto", role: "Faculty In-Charge", image: "/faculty images/Christina.webp" }
     ],
     coordinators: [
@@ -1257,6 +1257,36 @@ function GeneralRulesModal({ onClose }) {
 function CoordinatorAvatar({ name, image }) {
   const [imgError, setImgError] = useState(false);
 
+  const initials = (name || "")
+    .trim()
+    .split(" ")
+    .filter(
+      (w) =>
+        w.length > 0 &&
+        w[0] === w[0].toUpperCase()
+    )
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("");
+
+  const gradients = [
+    "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+    "linear-gradient(135deg, #0f172a 0%, #0284c7 100%)",
+    "linear-gradient(135deg, #134e4a 0%, #0d9488 100%)",
+    "linear-gradient(135deg, #311042 0%, #7c3aed 100%)",
+    "linear-gradient(135deg, #1e293b 0%, #3b82f6 100%)",
+    "linear-gradient(135deg, #083344 0%, #06b6d4 100%)",
+    "linear-gradient(135deg, #2e1065 0%, #9333ea 100%)",
+    "linear-gradient(135deg, #064e3b 0%, #059669 100%)",
+    "linear-gradient(135deg, #1e1e24 0%, #6366f1 100%)",
+    "linear-gradient(135deg, #172554 0%, #38bdf8 100%)",
+  ];
+
+  const colorIndex =
+    (name || "")
+      .split("")
+      .reduce((a, c) => a + c.charCodeAt(0), 0) % gradients.length;
+
   if (image && !imgError) {
     return (
       <img
@@ -1269,8 +1299,15 @@ function CoordinatorAvatar({ name, image }) {
   }
 
   return (
-    <div className="coordinator-avatar-fallback">
-      <i className="ri-user-3-line" />
+    <div
+      className="coordinator-avatar-fallback"
+      style={{ background: gradients[colorIndex] }}
+    >
+      {initials ? (
+        <span className="coordinator-avatar-initials">{initials}</span>
+      ) : (
+        <i className="ri-user-3-line" />
+      )}
     </div>
   );
 }

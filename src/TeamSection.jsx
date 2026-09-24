@@ -19,17 +19,17 @@ function Avatar({ name, image }) {
     .slice(0, 2)
     .join("");
 
-  const colors = [
-    "#e74c3c",
-    "#3498db",
-    "#2ecc71",
-    "#f39c12",
-    "#9b59b6",
-    "#1abc9c",
-    "#e67e22",
-    "#e91e63",
-    "#00bcd4",
-    "#8bc34a",
+  const gradients = [
+    "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)", // Deep Indigo
+    "linear-gradient(135deg, #0f172a 0%, #0284c7 100%)", // Cyber Sky
+    "linear-gradient(135deg, #134e4a 0%, #0d9488 100%)", // Deep Teal
+    "linear-gradient(135deg, #311042 0%, #7c3aed 100%)", // Deep Violet
+    "linear-gradient(135deg, #1e293b 0%, #3b82f6 100%)", // Slate to Royal Blue
+    "linear-gradient(135deg, #083344 0%, #06b6d4 100%)", // Ocean Cyan
+    "linear-gradient(135deg, #2e1065 0%, #9333ea 100%)", // Cyber Purple
+    "linear-gradient(135deg, #064e3b 0%, #059669 100%)", // Emerald Glow
+    "linear-gradient(135deg, #1e1e24 0%, #6366f1 100%)", // Dark Indigo
+    "linear-gradient(135deg, #172554 0%, #38bdf8 100%)", // Midnight Blue
   ];
 
   const colorIndex =
@@ -38,7 +38,7 @@ function Avatar({ name, image }) {
       .reduce(
         (a, c) => a + c.charCodeAt(0),
         0
-      ) % colors.length;
+      ) % gradients.length;
 
   const showImage = image && !imgError;
 
@@ -47,7 +47,7 @@ function Avatar({ name, image }) {
       <div
         className="team-avatar"
         style={{
-          backgroundColor: showImage ? "transparent" : colors[colorIndex],
+          background: showImage ? "transparent" : gradients[colorIndex],
         }}
       >
         {showImage ? (
@@ -300,6 +300,36 @@ const teamData = [
 
 
   // ===================================================
+  // EVENT HEADS
+  // ===================================================
+
+  {
+    title: "Event Heads",
+    icon: "\u{1F451}",
+
+    members: [
+      {
+        name: "Prof. Amey Shet Tilve",
+        role: "Faculty Event Head",
+        image: "/faculty images/amey.webp",
+      },
+      {
+        name: "Tanishq Kavlekar",
+        role: "Event Head",
+        image: "/student images/Tanishq Kavlekar.webp",
+        phone: "9373843024",
+      },
+      {
+        name: "Shreeshant Upadhye",
+        role: "Event Head",
+        image: "/student images/Shreeshant Upadhye.webp",
+        phone: "8600852734",
+      },
+    ],
+  },
+
+
+  // ===================================================
   // WEBSITE TEAM
   // ===================================================
 
@@ -537,7 +567,7 @@ const teamData = [
 
     members: [
       {
-        name: "Prof. Sweta Rane",
+        name: "Prof. Sweta Morajkar",
         role: "Faculty In-Charge",
         image: "/faculty images/Sweta.webp",
       },
@@ -763,31 +793,6 @@ const teamData = [
 
 
 // =====================================================
-// EVENT HEADS
-// =====================================================
-
-const eventHeads = [
-  {
-    name: "Prof. Amey Shet Tilve",
-    role: "Faculty Event Head",
-    image: "/faculty images/amey.webp",
-  },
-  {
-    name: "Tanishq Kavlekar",
-    role: "Event Head",
-    image: "/student images/Tanishq Kavlekar.webp",
-    phone: "9373843024",
-  },
-  {
-    name: "Shreeshant Upadhye",
-    role: "Event Head",
-    image: "/student images/Shreeshant Upadhye.webp",
-    phone: "8600852734",
-  },
-];
-
-
-// =====================================================
 // MAIN TEAM SECTION
 // =====================================================
 
@@ -812,10 +817,10 @@ function TeamSection() {
       </div>
 
 
-      {/* LEADERSHIP / FACULTY / COUNCIL / WEBSITE / DESIGN */}
+      {/* LEADERSHIP / FACULTY / COUNCIL / EVENT HEADS / WEBSITE / DESIGN */}
 
       {teamData
-        .slice(0, 5)
+        .slice(0, 6)
         .map((group, index) => (
           <TeamGroup
             key={index}
@@ -839,21 +844,13 @@ function TeamSection() {
       </div>
 
 
-      {/* EVENT HEADS ÔÇö BEFORE INSPIRATHON */}
-
-      <TeamGroup
-        title="Event Heads"
-        members={eventHeads}
-      />
-
-
       {/* EVENT TEAMS */}
 
       {teamData
-        .slice(5)
+        .slice(6)
         .map((group, index) => (
           <TeamGroup
-            key={index + 5}
+            key={index + 6}
             title={group.title}
             icon={group.icon}
             members={group.members}
@@ -866,7 +863,7 @@ function TeamSection() {
       <div className="team-footer">
 
         <p className="team-footer-text font-[Helvetica_Now_Display]">
-          Inspirus-9 &mdash; Don Bosco College of Engineering, Fatorda, Goa
+          Inspirus-X &mdash; Don Bosco College of Engineering, Fatorda, Goa
         </p>
 
       </div>
