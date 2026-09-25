@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,6 +14,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSidebar = useCallback(() => {
+    window.history.pushState({ inspirusModal: "sidebar" }, "");
+    setSidebarOpen(true);
+  }, []);
+
+  const closeSidebar = useCallback((fromPopState = false) => {
+    setSidebarOpen(false);
+    if (!fromPopState && window.history.state?.inspirusModal === "sidebar") {
+      window.history.back();
+    }
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (event.state?.inspirusModal !== "sidebar") {
+        setSidebarOpen(false);
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   // Pinned scroll-driven "X" Mask Zoom & Hero Entrance Animation
   useGSAP(() => {
@@ -264,7 +286,7 @@ function App() {
       {/* Sidebar */}
       <Sidebar
         isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
+        onClose={() => closeSidebar()}
       />
 
       <div className="main w-full">
@@ -281,7 +303,7 @@ function App() {
                 {/* HAMBURGER MENU */}
                 <div
                   className="lines flex flex-col gap-1 sm:gap-[5px] cursor-pointer"
-                  onClick={() => setSidebarOpen(true)}
+                  onClick={openSidebar}
                   aria-label="Open menu"
                 >
                   <div className="line w-8 sm:w-14 h-1 sm:h-2 bg-white rounded-full"></div>

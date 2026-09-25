@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 
 const generalRulesData = {
@@ -32,6 +32,7 @@ const generalRulesData = {
 const competitions = [
   {
     number: "01",
+    slug: "inspirathon",
     category: "technical",
     name: "Inspirathon",
     tag: "24 HOUR HACKATHON",
@@ -41,8 +42,7 @@ const competitions = [
     registerLink: "https://forms.gle/s1Dw2q6awuEGfeALA",
     eligibility: "Students from Undergraduate, Diploma, professional, and non-professional institutions. All team members must be current students with a valid institute ID. Cross college teams are allowed.",
     teamPolicy: "3 Members compulsorily per team. Cross college teams are allowed (teams with members from different colleges).",
-    cappingInfo: "Capped at 12 teams total (3 problem statements × 4 teams = 12 teams). Preliminary elimination round on 5th Oct if registrations exceed 12 by 1st Oct deadline.",
-    offlineReg: "Online pre-registration mandatory on FCFS basis. Offline/spot registration is NOT available for Inspirathon.",
+    cappingInfo: "Capped at 12 teams total (3 problem statements × 4 teams = 12 teams). Preliminary elimination round on 5th Oct if registrations are high by 1st Oct deadline.",
     prizeMoney: "₹3,000 each prize money for individual winner in each problem statement (3 Winners Total) + Official Merit Certificates",
     dateTimeVenue: "Date: 15 & 16 October 2026 | Timing: 15th October 09:00 AM to 16th October 01:00 PM (24 Hours Hackathon with Judgment) | Mode: Offline | Venue: Auditorium (2nd Floor)",
     registrationDeadline: "1st October 2026 at 5:00 PM",
@@ -95,8 +95,8 @@ const competitions = [
       {
         main: "Round Details & Capping Selection",
         sub: [
-          "If the total number of registered teams exceeds 12 by the registration deadline of 1st October, a preliminary elimination round will be conducted on 5th October to select the final 12 teams. The results of the preliminary round will be announced on 6th October. Further details regarding the preliminary round will be communicated at a later date.",
-          "If the total number of registered teams does not exceed 12 by the registration deadline of 1st October, the preliminary elimination round will not be conducted. In such a case, the first 12 teams to register on a first-come, first-served basis will be selected to participate in the 24-hour Hackathon on 15th October.",
+          "If the number of registered teams is HIGH by the registration deadline on 1st October, a preliminary elimination round will be held on the 5th of October to decide the final 12 teams. The results will be declared on 6th of October. Further details regarding the preliminary round will be given later.",
+          "If the number of registered teams is LOW by the registration deadline, the preliminary round will NOT be conducted, and the first 12 teams registered on first come first serve basis will compete for the 24 hour hackathon on 15th October.",
           "The final team list will be acknowledged via the official WhatsApp group."
         ]
       },
@@ -121,6 +121,7 @@ const competitions = [
   },
   {
     number: "02",
+    slug: "code-clash",
     category: "technical",
     name: "Code Clash",
     tag: "DEBUG • ALGORITHM • C++",
@@ -152,12 +153,6 @@ const competitions = [
         image: "/student images/Devanshu Yelurkar.webp",
         phone: "+91 9373814674"
       }
-    ],
-    judgingCriteria: [
-      "Round 1: Patching syntax & logic errors across 2 C++ programs within 3 evaluation attempts (25 Pts + Speed Boost: +5, +4, +3).",
-      "Round 2: Blind Coder challenge (25 Pts) + Player's 5 Minute-to-Win-It challenges (20 Pts) + Speed Boost (+5, +4, +3).",
-      "Round 3: 10 C++ coding problems worth 5 marks each (50 Pts total).",
-      "Tie-Breaker Hierarchy: 1) Submission Timestamp, 2) Algorithmic Efficiency (Big-O time & space complexity), 3) Single Host Benchmarking."
     ],
     rules: [
       {
@@ -215,6 +210,7 @@ const competitions = [
   },
   {
     number: "03",
+    slug: "retrieval-sages",
     category: "technical",
     name: "Retrieval Sages",
     tag: "APTITUDE • LOGIC • C/C++",
@@ -311,6 +307,7 @@ const competitions = [
   },
   {
     number: "04",
+    slug: "technomorph",
     category: "technical",
     name: "Technomorph",
     tag: "UI/UX • FIGMA • PROTOTYPING",
@@ -342,16 +339,6 @@ const competitions = [
         image: "/student images/pranita.webp",
         phone: "+91 9284183785"
       }
-    ],
-    judgingCriteria: [
-      "Usability",
-      "Navigation",
-      "Visual Design and Consistency",
-      "Creativity and Originality",
-      "Relevance to the Problem Statement",
-      "Presentation",
-      "Feasibility",
-      "Overall Impact"
     ],
     rules: [
       {
@@ -403,6 +390,7 @@ const competitions = [
   },
   {
     number: "05",
+    slug: "reel-it-feel-it",
     category: "non-technical",
     name: "Reel It Feel It",
     tag: "CONTENT • REEL MAKING • CREATIVITY",
@@ -413,9 +401,9 @@ const competitions = [
     eligibility: "The competition is open to College Students, Degree College Students, Professional Institutions, and Non-Professional Institutions.",
     teamPolicy: "2–3 teams per college/institute. Each team must have 1–2 official participants. If a team has 2 official participants, both must belong to the same institute. More people may appear in the reel, but only the registered 1–2 people will be considered official participants/team members.",
     cappingInfo: "2–3 teams per college/institute. Open participation across registered institutions.",
-    offlineReg: "Online entry submission. Participants post reel on Instagram and collaborate with @inspirus.reels.",
+    offlineReg: "Online entry submission. Participants post reel on Instagram and collaborate with @inspirus.reels by 8th October 2026, 11:59 PM.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: Submission Deadline: 8th October 2026 | Time: 11:59 PM | Mode: Online Mode | Venue: Online (Instagram @inspirus.reels)",
+    dateTimeVenue: "Reel Submission Deadline: 8th October 2026 at 11:59 PM | Mode: Online | Platform: Instagram (@inspirus.reels)",
     registrationDeadline: "6th October 2026 at 05:00 PM",
     facultyCoordinators: [
       { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" }
@@ -434,20 +422,13 @@ const competitions = [
         phone: "+91 9404427450"
       }
     ],
-    judgingCriteria: [
-      "Creativity & Innovation – 20 points",
-      "Relevance to Theme – 15 points",
-      "Technical Quality (Editing, Audio & Visuals) – 15 points",
-      "Originality – 15 points",
-      "Presentation & Aesthetics – 10 points",
-      "Clarity of Message – 10 points",
-      "Impact – 5 points"
-    ],
     rules: [
       {
-        main: "General Rules & Regulations",
+        main: "Important Deadlines & General Rules",
         sub: [
-          "Participants can take inspiration from existing trends online, but copying or plagiarizing content is strictly prohibited and may lead to disqualification.",
+          "Registration Deadline: Online registration strictly closes on 6th October 2026 at 5:00 PM.",
+          "Submission Deadline: Final reel must be published and submitted on or before 8th October 2026 at 11:59 PM. Late submissions will strictly not be entertained.",
+          "Participants can take inspiration from existing trends online, but copying or plagiarizing content is strictly prohibited and will lead to disqualification.",
           "Any derogatory remarks, name-calling, or regional slang targeting any person or community are strictly prohibited.",
           "The use of offensive or inappropriate language, gestures, or actions will lead to immediate disqualification.",
           "The video must not exceed 1 minute.",
@@ -464,10 +445,11 @@ const competitions = [
         ]
       },
       {
-        main: "Procedure",
+        main: "Procedure & Submission",
         sub: [
-          "After successful registration, participants must post their reel on their Instagram account (after adding the entry details template).",
-          "Participants must post the reel on their Instagram account, add @inspirus.reels as a collaborator, and include the entry number and participant name in the caption along with #inspirus2k26 and tag @inspirus.reels.",
+          "Complete the online registration form on or before 6th October 2026 at 5:00 PM.",
+          "After successful registration, create your reel and post it on your Instagram account (after adding the entry details template).",
+          "Add @inspirus.reels as a collaborator, include the entry number and participant name in the caption along with #inspirus2k26, and tag @inspirus.reels on or before 8th October 2026, 11:59 PM.",
           "Entries will be judged based on the criteria mentioned."
         ]
       },
@@ -487,6 +469,7 @@ const competitions = [
   },
   {
     number: "06",
+    slug: "prompt-wars",
     category: "technical",
     name: "Prompt Wars",
     tag: "AI • PROMPT ENGINEERING",
@@ -518,12 +501,6 @@ const competitions = [
         image: "/student images/aditya.webp",
         phone: "+91 9356950853"
       }
-    ],
-    judgingCriteria: [
-      "Round 1: Initial AI challenge testing creativity, prompt-engineering skills, and adherence to requirements (Top 10 teams qualify).",
-      "Round 2: Two surprise mini-challenges evaluated on combined score (Top 5 teams qualify).",
-      "Round 3: Final AI challenge determining winning teams (Tie-breaker conducted if required).",
-      "Evaluation & Decisions: The organizers' decision regarding evaluation, elimination, and tie-breakers is final."
     ],
     rules: [
       {
@@ -576,19 +553,20 @@ const competitions = [
   },
   {
     number: "07",
+    slug: "exquizite",
     category: "technical",
     name: "ExQuizite",
     tag: "QUIZ • GENERAL KNOWLEDGE • TRIVIA",
     tagline: "Knowledge is the key!! Quiz is the game!! ExQuizite is the way you can get fame!!",
     description:
-      "Knowledge is the key!! Quiz is the game!! ExQuizite is the way you can get fame!! Sharpen your minds, put your knowledge to the test, and compete for the title across General Knowledge, Science, Technology, History, Geography, Entertainment, Sports, and Current Affairs!",
+      "Sharpen your minds, put your knowledge to the test, and compete for the title across General Knowledge, Science, Technology, History, Geography, Entertainment, Sports, and Current Affairs!",
     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSfeS-w4UhS4nMvHKKFlaxuhF5x-600lsq93KE76veEQid8FCA/viewform?usp=publish-editor",
     eligibility: "Undergraduate and Diploma Students from professional and non-professional institutions.",
     teamPolicy: "2 participants per team. All team members must be from the same college. No intercollege teams are permitted.",
     cappingInfo: "Maximum 45 participating teams (40 regular online registrations + up to 5 on-spot registrations). Limit of 6 teams per college on FCFS basis.",
     offlineReg: "On-spot registrations: Maximum 5 additional teams on the spot (provided the 6-team-per-college limit is not exceeded).",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
-    dateTimeVenue: "Date: 15 October 2026 | Time: 01:00 PM to 05:00 PM | Mode: Offline | Venue: Preliminary Round: C19 Lab (1st Floor) | Main Round: Seminar Hall 1 (1st Floor)",
+    dateTimeVenue: "Date: 15 October 2026 | Time: 11:30 AM to 05:00 PM | Mode: Offline | Venue: Preliminary Round: C19 Lab (1st Floor) | Main Round: Seminar Hall 1 (1st Floor)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 40 confirmed regular teams)",
     facultyCoordinators: [
       { name: "Prof. Sweta Morajkar", role: "Faculty In-Charge", image: "/faculty images/Sweta.webp" },
@@ -608,18 +586,12 @@ const competitions = [
         phone: "+91 9284196477"
       }
     ],
-    judgingCriteria: [
-      "Preliminary Round 1: All 45 registered teams participate; top 20 advance to Preliminary Round 2 based on points.",
-      "Preliminary Round 2: Top 20 teams compete; exactly 5 teams qualify for the Main Round.",
-      "Main Rounds: Top 5 finalist teams battle across rounds to determine final 2 winning teams.",
-      "Tie-Breaker: Dedicated tie-breaker round; if unresolved, impartial random selection procedure."
-    ],
     rules: [
       {
         main: "Team Composition & Registration Rules",
         sub: [
           "Team Composition: All team members must be from the same college. No intercollege teams are permitted. If a team is found to have members from different colleges, they will be disqualified.",
-          "Replacement Policy: Replacement of any participant after registration is not allowed. However, in the event of an unforeseen circumstance (e.g., illness), a replacement may be permitted at the sole discretion of the organizers, provided the request is made at least 2 hours before the commencement of the Preliminary Round (i.e., by 11:00 a.m.). The organizers reserve the right to approve or reject any replacement request.",
+          "Replacement Policy: Replacement of any participant after registration is not allowed. However, in the event of an unforeseen circumstance (e.g., illness), a replacement may be permitted at the sole discretion of the organizers, provided the request is made at least 1 hour before the commencement of the Preliminary Round (i.e., by 10:30 am). The organizers reserve the right to approve or reject any replacement request.",
           "Registration Limits: There is a limit of 6 teams per college, determined on a first-come-first-serve basis. This limit applies to both regular and on-spot registrations.",
           "Maximum Teams: A maximum of 40 teams will be allowed to register through the regular online registration process. On-spot registrations: A maximum of 5 additional teams may be registered on the spot (provided the 6-team-per-college limit is not exceeded). Maximum participating teams: 45."
         ]
@@ -655,16 +627,17 @@ const competitions = [
   },
   {
     number: "08",
+    slug: "code-beyond-sight",
     category: "technical",
     name: "Code Beyond Sight",
     tag: "C/C++ • BLIND CODING • VS CODE",
     tagline: "Type Blind. Code Pure. Master Logic.",
     description:
-      "Code Beyond Sight is an intensive programming challenge designed to test raw coding proficiency, memory, and blind-typing execution. Participants compete in teams to solve problems under strict constraints, utilizing C or C++ in a VS Code and MinGW environment.",
+      "Code Beyond Sight is a team-based programming competition that challenges participants to test their coding skills, memory, logic, and typing accuracy. Across 3 rounds, participants will solve coding, debugging, and problem-solving challenges using C/C++ in VS Code. During the blind-coding phases, the monitor will be switched OFF, requiring participants to code without viewing the screen and rely on their knowledge and memory.",
     registerLink: "https://docs.google.com/forms/d/1xjlQdqf8DKt7OQNqwnZRKZPhk4lXNauxUPFDIkvYz-g/edit",
     eligibility: "Open to Undergraduate, Diploma and Higher Secondary students from professional and non-professional institutions.",
     teamPolicy: "Teams consist of 2 partners. All team members must be from the same college (interdepartmental teams allowed). There is no restriction on the number of teams per college.",
-    cappingInfo: "Participation is limited to a maximum of 20 teams on a first-come, first-serve basis.",
+    cappingInfo: "Participation is limited to a maximum of 20 teams on a first-come, first-serve basis. An additional 5 teams will be placed on the waiting list.",
     offlineReg: "Spot registration available at venue 30 minutes prior to event start, subject to slot availability.",
     prizeMoney: "1st Place: ₹2,000 + Certificate | 2nd Place: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 15 October 2026 | Time: 11:00 AM to 03:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
@@ -687,12 +660,6 @@ const competitions = [
         phone: "+91 70387 96120"
       }
     ],
-    judgingCriteria: [
-      "Point System: Teams compete for points based on functional logic, syntactic correctness, and code execution under blind conditions.",
-      "Round 1 to Round 2: Out of 20 registered teams, the top 8 teams with highest points qualify for Round 2.",
-      "Round 2 to Main Round: Top 4 teams from Round 2 advance to Main Round (final 2 winning teams determined).",
-      "Tie-Breaker: In event of points tie, completion time, code cleanliness, and output correctness determine winner."
-    ],
     rules: [
       {
         main: "General Rules & Environment",
@@ -712,8 +679,8 @@ const competitions = [
         sub: [
           "Teams consist of 2 partners. All team members must be from the same college (interdepartmental teams allowed).",
           "There is no restriction on the number of teams per college.",
-          "Participation is limited to a maximum of 20 teams on a first-come, first-serve basis.",
-          "Registration will be conducted through an online form and will close at the deadline, or earlier if the maximum number of teams is reached.",
+          "Participation is limited to a maximum of 20 teams on a first-come, first-serve basis. An additional 5 teams will be placed on the waiting list.",
+          "If a confirmed team wishes to withdraw from the competition, they must inform the organizers on or before 10 October 2026. This will allow the organizers to offer the vacant slot to a team from the waiting list.",
           "After successfully submitting the registration form, participants will receive a confirmation email on their registered email address.",
           "Replacement Policy: Replacement of any participant after registration is not allowed. However, in the event of an unforeseen circumstance, a replacement may be permitted at the sole discretion of the organizers, provided the request is made at least 1 Day before the commencement of Round 1."
         ]
@@ -739,6 +706,7 @@ const competitions = [
   },
   {
     number: "09",
+    slug: "veil-of-secrets",
     category: "non-technical",
     name: "Veil of Secrets",
     tag: "MYSTERY • LOGIC • ESCAPE ROOM",
@@ -747,8 +715,8 @@ const competitions = [
       "Embark on a mystery quest combining logical aptitude puzzles, a campus-wide treasure hunt, and a fast-paced escape room experience.",
     registerLink: "https://forms.gle/cDJRV8aHxJZU7U1b9",
     eligibility: "Students from higher secondary schools, undergraduate and diploma holders from professional and non-professional institutions.",
-    teamPolicy: "3 Members per team. Registration form should be filled by team leaders only once.",
-    cappingInfo: "Maximum participation capped on a first-come, first-served basis.",
+    teamPolicy: "3 Members per team. All team members must be from the same college. No intercollege teams are permitted. Registration form should be filled by team leaders only once.",
+    cappingInfo: "Maximum 30 teams through online registration on a first-come, first-served basis. Limit of 5 teams per college.",
     offlineReg: "Online registration mandatory. No spot/offline registration.",
     prizeMoney: "1st: ₹2,000 + Certificate | 2nd: ₹1,000 + Certificate",
     dateTimeVenue: "Date: 16 October 2026 | Time: 09:30 AM to 01:00 PM | Mode: Offline | Venue: C3, C4 Lab (DBCE)",
@@ -771,18 +739,21 @@ const competitions = [
         phone: "+91 9923515005"
       }
     ],
-    judgingCriteria: [
-      "Round 1 (Aptitude & Puzzles): Maximum score and minimum time taken within 60 minutes (Top 8 to 9 teams advance).",
-      "Round 2 (Treasure Hunt & Escape Room): First teams to collect all clues (FCFS) enter escape room; performance within 10–12 minute escape room activities.",
-      "Final Judgment: Overall scores and completion timestamps."
-    ],
     rules: [
       {
-        main: "General Rules",
+        main: "Team Composition & Registration Rules",
         sub: [
+          "Team Composition: All team members must be from the same college. No intercollege teams are permitted. If a team is found to have members from different colleges, they will be disqualified.",
+          "Registration Limits: There is a limit of 5 teams per college, determined on a first-come-first-serve basis.",
+          "Maximum Teams: A maximum of 30 teams will be allowed to register through the regular online registration process.",
           "Registration will be through ONLINE form.",
           "The registration form should be filled by team leaders only once. Any team submitting more than one form will be disqualified.",
-          "Only team leaders will be added to the WhatsApp group so make sure the contact details are correct.",
+          "Only team leaders will be added to the WhatsApp group so make sure the contact details are correct."
+        ]
+      },
+      {
+        main: "General Instructions",
+        sub: [
           "All team members should report to the venue 15 minutes before the start of the event. Late arrivals may result in a reduced playtime.",
           "The event consists of 2 rounds.",
           "All team members should carry their valid institute ID cards.",
@@ -823,6 +794,7 @@ const competitions = [
   },
   {
     number: "10",
+    slug: "framed",
     category: "non-technical",
     name: "Framed",
     tag: "PHOTOGRAPHY • STORY • CREATIVITY",
@@ -935,7 +907,7 @@ const scheduleData = {
         {
           location: "ONLINE",
           slots: [
-            { colStart: 0, colspan: 9, label: "REEL IT FEEL IT (ONLINE - SUBMISSION BY 8TH OCT, 11:59 PM)", color: "purple" }
+            { colStart: 0, colspan: 9, label: "REEL IT FEEL IT (ONLINE SUBMISSION ENDS 8TH OCT, 11:59 PM)", color: "purple" }
           ]
         },
         {
@@ -965,7 +937,7 @@ const scheduleData = {
         {
           location: "C19 LAB & SEMINAR HALL 1 (1st FLOOR)",
           slots: [
-            { colStart: 5, colspan: 4, label: "EXQUIZITE (QUIZ)", color: "yellow" }
+            { colStart: 3, colspan: 6, label: "EXQUIZITE (QUIZ)", color: "yellow" }
           ]
         }
       ]
@@ -1448,13 +1420,15 @@ function EventDetailPage({ competition, onBack }) {
               <p className="banner-subtext"><strong>Capacity & Capping:</strong> {competition.cappingInfo}</p>
             </div>
 
-            <div className="modal-banner">
-              <div className="banner-header">
-                <i className="ri-user-add-line" />
-                <span>OFFLINE REGISTRATION CRITERIA</span>
+            {competition.offlineReg && (
+              <div className="modal-banner">
+                <div className="banner-header">
+                  <i className="ri-user-add-line" />
+                  <span>OFFLINE REGISTRATION CRITERIA</span>
+                </div>
+                <p>{competition.offlineReg}</p>
               </div>
-              <p>{competition.offlineReg}</p>
-            </div>
+            )}
 
             <div className="modal-banner-grid">
               <div className="modal-banner compact-banner">
@@ -1637,16 +1611,8 @@ function CompetitionCard({ competition, onInfo }) {
       </div>
 
       <div className="competition-card-header">
-        <span className="competition-card-number">
-          {competition.number}
-        </span>
-
         <span className={`competition-card-category-tag ${competition.category}`}>
           {competition.category === "technical" ? "TECHNICAL" : "NON-TECH"}
-        </span>
-
-        <span className="competition-card-code">
-          EVENT_{competition.number}
         </span>
       </div>
 
@@ -1702,6 +1668,194 @@ export default function CompetitionsSection() {
   const [showSchedule, setShowSchedule] = useState(false);
   const [activeCategory, setActiveCategory] = useState("all");
 
+  const stateRef = useRef({
+    selectedCompetition,
+    showGeneralRules,
+    showSchedule,
+  });
+
+  useEffect(() => {
+    stateRef.current = {
+      selectedCompetition,
+      showGeneralRules,
+      showSchedule,
+    };
+  }, [selectedCompetition, showGeneralRules, showSchedule]);
+
+  // Deep-link helper to find competition by slug or number
+  const findCompetitionByParam = useCallback((param) => {
+    if (!param) return null;
+    const clean = param.toLowerCase().trim().replace(/^#/, "").replace(/^event-/, "");
+    return competitions.find((c) => {
+      const slug = c.slug || c.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+      return (
+        slug === clean ||
+        c.number === clean ||
+        c.name.toLowerCase() === clean ||
+        c.name.toLowerCase().replace(/[^a-z0-9]+/g, "") === clean.replace(/[^a-z0-9]+/g, "")
+      );
+    });
+  }, []);
+
+  // Check URL on initial load for direct event link (e.g. ?event=inspirathon or ?event=code-clash)
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const eventParam = params.get("event") || params.get("competition") || (window.location.hash ? window.location.hash.replace(/^#/, "") : null);
+      if (eventParam) {
+        const found = findCompetitionByParam(eventParam);
+        if (found) {
+          setSelectedCompetition(found);
+          const slug = found.slug || found.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+          const newUrl = new URL(window.location.href);
+          newUrl.searchParams.set("event", slug);
+          window.history.replaceState(
+            { inspirusModal: "competition", number: found.number, slug },
+            "",
+            newUrl.pathname + newUrl.search + newUrl.hash
+          );
+        }
+      }
+    } catch {
+      // Fallback silently if URLSearchParams fails
+    }
+  }, [findCompetitionByParam]);
+
+  // Lock body scroll when modal/detail page is open
+  useEffect(() => {
+    if (selectedCompetition || showGeneralRules || showSchedule) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedCompetition, showGeneralRules, showSchedule]);
+
+  // Push history state helpers so browser/mobile Back button navigates back to main page
+  const openGeneralRules = useCallback(() => {
+    window.history.pushState({ inspirusModal: "generalRules" }, "");
+    setShowGeneralRules(true);
+  }, []);
+
+  const closeGeneralRules = useCallback((fromPopState = false) => {
+    setShowGeneralRules(false);
+    if (!fromPopState && window.history.state?.inspirusModal === "generalRules") {
+      window.history.back();
+    }
+  }, []);
+
+  const openSchedule = useCallback(() => {
+    window.history.pushState({ inspirusModal: "schedule" }, "");
+    setShowSchedule(true);
+  }, []);
+
+  const closeSchedule = useCallback((fromPopState = false) => {
+    setShowSchedule(false);
+    if (!fromPopState && window.history.state?.inspirusModal === "schedule") {
+      window.history.back();
+    }
+  }, []);
+
+  const openCompetition = useCallback((comp) => {
+    const slug = comp.slug || comp.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    try {
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set("event", slug);
+      window.history.pushState(
+        { inspirusModal: "competition", number: comp.number, slug },
+        "",
+        newUrl.pathname + newUrl.search + newUrl.hash
+      );
+    } catch {
+      window.history.pushState({ inspirusModal: "competition", number: comp.number, slug }, "");
+    }
+    setSelectedCompetition(comp);
+  }, []);
+
+  const closeCompetition = useCallback((fromPopState = false) => {
+    setSelectedCompetition(null);
+    if (!fromPopState) {
+      if (window.history.state?.inspirusModal === "competition") {
+        window.history.back();
+      } else {
+        try {
+          const newUrl = new URL(window.location.href);
+          newUrl.searchParams.delete("event");
+          newUrl.searchParams.delete("competition");
+          const cleanSearch = newUrl.searchParams.toString();
+          const searchPart = cleanSearch ? `?${cleanSearch}` : "";
+          window.history.replaceState({}, "", newUrl.pathname + searchPart + newUrl.hash);
+        } catch {
+          // Fallback
+        }
+      }
+    }
+  }, []);
+
+  // Listen to popstate (back button / mobile back gesture) & Escape key
+  useEffect(() => {
+    const handlePopState = (event) => {
+      const modalType = event.state?.inspirusModal;
+
+      if (modalType === "generalRules") {
+        setShowGeneralRules(true);
+        setShowSchedule(false);
+        setSelectedCompetition(null);
+      } else if (modalType === "schedule") {
+        setShowSchedule(true);
+        setShowGeneralRules(false);
+        setSelectedCompetition(null);
+      } else if (modalType === "competition") {
+        const found = event.state.number
+          ? competitions.find((c) => c.number === event.state.number)
+          : findCompetitionByParam(event.state.slug);
+        setSelectedCompetition(found || null);
+        setShowGeneralRules(false);
+        setShowSchedule(false);
+      } else {
+        // Also check if there's a param in current URL
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const eventParam = params.get("event") || params.get("competition");
+          if (eventParam) {
+            const found = findCompetitionByParam(eventParam);
+            if (found) {
+              setSelectedCompetition(found);
+              return;
+            }
+          }
+        } catch {
+          // Ignore
+        }
+        // Returned to base page state -> Close all modals/views
+        if (stateRef.current.showGeneralRules) setShowGeneralRules(false);
+        if (stateRef.current.showSchedule) setShowSchedule(false);
+        if (stateRef.current.selectedCompetition) setSelectedCompetition(null);
+      }
+    };
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        if (stateRef.current.showGeneralRules) {
+          closeGeneralRules();
+        } else if (stateRef.current.showSchedule) {
+          closeSchedule();
+        } else if (stateRef.current.selectedCompetition) {
+          closeCompetition();
+        }
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [closeGeneralRules, closeSchedule, closeCompetition, findCompetitionByParam]);
+
   const technicalEvents = competitions.filter((c) => c.category === "technical");
   const nonTechnicalEvents = competitions.filter((c) => c.category === "non-technical");
 
@@ -1732,7 +1886,7 @@ export default function CompetitionsSection() {
             <button
               type="button"
               className="general-rules-btn"
-              onClick={() => setShowGeneralRules(true)}
+              onClick={openGeneralRules}
             >
               <i className="ri-file-text-line" />
               <span>GENERAL RULES</span>
@@ -1741,7 +1895,7 @@ export default function CompetitionsSection() {
             <button
               type="button"
               className="schedule-btn"
-              onClick={() => setShowSchedule(true)}
+              onClick={openSchedule}
             >
               <i className="ri-calendar-schedule-line" />
               <span>SCHEDULE</span>
@@ -1802,7 +1956,7 @@ export default function CompetitionsSection() {
                 <CompetitionCard
                   key={competition.number}
                   competition={competition}
-                  onInfo={setSelectedCompetition}
+                  onInfo={openCompetition}
                 />
               ))}
             </div>
@@ -1829,7 +1983,7 @@ export default function CompetitionsSection() {
                 <CompetitionCard
                   key={competition.number}
                   competition={competition}
-                  onInfo={setSelectedCompetition}
+                  onInfo={openCompetition}
                 />
               ))}
             </div>
@@ -1843,17 +1997,17 @@ export default function CompetitionsSection() {
       </section>
 
       {showGeneralRules && (
-        <GeneralRulesModal onClose={() => setShowGeneralRules(false)} />
+        <GeneralRulesModal onClose={() => closeGeneralRules()} />
       )}
 
       {showSchedule && (
-        <ScheduleModal onClose={() => setShowSchedule(false)} />
+        <ScheduleModal onClose={() => closeSchedule()} />
       )}
 
       {selectedCompetition && (
         <EventDetailPage
           competition={selectedCompetition}
-          onBack={() => setSelectedCompetition(null)}
+          onBack={() => closeCompetition()}
         />
       )}
     </>

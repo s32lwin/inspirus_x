@@ -158,14 +158,29 @@ export default function GallerySection() {
   };
 
   const openLightbox = (index) => {
+    window.history.pushState({ inspirusModal: "galleryLightbox" }, "");
     setLightboxIndex(index);
     document.body.style.overflow = "hidden";
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = (fromPopState = false) => {
     setLightboxIndex(null);
     document.body.style.overflow = "";
+    if (!fromPopState && window.history.state?.inspirusModal === "galleryLightbox") {
+      window.history.back();
+    }
   };
+
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (event.state?.inspirusModal !== "galleryLightbox") {
+        setLightboxIndex(null);
+        document.body.style.overflow = "";
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   const nextLightbox = useCallback(() => {
     setLightboxIndex((prev) => (prev + 1) % total);
