@@ -42,7 +42,7 @@ export default function CustomCursor() {
         target &&
         (target instanceof HTMLElement || target instanceof SVGElement) &&
         target.closest(
-          'a, button, input, textarea, select, [role="button"], .cursor-pointer, .clickable, .competition-card, .team-card, .gallery-glass-card, .general-rules-btn, .schedule-btn, .category-tab-btn, .footer-social-btn, .footer-back-to-top, .lines, .detail-back-btn, .detail-register-btn, .coordinator-whatsapp-btn, .footer-register-btn, .footer-back-btn, .competition-modal-close, .competition-modal-done'
+          'a, button, input, textarea, select, [role="button"], .cursor-pointer, .clickable, .competition-card, .team-card, .gallery-glass-card, .general-rules-btn, .schedule-btn, .category-tab-btn, .footer-social-btn, .footer-back-to-top, .lines, .detail-back-btn, .detail-register-btn, .coordinator-whatsapp-btn, .footer-register-btn, .footer-back-btn, .competition-modal-close, .competition-modal-done, .sch-switch-btn, .sch-day-btn, .schedule-card'
         )
       ) {
         setIsHovered(true);

@@ -39,7 +39,7 @@ export default function Footer() {
               </span>
               <div className="footer-logo-wrap">
                 <img
-                  src="/logos/inspirusx.jpeg"
+                  src="logos/inspirusx.jpeg"
                   alt="Inspirus-X - Make It Happen"
                   className="footer-logo-img"
                 />

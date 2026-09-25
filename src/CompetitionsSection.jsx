@@ -47,23 +47,23 @@ const competitions = [
     dateTimeVenue: "Date: 15 & 16 October 2026 | Timing: 15th October 09:00 AM to 16th October 01:00 PM (24 Hours Hackathon with Judgment) | Mode: Offline | Venue: Auditorium (2nd Floor)",
     registrationDeadline: "1st October 2026 at 5:00 PM",
     facultyCoordinators: [
-      { name: "Prof. Amey Shet Tilve", role: "Faculty In-Charge", image: "/faculty images/amey.webp" },
-      { name: "Prof. Janhavi Naik", role: "Faculty In-Charge", image: "/faculty images/Janhavi.webp" },
-      { name: "Mr. Amit Sapkal", role: "Staff Incharge", image: "/faculty images/AmitSapkal_26.webp" },
-      { name: "Mr. Romeo D'Cruz", role: "Staff Incharge", image: "/faculty images/RomeoDaCruz.webp" },
-      { name: "Mr. Antonio Nevis", role: "Staff Incharge", image: "/faculty images/AntonioNoronhaNeves.webp" }
+      { name: "Prof. Amey Shet Tilve", role: "Faculty In-Charge", image: "faculty images/amey.webp" },
+      { name: "Prof. Janhavi Naik", role: "Faculty In-Charge", image: "faculty images/Janhavi.webp" },
+      { name: "Mr. Amit Sapkal", role: "Staff Incharge", image: "faculty images/AmitSapkal_26.webp" },
+      { name: "Mr. Romeo D'Cruz", role: "Staff Incharge", image: "faculty images/RomeoDaCruz.webp" },
+      { name: "Mr. Antonio Nevis", role: "Staff Incharge", image: "faculty images/AntonioNoronhaNeves.webp" }
     ],
     coordinators: [
       {
         name: "Reuel Luis",
         role: "Student Coordinator",
-        image: "/student images/Reuel_Luis.webp",
+        image: "student images/Reuel_Luis.webp",
         phone: "+91 9359587415"
       },
       {
         name: "Analee Martins",
         role: "Student Coordinator",
-        image: "/student images/Analee Martins SE.webp",
+        image: "student images/Analee Martins SE.webp",
         phone: "+91 8999294903"
       }
     ],
@@ -137,20 +137,20 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 12:00 PM to 04:00 PM | Mode: Offline | Venue: C2, C3 Lab (2nd Floor)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 18 confirmed teams)",
     facultyCoordinators: [
-      { name: "Prof. Siya Khandeparkar", role: "Faculty In-Charge", image: "/faculty images/Siya.webp" },
-      { name: "Mrs. Sandra Mazarello", role: "Staff Incharge", image: "/faculty images/SandraMazarello.webp" }
+      { name: "Prof. Siya Khandeparkar", role: "Faculty In-Charge", image: "faculty images/Siya.webp" },
+      { name: "Mrs. Sandra Mazarello", role: "Staff Incharge", image: "faculty images/SandraMazarello.webp" }
     ],
     coordinators: [
       {
         name: "Shaun Fernandes",
         role: "Student Coordinator",
-        image: "/student images/Shaun.webp",
+        image: "student images/Shaun.webp",
         phone: "+91 9359936029"
       },
       {
         name: "Devanshu Yelurkar",
         role: "Student Coordinator",
-        image: "/student images/Devanshu Yelurkar.webp",
+        image: "student images/Devanshu Yelurkar.webp",
         phone: "+91 9373814674"
       }
     ],
@@ -226,20 +226,20 @@ const competitions = [
     dateTimeVenue: "Date: 16 October 2026 | Time: 09:30 AM to 01:00 PM | Mode: Offline | Venue: C1, C2 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
-      { name: "Prof. Manisha Fal Dessai", role: "Faculty In-Charge", image: "/faculty images/Manisha.webp" },
-      { name: "Prof. Karishma Tuenkar", role: "Faculty In-Charge", image: "/faculty images/Karishma.webp" }
+      { name: "Prof. Manisha Fal Dessai", role: "Faculty In-Charge", image: "faculty images/Manisha.webp" },
+      { name: "Prof. Karishma Tuenkar", role: "Faculty In-Charge", image: "faculty images/Karishma.webp" }
     ],
     coordinators: [
       {
         name: "Devanshi Rami",
         role: "Student Coordinator",
-        image: "/student images/Devanshi.webp",
+        image: "student images/Devanshi.webp",
         phone: "+91 88064 32239"
       },
       {
         name: "Mansi Mishra",
         role: "Student Coordinator",
-        image: "/student images/Mansi Mishra SE.webp",
+        image: "student images/Mansi Mishra SE.webp",
         phone: "+91 74998 42448"
       }
     ],
@@ -323,20 +323,20 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 10:00 AM to 04:00 PM | Mode: Offline | Venue: C4, C9 Lab",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
-      { name: "Prof. Mithil Parab", role: "Faculty In-Charge", image: "/faculty images/Mithil_parab.webp" },
-      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.webp" }
+      { name: "Prof. Mithil Parab", role: "Faculty In-Charge", image: "faculty images/Mithil_parab.webp" },
+      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "faculty images/duval.webp" }
     ],
     coordinators: [
       {
         name: "Rushank Natekar",
         role: "Student Coordinator",
-        image: "/student images/rushank.webp",
+        image: "student images/rushank.webp",
         phone: "+91 9022656976"
       },
       {
         name: "Pranita Govekar",
         role: "Student Coordinator",
-        image: "/student images/pranita.webp",
+        image: "student images/pranita.webp",
         phone: "+91 9284183785"
       }
     ],
@@ -406,19 +406,19 @@ const competitions = [
     dateTimeVenue: "Reel Submission Deadline: 8th October 2026 at 11:59 PM | Mode: Online | Platform: Instagram (@inspirus.reels)",
     registrationDeadline: "6th October 2026 at 05:00 PM",
     facultyCoordinators: [
-      { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" }
+      { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "faculty images/Floyd.webp" }
     ],
     coordinators: [
       {
         name: "Pavitra Nayak",
         role: "Student Coordinator",
-        image: "/student images/Pavitra nayak.webp",
+        image: "student images/Pavitra nayak.webp",
         phone: "+91 9529231516"
       },
       {
         name: "Prasanna Pednekar",
         role: "Student Coordinator",
-        image: "/student images/Prasanna Pednekar_.webp",
+        image: "student images/Prasanna Pednekar_.webp",
         phone: "+91 9404427450"
       }
     ],
@@ -485,20 +485,20 @@ const competitions = [
     dateTimeVenue: "Date: 16 October 2026 | Time: 09:30 AM to 01:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
-      { name: "Prof. Amey Kerkar", role: "Faculty In-Charge", image: "/faculty images/Amey_Kerkar.webp" },
-      { name: "Dr. Norman Dias", role: "Faculty In-Charge", image: "/faculty images/Norman.webp" }
+      { name: "Prof. Amey Kerkar", role: "Faculty In-Charge", image: "faculty images/Amey_Kerkar.webp" },
+      { name: "Dr. Norman Dias", role: "Faculty In-Charge", image: "faculty images/Norman.webp" }
     ],
     coordinators: [
       {
         name: "Shanaia Martis",
         role: "Student Coordinator",
-        image: "/student images/Shanaia Martis.webp",
+        image: "student images/Shanaia Martis.webp",
         phone: "+91 9356966736"
       },
       {
         name: "Aditya Bingekar",
         role: "Student Coordinator",
-        image: "/student images/aditya.webp",
+        image: "student images/aditya.webp",
         phone: "+91 9356950853"
       }
     ],
@@ -569,20 +569,20 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 11:30 AM to 05:00 PM | Mode: Offline | Venue: Preliminary Round: C19 Lab (1st Floor) | Main Round: Seminar Hall 1 (1st Floor)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 40 confirmed regular teams)",
     facultyCoordinators: [
-      { name: "Prof. Sweta Morajkar", role: "Faculty In-Charge", image: "/faculty images/Sweta.webp" },
-      { name: "Prof. Christina Barretto", role: "Faculty In-Charge", image: "/faculty images/Christina.webp" }
+      { name: "Prof. Sweta Morajkar", role: "Faculty In-Charge", image: "faculty images/Sweta.webp" },
+      { name: "Prof. Christina Barretto", role: "Faculty In-Charge", image: "faculty images/Christina.webp" }
     ],
     coordinators: [
       {
         name: "Vedhant Sawant",
         role: "Student Coordinator",
-        image: "/student images/vedhant_.webp",
+        image: "student images/vedhant_.webp",
         phone: "+91 9373594972"
       },
       {
         name: "Ishika Sawardekar",
         role: "Student Coordinator",
-        image: "/student images/Ishika_.webp",
+        image: "student images/Ishika_.webp",
         phone: "+91 9284196477"
       }
     ],
@@ -643,20 +643,20 @@ const competitions = [
     dateTimeVenue: "Date: 15 October 2026 | Time: 11:00 AM to 03:00 PM | Mode: Offline | Venue: C5, C6 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM (or upon 20 confirmed teams)",
     facultyCoordinators: [
-      { name: "Dr. Amrita Naik", role: "Faculty In-Charge", image: "/faculty images/Amrita_Naik.webp" },
+      { name: "Dr. Amrita Naik", role: "Faculty In-Charge", image: "faculty images/Amrita_Naik.webp" },
       { name: "Prof. Vidhya N.", role: "Faculty In-Charge" }
     ],
     coordinators: [
       {
         name: "Parima Tendulkar",
         role: "Student Coordinator",
-        image: "/student images/Parima Tendulkar (TE coordinator).webp",
+        image: "student images/Parima Tendulkar (TE coordinator).webp",
         phone: "+91 9404930645"
       },
       {
         name: "Meera Anthony",
         role: "Student Coordinator",
-        image: "/student images/Meera Antony.webp",
+        image: "student images/Meera Antony.webp",
         phone: "+91 70387 96120"
       }
     ],
@@ -722,20 +722,20 @@ const competitions = [
     dateTimeVenue: "Date: 16 October 2026 | Time: 09:30 AM to 01:00 PM | Mode: Offline | Venue: C3, C4 Lab (DBCE)",
     registrationDeadline: "10th October 2026 at 05:00 PM",
     facultyCoordinators: [
-      { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "/faculty images/Floyd.webp" },
-      { name: "Prof. Merwyn D'Souza", role: "Faculty In-Charge", image: "/faculty images/Marwyn_Dsouza.webp" }
+      { name: "Prof. Floyd Fernandes", role: "Faculty In-Charge", image: "faculty images/Floyd.webp" },
+      { name: "Prof. Merwyn D'Souza", role: "Faculty In-Charge", image: "faculty images/Marwyn_Dsouza.webp" }
     ],
     coordinators: [
       {
         name: "Debbie Mascarenhas",
         role: "Student Coordinator",
-        image: "/student images/Debbie Fatima Mascarenhas.webp",
+        image: "student images/Debbie Fatima Mascarenhas.webp",
         phone: "+91 9209231065"
       },
       {
         name: "Amogh Tendulkar",
         role: "Student Coordinator",
-        image: "/student images/Amogh Ulhas Tendulkar_.webp",
+        image: "student images/Amogh Ulhas Tendulkar_.webp",
         phone: "+91 9923515005"
       }
     ],
@@ -810,19 +810,19 @@ const competitions = [
     dateTimeVenue: "Date: 15 & 16 October 2026 | Mode: Online Mode | Venue: Online Submission (Google Form)",
     registrationDeadline: "10th October 2026 at 05:00 PM",
     facultyCoordinators: [
-      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "/faculty images/duval.webp" }
+      { name: "Prof. Duval Gomes", role: "Faculty In-Charge", image: "faculty images/duval.webp" }
     ],
     coordinators: [
       {
         name: "Aryan Adelker",
         role: "Student Coordinator",
-        image: "/student images/Aryan Adelker.webp",
+        image: "student images/Aryan Adelker.webp",
         phone: "+91 8788217993"
       },
       {
         name: "Arnav Dessai",
         role: "Student Coordinator",
-        image: "/student images/arnav.webp",
+        image: "student images/arnav.webp",
         phone: "+91 9356738893"
       }
     ],
@@ -992,6 +992,151 @@ const scheduleData = {
   ]
 };
 
+const scheduleTimeline = [
+  {
+    dayId: "day1",
+    dayLabel: "15TH OCT",
+    dayTitle: "Day 1 — Thursday, 15th October 2026",
+    events: [
+      {
+        time: "09:00 AM – 01:00 PM",
+        title: "Registration Desk",
+        venue: "SE Civil Classroom",
+        color: "pink",
+        category: "Registration Desk",
+        slug: null
+      },
+      {
+        time: "09:00 AM (Overnight to 16th Oct, 1:00 PM)",
+        title: "Inspirathon (24 Hours Hackathon)",
+        venue: "Auditorium (2nd Floor)",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "inspirathon"
+      },
+      {
+        time: "09:30 AM – 10:00 AM",
+        title: "Grand Inauguration Ceremony",
+        venue: "Auditorium (2nd Floor)",
+        color: "teal",
+        category: "Inauguration",
+        slug: null
+      },
+      {
+        time: "10:00 AM – 04:00 PM",
+        title: "Technomorph (UI/UX Designing)",
+        venue: "C4, C9 Lab",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "technomorph"
+      },
+      {
+        time: "11:00 AM – 03:00 PM",
+        title: "Code Beyond Sight (Blind Coding)",
+        venue: "C5, C6 Lab (DBCE)",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "code-beyond-sight"
+      },
+      {
+        time: "11:30 AM – 05:00 PM",
+        title: "ExQuizite (Quiz Competition)",
+        venue: "Preliminary: C19 Lab (1st Floor) | Main: Seminar Hall 1 (1st Floor)",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "exquizite"
+      },
+      {
+        time: "12:00 PM – 04:00 PM",
+        title: "Code Clash (Code Fiesta)",
+        venue: "C2, C3 Lab (2nd Floor)",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "code-clash"
+      },
+      {
+        time: "Submission Ended 8th Oct, 11:59 PM",
+        title: "Reel It Feel It (Instagram Reel Making)",
+        venue: "Online (@inspirus.reels)",
+        color: "purple",
+        category: "Non-Technical (Online)",
+        slug: "reel-it-feel-it"
+      },
+      {
+        time: "Online Submission",
+        title: "Framed (Photography Competition)",
+        venue: "Online Submission (Google Form)",
+        color: "purple",
+        category: "Non-Technical (Online)",
+        slug: "framed"
+      }
+    ]
+  },
+  {
+    dayId: "day2",
+    dayLabel: "16TH OCT",
+    dayTitle: "Day 2 — Friday, 16th October 2026",
+    events: [
+      {
+        time: "09:00 AM – 11:00 AM",
+        title: "Registration Desk",
+        venue: "SE Civil Classroom",
+        color: "pink",
+        category: "Registration Desk",
+        slug: null
+      },
+      {
+        time: "09:00 AM – 01:00 PM",
+        title: "Inspirathon (Hackathon Demos & Final Judgment)",
+        venue: "Auditorium (2nd Floor)",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "inspirathon"
+      },
+      {
+        time: "09:30 AM – 01:00 PM",
+        title: "Retrieval Sages (Logical Reasoning & Coding)",
+        venue: "C1, C2 Lab (DBCE)",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "retrieval-sages"
+      },
+      {
+        time: "09:30 AM – 01:00 PM",
+        title: "Veil of Secrets (Escape Room & Mystery Hunt)",
+        venue: "C3, C4 Lab (DBCE)",
+        color: "yellow",
+        category: "Non-Technical Competition",
+        slug: "veil-of-secrets"
+      },
+      {
+        time: "09:30 AM – 01:00 PM",
+        title: "Prompt Wars (AI Engineering)",
+        venue: "C5, C6 Lab (DBCE)",
+        color: "yellow",
+        category: "Technical Competition",
+        slug: "prompt-wars"
+      },
+      {
+        time: "Online Submission Review",
+        title: "Framed (Photography Competition)",
+        venue: "Online Submission (Google Form)",
+        color: "purple",
+        category: "Non-Technical (Online)",
+        slug: "framed"
+      },
+      {
+        time: "03:30 PM – 05:00 PM",
+        title: "Grand Valedictory Function & Prize Distribution",
+        venue: "Auditorium (2nd Floor)",
+        color: "teal",
+        category: "Valedictory Ceremony",
+        slug: null
+      }
+    ]
+  }
+];
+
 const COLOR_MAP = {
   teal: { bg: "#00897b", text: "#fff", label: "Inauguration / Valedictory" },
   yellow: { bg: "#f9a825", text: "#111", label: "Competitions" },
@@ -999,9 +1144,243 @@ const COLOR_MAP = {
   pink: { bg: "#d4739a", text: "#fff", label: "Registration Desk" },
 };
 
-function ScheduleModal({ onClose }) {
+function downloadScheduleImage() {
+  const width = 2400;
+  const height = 1750;
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  // Background gradient
+  const bgGrad = ctx.createLinearGradient(0, 0, width, height);
+  bgGrad.addColorStop(0, "#08090d");
+  bgGrad.addColorStop(0.5, "#0e1017");
+  bgGrad.addColorStop(1, "#050608");
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, width, height);
+
+  // Background Grid Lines
+  ctx.strokeStyle = "rgba(0, 229, 204, 0.04)";
+  ctx.lineWidth = 1;
+  const gridSize = 60;
+  for (let x = 0; x < width; x += gridSize) {
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, height);
+    ctx.stroke();
+  }
+  for (let y = 0; y < height; y += gridSize) {
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(width, y);
+    ctx.stroke();
+  }
+
+  // Outer Border & Accents
+  ctx.strokeStyle = "rgba(0, 229, 204, 0.4)";
+  ctx.lineWidth = 4;
+  ctx.strokeRect(30, 30, width - 60, height - 60);
+
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(40, 40, width - 80, height - 80);
+
+  // Corner tech ticks
+  const corners = [
+    [40, 40],
+    [width - 40, 40],
+    [40, height - 40],
+    [width - 40, height - 40]
+  ];
+  corners.forEach(([cx, cy]) => {
+    ctx.strokeStyle = "#00e5cc";
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    const len = 30;
+    const dx = cx < width / 2 ? 1 : -1;
+    const dy = cy < height / 2 ? 1 : -1;
+    ctx.moveTo(cx, cy + dy * len);
+    ctx.lineTo(cx, cy);
+    ctx.lineTo(cx + dx * len, cy);
+    ctx.stroke();
+  });
+
+  // Header
+  ctx.textAlign = "center";
+  ctx.font = "bold 22px 'Courier New', monospace";
+  ctx.fillStyle = "#00e5cc";
+  ctx.fillText("DON BOSCO COLLEGE OF ENGINEERING • DEPT. OF COMPUTER ENGINEERING", width / 2, 90);
+
+  ctx.font = "900 60px Arial, sans-serif";
+  const titleGrad = ctx.createLinearGradient(width / 2 - 400, 110, width / 2 + 400, 170);
+  titleGrad.addColorStop(0, "#ffffff");
+  titleGrad.addColorStop(0.7, "#00e5cc");
+  titleGrad.addColorStop(1, "#38bdf8");
+  ctx.fillStyle = titleGrad;
+  ctx.fillText("INSPIRUS 2K26 — FESTIVAL SCHEDULE", width / 2, 160);
+
+  ctx.font = "600 22px 'Courier New', monospace";
+  ctx.fillStyle = "rgba(255, 255, 255, 0.75)";
+  ctx.fillText("OFFICIAL 2-DAY EVENT & VENUE DIRECTORY // 15TH & 16TH OCTOBER 2026", width / 2, 202);
+
+  // Columns for Day 1 and Day 2
+  const colWidth = 1080;
+  const colTop = 236;
+  const colHeight = 1360;
+
+  scheduleTimeline.forEach((group, gIdx) => {
+    const colX = gIdx === 0 ? 80 : 1240;
+
+    // Group Background Card
+    ctx.fillStyle = "rgba(18, 20, 28, 0.85)";
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.12)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(colX, colTop, colWidth, colHeight, 16);
+    ctx.fill();
+    ctx.stroke();
+
+    // Group Header Banner
+    const isDay1 = gIdx === 0;
+    const bannerGrad = ctx.createLinearGradient(colX, colTop, colX + colWidth, colTop);
+    if (isDay1) {
+      bannerGrad.addColorStop(0, "rgba(0, 229, 204, 0.25)");
+      bannerGrad.addColorStop(1, "rgba(0, 137, 123, 0.05)");
+    } else {
+      bannerGrad.addColorStop(0, "rgba(249, 168, 37, 0.25)");
+      bannerGrad.addColorStop(1, "rgba(212, 115, 154, 0.05)");
+    }
+    ctx.fillStyle = bannerGrad;
+    ctx.beginPath();
+    ctx.roundRect(colX, colTop, colWidth, 75, [16, 16, 0, 0]);
+    ctx.fill();
+
+    // Day Header Text
+    ctx.textAlign = "left";
+    ctx.font = "900 28px Arial, sans-serif";
+    ctx.fillStyle = isDay1 ? "#00e5cc" : "#f9a825";
+    ctx.fillText(group.dayLabel, colX + 30, colTop + 48);
+
+    ctx.font = "700 20px 'Courier New', monospace";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(group.dayTitle.split(" — ")[1] || group.dayTitle, colX + 190, colTop + 46);
+
+    // Event Items
+    let cardY = colTop + 95;
+    const cardHeight = gIdx === 0 ? 122 : 155;
+    const gap = 14;
+
+    group.events.forEach((ev) => {
+      const colorKey = ev.color || "yellow";
+      const colorInfo = COLOR_MAP[colorKey] || COLOR_MAP.yellow;
+
+      // Event Card Box
+      ctx.fillStyle = "rgba(26, 29, 40, 0.9)";
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.08)";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(colX + 24, cardY, colWidth - 48, cardHeight, 10);
+      ctx.fill();
+      ctx.stroke();
+
+      // Left Accent Strip
+      ctx.fillStyle = colorInfo.bg;
+      ctx.beginPath();
+      ctx.roundRect(colX + 24, cardY, 6, cardHeight, [10, 0, 0, 10]);
+      ctx.fill();
+
+      // Category Pill
+      ctx.font = "bold 13px 'Courier New', monospace";
+      const catText = ev.category.toUpperCase();
+      const catWidth = ctx.measureText(catText).width + 16;
+      ctx.fillStyle = colorInfo.bg;
+      ctx.beginPath();
+      ctx.roundRect(colX + 44, cardY + 14, catWidth, 22, 4);
+      ctx.fill();
+      ctx.fillStyle = colorInfo.text;
+      ctx.fillText(catText, colX + 52, cardY + 29);
+
+      // Time Badge
+      ctx.textAlign = "right";
+      ctx.font = "bold 16px 'Courier New', monospace";
+      ctx.fillStyle = "#00e5cc";
+      ctx.fillText(ev.time, colX + colWidth - 44, cardY + 30);
+
+      // Event Title
+      ctx.textAlign = "left";
+      ctx.font = "bold 20px Arial, sans-serif";
+      ctx.fillStyle = "#ffffff";
+      ctx.fillText(ev.title, colX + 44, cardY + 68);
+
+      // Venue
+      ctx.font = "600 16px 'Courier New', monospace";
+      ctx.fillStyle = "#f9a825";
+      ctx.fillText("📍 " + ev.venue, colX + 44, cardY + 100);
+
+      cardY += cardHeight + gap;
+    });
+  });
+
+  // Footer & Legend
+  const footerY = 1665;
+  let legX = 500;
+  const legItems = [
+    { label: "Competitions", bg: "#f9a825" },
+    { label: "Inauguration / Valedictory", bg: "#00897b" },
+    { label: "Online Submissions", bg: "#7e57c2" },
+    { label: "Registration Desk", bg: "#d4739a" }
+  ];
+
+  legItems.forEach((item) => {
+    ctx.fillStyle = item.bg;
+    ctx.beginPath();
+    ctx.arc(legX, footerY, 7, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.textAlign = "left";
+    ctx.font = "bold 15px 'Courier New', monospace";
+    ctx.fillStyle = "#ccc";
+    ctx.fillText(item.label, legX + 16, footerY + 5);
+
+    legX += ctx.measureText(item.label).width + 60;
+  });
+
+  ctx.textAlign = "center";
+  ctx.font = "600 15px 'Courier New', monospace";
+  ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
+  ctx.fillText("INSPIRUS 2K26 // DBCE FATORDA GOA // MAKE IT HAPPEN", width / 2, footerY + 38);
+
+  // Trigger download
+  const link = document.createElement("a");
+  link.download = "inspirus-2k26-schedule.png";
+  link.href = canvas.toDataURL("image/png");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function ScheduleModal({ onClose, onSelectCompetition }) {
+  const [viewMode, setViewMode] = useState("table");
+  const [selectedDay, setSelectedDay] = useState("all");
+
   const days = scheduleData.days;
   const timeSlots = scheduleData.timeSlots;
+
+  const filteredTimeline = selectedDay === "all"
+    ? scheduleTimeline
+    : scheduleTimeline.filter((d) => d.dayId === selectedDay);
+
+  const handleCardClick = (slug) => {
+    if (slug && onSelectCompetition) {
+      const comp = competitions.find((c) => c.slug === slug);
+      if (comp) {
+        onClose();
+        onSelectCompetition(comp);
+      }
+    }
+  };
 
   const modal = (
     <div className="competition-modal-overlay" onClick={onClose}>
@@ -1024,67 +1403,202 @@ function ScheduleModal({ onClose }) {
             <span>EVENT SCHEDULE</span>
           </div>
           <h2 className="schedule-modal-title">INSPIRUS 10 SCHEDULE</h2>
+          <p className="schedule-modal-subtitle">
+            OFFICIAL FESTIVAL TIMELINE & VENUE DIRECTORY (15–16 OCTOBER 2026)
+          </p>
+
+          <div className="schedule-header-actions">
+            {/* VIEW SWITCHER */}
+            <div className="schedule-view-switcher">
+              <button
+                type="button"
+                className={`sch-switch-btn ${viewMode === "timeline" ? "active" : ""}`}
+                onClick={() => setViewMode("timeline")}
+              >
+                <i className="ri-list-check-3" />
+                <span>TIMELINE VIEW</span>
+              </button>
+              <button
+                type="button"
+                className={`sch-switch-btn ${viewMode === "table" ? "active" : ""}`}
+                onClick={() => setViewMode("table")}
+              >
+                <i className="ri-grid-fill" />
+                <span>GRID TABLE VIEW</span>
+              </button>
+            </div>
+
+            {/* DOWNLOAD SCHEDULE IMAGE BUTTON */}
+            <button
+              type="button"
+              className="schedule-download-btn"
+              onClick={downloadScheduleImage}
+              title="Download High-Resolution Schedule Image"
+            >
+              <i className="ri-download-cloud-2-line" />
+              <span>DOWNLOAD IMAGE (PNG)</span>
+            </button>
+          </div>
+
+          {/* DAY FILTER (FOR TIMELINE) */}
+          {viewMode === "timeline" && (
+            <div className="schedule-day-filter">
+              <button
+                type="button"
+                className={`sch-day-btn ${selectedDay === "all" ? "active" : ""}`}
+                onClick={() => setSelectedDay("all")}
+              >
+                <span>ALL EVENTS</span>
+              </button>
+              <button
+                type="button"
+                className={`sch-day-btn ${selectedDay === "day1" ? "active" : ""}`}
+                onClick={() => setSelectedDay("day1")}
+              >
+                <i className="ri-calendar-event-line" />
+                <span>DAY 1 (15TH OCT)</span>
+              </button>
+              <button
+                type="button"
+                className={`sch-day-btn ${selectedDay === "day2" ? "active" : ""}`}
+                onClick={() => setSelectedDay("day2")}
+              >
+                <i className="ri-calendar-event-line" />
+                <span>DAY 2 (16TH OCT)</span>
+              </button>
+            </div>
+          )}
         </div>
 
-        <div className="schedule-scroll-wrap">
-          <table className="schedule-table">
-            <thead>
-              <tr>
-                <th className="sch-th sch-days-col">DAYS</th>
-                <th className="sch-th sch-loc-col">LOCATION</th>
-                {timeSlots.map((ts, i) => (
-                  <th key={i} className="sch-th sch-time-col">{ts}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {days.map((day) =>
-                day.rows.map((row, ri) => {
-                  const cells = [];
-                  let colIdx = 0;
-                  row.slots.forEach((slot, si) => {
-                    const targetCol = slot.colStart !== undefined ? slot.colStart : 0;
-                    while (colIdx < targetCol) {
-                      cells.push(<td key={`empty-${colIdx}`} className="sch-td" />);
-                      colIdx++;
-                    }
-                    const c = COLOR_MAP[slot.color] || COLOR_MAP.yellow;
-                    cells.push(
-                      <td
-                        key={`slot-${si}`}
-                        colSpan={slot.colspan}
-                        className="sch-td sch-event-cell"
-                        style={{ background: c.bg, color: c.text }}
+        {/* TIMELINE VIEW (HIGHLY READABLE ON MOBILE & DESKTOP) */}
+        {viewMode === "timeline" ? (
+          <div className="schedule-timeline-container">
+            {filteredTimeline.map((group) => (
+              <div key={group.dayId} className="schedule-timeline-group">
+                <div className="schedule-group-header">
+                  <div className="group-header-badge">
+                    <i className="ri-calendar-2-line" />
+                    <span>{group.dayLabel}</span>
+                  </div>
+                  <h3 className="group-header-title">{group.dayTitle}</h3>
+                </div>
+
+                <div className="schedule-cards-grid">
+                  {group.events.map((ev, idx) => {
+                    const c = COLOR_MAP[ev.color] || COLOR_MAP.yellow;
+                    const isClickable = !!ev.slug;
+                    return (
+                      <div
+                        key={idx}
+                        className={`schedule-card ${isClickable ? "clickable-event" : ""}`}
+                        style={{ "--card-accent": c.bg }}
+                        onClick={() => isClickable && handleCardClick(ev.slug)}
+                        role={isClickable ? "button" : undefined}
+                        tabIndex={isClickable ? 0 : undefined}
                       >
-                        {slot.label}
-                      </td>
-                    );
-                    colIdx += slot.colspan;
-                  });
-                  while (colIdx < timeSlots.length) {
-                    cells.push(<td key={`fill-${colIdx}`} className="sch-td" />);
-                    colIdx++;
-                  }
+                        <div className="sch-card-top">
+                          <span
+                            className="sch-card-badge"
+                            style={{ backgroundColor: c.bg, color: c.text }}
+                          >
+                            {ev.category}
+                          </span>
+                          <span className="sch-card-time">
+                            <i className="ri-time-line" />
+                            {ev.time}
+                          </span>
+                        </div>
 
-                  return (
-                    <tr key={`${day.label}-${ri}`}>
-                      {ri === 0 && (
-                        <td
-                          className="sch-td sch-day-label"
-                          rowSpan={day.rows.length}
-                        >
-                          {day.label}
-                        </td>
-                      )}
-                      <td className="sch-td sch-location">{row.location}</td>
-                      {cells}
-                    </tr>
-                  );
-                })
-              )}
-            </tbody>
-          </table>
-        </div>
+                        <h4 className="sch-card-title">{ev.title}</h4>
+
+                        <div className="sch-card-bottom">
+                          <div className="sch-card-venue">
+                            <i className="ri-map-pin-2-line" />
+                            <span>{ev.venue}</span>
+                          </div>
+                          {isClickable && (
+                            <span className="sch-card-action">
+                              <span>EVENT DETAILS</span>
+                              <i className="ri-arrow-right-up-line" />
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          /* TABLE GRID VIEW */
+          <div className="schedule-table-section">
+            <div className="schedule-table-hint">
+              <i className="ri-drag-move-2-line" />
+              <span>Swipe horizontally to view all time slots & locations</span>
+            </div>
+
+            <div className="schedule-scroll-wrap">
+              <table className="schedule-table">
+                <thead>
+                  <tr>
+                    <th className="sch-th sch-days-col">DAYS</th>
+                    <th className="sch-th sch-loc-col">LOCATION</th>
+                    {timeSlots.map((ts, i) => (
+                      <th key={i} className="sch-th sch-time-col">{ts}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {days.map((day) =>
+                    day.rows.map((row, ri) => {
+                      const cells = [];
+                      let colIdx = 0;
+                      row.slots.forEach((slot, si) => {
+                        const targetCol = slot.colStart !== undefined ? slot.colStart : 0;
+                        while (colIdx < targetCol) {
+                          cells.push(<td key={`empty-${colIdx}`} className="sch-td" />);
+                          colIdx++;
+                        }
+                        const c = COLOR_MAP[slot.color] || COLOR_MAP.yellow;
+                        cells.push(
+                          <td
+                            key={`slot-${si}`}
+                            colSpan={slot.colspan}
+                            className="sch-td sch-event-cell"
+                            style={{ background: c.bg, color: c.text }}
+                          >
+                            {slot.label}
+                          </td>
+                        );
+                        colIdx += slot.colspan;
+                      });
+                      while (colIdx < timeSlots.length) {
+                        cells.push(<td key={`fill-${colIdx}`} className="sch-td" />);
+                        colIdx++;
+                      }
+
+                      return (
+                        <tr key={`${day.label}-${ri}`}>
+                          {ri === 0 && (
+                            <td
+                              className="sch-td sch-day-label"
+                              rowSpan={day.rows.length}
+                            >
+                              {day.label}
+                            </td>
+                          )}
+                          <td className="sch-td sch-location">{row.location}</td>
+                          {cells}
+                        </tr>
+                      );
+                    })
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
 
         <div className="schedule-legend">
           {Object.entries(COLOR_MAP).map(([key, val]) => (
@@ -1097,13 +1611,23 @@ function ScheduleModal({ onClose }) {
           ))}
         </div>
 
-        <button
-          type="button"
-          className="competition-modal-done"
-          onClick={onClose}
-        >
-          CLOSE SCHEDULE
-        </button>
+        <div className="schedule-modal-footer-btns">
+          <button
+            type="button"
+            className="schedule-download-footer-btn"
+            onClick={downloadScheduleImage}
+          >
+            <i className="ri-download-cloud-2-line" />
+            <span>DOWNLOAD SCHEDULE IMAGE</span>
+          </button>
+          <button
+            type="button"
+            className="competition-modal-done"
+            onClick={onClose}
+          >
+            CLOSE SCHEDULE
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -2001,7 +2525,10 @@ export default function CompetitionsSection() {
       )}
 
       {showSchedule && (
-        <ScheduleModal onClose={() => closeSchedule()} />
+        <ScheduleModal
+          onClose={() => closeSchedule()}
+          onSelectCompetition={openCompetition}
+        />
       )}
 
       {selectedCompetition && (

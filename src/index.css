@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "pricedown";
-  src: url("/pricedown.otf");
+  src: url("pricedown.otf");
 }
 
 html,
@@ -1688,7 +1688,7 @@ html {
       rgba(20, 0, 35, 0.15),
       rgba(5, 0, 15, 0.58)
     ),
-    url("/competition-card-bg.webp");
+    url("competition-card-bg.webp");
 
   background-size: cover;
 
@@ -2849,19 +2849,19 @@ html {
 .schedule-modal {
   position: relative;
   background: #0d0d0d;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 16px;
-  padding: 40px 36px 32px;
+  padding: 36px 32px 28px;
   width: min(96vw, 1200px);
   max-height: 90vh;
   overflow-y: auto;
   box-shadow:
     0 0 60px rgba(0, 200, 180, 0.15),
-    0 30px 80px rgba(0, 0, 0, 0.8);
+    0 30px 80px rgba(0, 0, 0, 0.85);
   animation: modalSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .schedule-modal::-webkit-scrollbar { width: 6px; }
@@ -2870,6 +2870,10 @@ html {
 
 .schedule-modal-header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .schedule-modal-title {
@@ -2878,18 +2882,330 @@ html {
   color: #fff;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-top: 14px;
+  margin-top: 4px;
   background: linear-gradient(135deg, #fff 30%, #00e5cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Scrollable wrapper */
+.schedule-modal-subtitle {
+  font-family: "Share Tech Mono", monospace;
+  font-size: clamp(0.75rem, 1.5vw, 0.85rem);
+  color: #00e5cc;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: -4px;
+  opacity: 0.9;
+}
+
+/* ─── SCHEDULE HEADER ACTIONS ─── */
+.schedule-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ─── SCHEDULE VIEW SWITCHER ─── */
+.schedule-view-switcher {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  padding: 4px;
+  gap: 4px;
+}
+
+/* ─── SCHEDULE DOWNLOAD BUTTON (HEADER) ─── */
+.schedule-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(0, 229, 204, 0.16), rgba(0, 137, 123, 0.22));
+  border: 1px solid rgba(0, 229, 204, 0.6);
+  color: #00e5cc;
+  padding: 9px 20px;
+  border-radius: 30px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 16px rgba(0, 229, 204, 0.2);
+}
+
+.schedule-download-btn i {
+  font-size: 1.05rem;
+  transition: transform 0.2s ease;
+}
+
+.schedule-download-btn:hover {
+  background: #00e5cc;
+  color: #0d0d0d;
+  box-shadow: 0 0 25px rgba(0, 229, 204, 0.55);
+  transform: translateY(-2px);
+}
+
+.schedule-download-btn:hover i {
+  transform: translateY(2px);
+}
+
+.sch-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 8px 18px;
+  border-radius: 24px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sch-switch-btn i {
+  font-size: 1rem;
+}
+
+.sch-switch-btn:hover {
+  color: #fff;
+}
+
+.sch-switch-btn.active {
+  background: linear-gradient(135deg, #00897b, #00e5cc);
+  color: #0d0d0d;
+  box-shadow: 0 0 16px rgba(0, 229, 204, 0.4);
+}
+
+/* ─── DAY FILTER BUTTONS ─── */
+.schedule-day-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.sch-day-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(20, 20, 25, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sch-day-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(0, 229, 204, 0.3);
+}
+
+.sch-day-btn.active {
+  background: rgba(0, 229, 204, 0.15);
+  border-color: #00e5cc;
+  color: #00e5cc;
+  box-shadow: 0 0 12px rgba(0, 229, 204, 0.2);
+}
+
+/* ─── TIMELINE VIEW ─── */
+.schedule-timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.schedule-timeline-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.schedule-group-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #00e5cc;
+  color: #0d0d0d;
+  font-family: "pricedown", Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.group-header-title {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.92rem;
+  color: #eee;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.schedule-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+
+.schedule-card {
+  background: rgba(18, 18, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--card-accent, #00e5cc);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.schedule-card.clickable-event {
+  cursor: pointer;
+}
+
+.schedule-card.clickable-event:hover {
+  background: rgba(28, 28, 36, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-left-color: var(--card-accent, #00e5cc);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 229, 204, 0.15);
+}
+
+.sch-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.sch-card-badge {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.sch-card-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.78rem;
+  color: #00e5cc;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: right;
+}
+
+.sch-card-time i {
+  font-size: 0.9rem;
+}
+
+.sch-card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.sch-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sch-card-venue {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.74rem;
+  color: #bbb;
+  letter-spacing: 0.4px;
+}
+
+.sch-card-venue i {
+  color: #f9a825;
+  font-size: 0.85rem;
+}
+
+.sch-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #00e5cc;
+  letter-spacing: 1px;
+}
+
+/* ─── TABLE GRID SECTION ─── */
+.schedule-table-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schedule-table-hint {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.75rem;
+  color: #00e5cc;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  background: rgba(0, 229, 204, 0.08);
+  border-radius: 6px;
+}
+
 .schedule-scroll-wrap {
   overflow-x: auto;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.12);
+  -webkit-overflow-scrolling: touch;
 }
 
 .schedule-scroll-wrap::-webkit-scrollbar { height: 6px; }
@@ -2900,27 +3216,27 @@ html {
 .schedule-table {
   border-collapse: collapse;
   width: 100%;
-  min-width: 900px;
+  min-width: 950px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11.5px;
 }
 
 /* Header */
 .sch-th {
-  background: #1a1a1a;
-  color: #ccc;
+  background: #18181f;
+  color: #eee;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  padding: 10px 8px;
+  padding: 11px 9px;
   border: 1px solid rgba(255,255,255,0.1);
   white-space: nowrap;
   text-align: center;
 }
 
-.sch-days-col  { width: 80px;  min-width: 80px; }
-.sch-loc-col   { width: 160px; min-width: 140px; text-align: left; }
-.sch-time-col  { min-width: 90px; }
+.sch-days-col  { width: 90px;  min-width: 90px; }
+.sch-loc-col   { width: 170px; min-width: 150px; text-align: left; }
+.sch-time-col  { min-width: 95px; }
 
 /* Body cells */
 .sch-td {
@@ -2935,7 +3251,7 @@ html {
   background: #111;
   color: #fff;
   font-family: "pricedown", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-align: center;
@@ -2947,26 +3263,25 @@ html {
 .sch-location {
   background: #111;
   color: #bbb;
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 8px 10px;
+  padding: 9px 11px;
   border-right: 2px solid rgba(255,255,255,0.1);
 }
 
 .sch-event-cell {
   font-weight: 700;
-  font-size: 11px;
+  font-size: 11.5px;
   letter-spacing: 0.4px;
   text-align: center;
-  padding: 9px 8px;
+  padding: 10px 8px;
   line-height: 1.35;
   border-radius: 3px;
   white-space: normal;
   word-break: break-word;
 }
 
-/* Day separator row */
 .schedule-table tbody tr:first-child .sch-day-label {
   border-top: 2px solid rgba(0, 200, 180, 0.5);
 }
@@ -2977,7 +3292,7 @@ html {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  padding: 10px 0 4px;
+  padding: 14px 0 4px;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -2995,21 +3310,141 @@ html {
 }
 
 .legend-label {
-  font-family: Arial, sans-serif;
-  font-size: 11.5px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: #bbb;
+  color: #ccc;
+}
+
+/* ─── SCHEDULE MODAL FOOTER BUTTONS ─── */
+.schedule-modal-footer-btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 8px;
+  padding-top: 10px;
+}
+
+.schedule-download-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(0, 229, 204, 0.22), rgba(0, 137, 123, 0.28));
+  border: 1px solid rgba(0, 229, 204, 0.6);
+  border-radius: 8px;
+  color: #00e5cc;
+  font-family: Arial, sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(0, 229, 204, 0.25);
+}
+
+.schedule-download-footer-btn i {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.schedule-download-footer-btn:hover {
+  background: #00e5cc;
+  color: #0d0d0d;
+  border-color: #00e5cc;
+  box-shadow: 0 0 35px rgba(0, 229, 204, 0.6);
+  transform: translateY(-2px);
+}
+
+.schedule-download-footer-btn:hover i {
+  transform: translateY(2px);
 }
 
 /* ─── RESPONSIVE ─── */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .schedule-modal {
-    padding: 28px 16px 24px;
+    padding: 28px 14px 20px;
     border-radius: 12px;
+    width: 98vw;
+    gap: 16px;
   }
 
+  .schedule-header-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .schedule-download-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 9px 14px;
+    font-size: 0.78rem;
+  }
+
+  .schedule-modal-footer-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .schedule-download-footer-btn,
+  .schedule-modal-footer-btns .competition-modal-done {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .schedule-table-hint {
+    display: flex;
+  }
+
+  .schedule-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .schedule-view-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sch-switch-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 10px;
+    font-size: 0.76rem;
+  }
+
+  .schedule-day-filter {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .sch-day-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 6px 8px;
+    font-size: 0.72rem;
+  }
+
+  .schedule-card {
+    padding: 12px 14px;
+  }
+
+  .sch-card-title {
+    font-size: 0.9rem;
+  }
+
+  .schedule-legend {
+    gap: 10px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 600px) {
   .schedule-btn {
     margin-left: 0;
     margin-top: 10px;

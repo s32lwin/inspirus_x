@@ -441,7 +441,7 @@ function App() {
             <div className="limg relative w-full lg:w-1/2 flex items-center justify-center">
               <video
                 className="w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[520px] h-auto rounded-2xl object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
-                src="/assets/i_1.mp4"
+                src="assets/i_1.mp4"
                 autoPlay
                 loop
                 muted
@@ -450,7 +450,7 @@ function App() {
                 disablePictureInPicture
                 onContextMenu={(e) => e.preventDefault()}
               >
-                <source src="/assets/i_1.mp4" type="video/mp4" />
+                <source src="assets/i_1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
