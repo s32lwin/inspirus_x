@@ -7,7 +7,7 @@ const sponsorGroups = [
     sponsors: [
       {
         name: "Shri.Babush Monserrate",
-        role: "Hon. Minister for Labour and Employment Gov. of Goa",
+        role: "Hon. Minister for Labour and Employment,Govt. of Goa",
         image: "/sponsors/babush-monserrate.webp",
         type: "person",
       },
@@ -20,7 +20,7 @@ const sponsorGroups = [
     sponsors: [
       {
         name: "Shri.Subhash Phal Desai",
-        role: "Hon. Minister of Social Welfare Gov. of Goa",
+        role: "Hon. Minister of Social Welfare, Govt. of Goa",
         image: "/sponsors/subhash-phal-desai.jpeg",
         type: "person",
       },
@@ -33,7 +33,7 @@ const sponsorGroups = [
     sponsors: [
       {
         name: "Shri.Damu Naik",
-        role: "Former Member of the Goa Legislative Assembly",
+        role: "State President of BJP,Goa Pradesh" ,
         image: "/sponsors/damu-naik.webp",
         type: "person",
       },
@@ -44,18 +44,6 @@ const sponsorGroups = [
     title: "PEARL",
     className: "pearl-group",
     sponsors: [
-      {
-        name: "Hotel Shakti Palace",
-        role: "Ponda, Goa",
-        image: "/sponsors/hotel-shakti-palace.png",
-        type: "logo",
-      },
-      {
-        name: "Mobile Hub",
-        role: "Sponsor",
-        image: "/sponsors/mobile-hub.jpeg",
-        type: "logo",
-      },
       {
         name: "Shri.Nilesh Cabral",
         role: "Hon. Member of the Goa Legislative Assembly",
@@ -73,6 +61,18 @@ const sponsorGroups = [
         role: "Hon. Member of the Goa Legislative Assembly",
         image: "/sponsors/venzy-viegas.webp",
         type: "person",
+      },
+      {
+        name: "Hotel Shakti Palace",
+        role: "Ponda, Goa",
+        image: "/sponsors/hotel-shakti-palace.png",
+        type: "logo",
+      },
+      {
+        name: "Mobile Hub",
+        role: "",
+        image: "/sponsors/mobile-hub.jpeg",
+        type: "logo",
       },
     ],
   },
