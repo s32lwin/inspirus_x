@@ -9,6 +9,7 @@ import CompetitionsSection from "./CompetitionsSection";
 import GallerySection from "./GallerySection";
 import Footer from "./Footer";
 import CustomCursor from "./CustomCursor";
+import SponsorsSection from "./SponsorsSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -478,6 +479,9 @@ function App() {
         <div id="teams">
           <TeamSection />
         </div>
+        {/* SUPPORTERS / PARTNERS SECTION */}
+          <SponsorsSection />
+
 
         {/* SITE FOOTER */}
         <Footer />
