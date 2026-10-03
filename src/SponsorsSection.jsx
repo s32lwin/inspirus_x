@@ -6,7 +6,7 @@ const sponsorGroups = [
     className: "powered-by-group",
     sponsors: [
       {
-        name: "Shri. Babush Monserrate",
+        name: "Shri. Atanasio(Babush) Monserrate",
         role: "Hon. Minister for Labour and Employment,Govt. of Goa",
         image: "/sponsors/babush-monserrate.webp",
         type: "person",
