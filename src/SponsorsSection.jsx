@@ -1,75 +1,106 @@
 import React from "react";
 
-const supporters = [
+const sponsorGroups = [
   {
-    name: "Shri.Babush Monserrate",
-    role: "Hon. Minister for Labour and Employment Gov. of Goa",
-    category: "Sponsor",
-    image: "/sponsors/babush-monserrate.webp",
-    type: "person",
+    title: "POWERED BY",
+    className: "powered-by-group",
+    sponsors: [
+      {
+        name: "Shri.Babush Monserrate",
+        role: "Hon. Minister for Labour and Employment Gov. of Goa",
+        image: "/sponsors/babush-monserrate.webp",
+        type: "person",
+      },
+    ],
   },
+
   {
-    name: "Shri.Subhash Phal Desai",
-    role: "Hon. Minister of Social Welfare Gov. of Goa",
-    category: "Sponsor",
-    image: "/sponsors/subhash-phal-desai.jpeg",
-    type: "person",
+    title: "SUPPORTED BY",
+    className: "supported-by-group",
+    sponsors: [
+      {
+        name: "Shri.Subhash Phal Desai",
+        role: "Hon. Minister of Social Welfare Gov. of Goa",
+        image: "/sponsors/subhash-phal-desai.jpeg",
+        type: "person",
+      },
+    ],
   },
+
   {
-    name: "Shri.Damu Naik",
-    role: "Former Member of the Goa Legislative Assembly",
-    category: "Sponsor",
-    image: "/sponsors/damu-naik.webp",
-    type: "person",
+    title: "BRONZE",
+    className: "bronze-group",
+    sponsors: [
+      {
+        name: "Shri.Damu Naik",
+        role: "Former Member of the Goa Legislative Assembly",
+        image: "/sponsors/damu-naik.webp",
+        type: "person",
+      },
+    ],
   },
+
   {
-    name: "Shri.Nilesh Cabral",
-    role: "Hon. Member of the Goa Legislative Assembly",
-    category: "Sponsor",
-    image: "/sponsors/nilesh-cabral.webp",
-    type: "person",
+    title: "PEARL",
+    className: "pearl-group",
+    sponsors: [
+      {
+        name: "Hotel Shakti Palace",
+        role: "Ponda, Goa",
+        image: "/sponsors/hotel-shakti-palace.png",
+        type: "logo",
+      },
+      {
+        name: "Mobile Hub",
+        role: "Sponsor",
+        image: "/sponsors/mobile-hub.jpeg",
+        type: "logo",
+      },
+      {
+        name: "Shri.Nilesh Cabral",
+        role: "Hon. Member of the Goa Legislative Assembly",
+        image: "/sponsors/nilesh-cabral.webp",
+        type: "person",
+      },
+      {
+        name: "Smt.Luiza Pereira e Rodrigues",
+        role: "ZP Member, Benaulim Constituency",
+        image: "/sponsors/luiza-pereira.jpeg",
+        type: "person",
+      },
+      {
+        name: "Mr.Venzy Viegas",
+        role: "Hon. Member of the Goa Legislative Assembly",
+        image: "/sponsors/venzy-viegas.webp",
+        type: "person",
+      },
+    ],
   },
+
   {
-    name: "Mr.Venzy Viegas",
-    role: "Hon. Member of the Goa Legislative Assembly",
-    category: "Sponsor",
-    image: "/sponsors/venzy-viegas.webp",
-    type: "person",
+    title: "STREAMING PARTNER",
+    className: "streaming-group",
+    sponsors: [
+      {
+        name: "BundleHUB",
+        role: "Streaming Partner",
+        image: "/sponsors/bundlehub.png",
+        type: "streaming",
+      },
+    ],
   },
+
   {
-    name: "Goa News Hub",
-    role: "GNH",
-    category: "Media Partner",
-    image: "/sponsors/goa-news-hub.png",
-    type: "partner",
-  },
-  {
-    name: "BundleHUB",
-    role: "Streaming Partner",
-    category: "Streaming Partner",
-    image: "/sponsors/bundlehub.png",
-    type: "partner",
-  },
-  {
-    name: "Mobile Hub",
-    role: "Sponsor",
-    category: "Sponsor",
-    image: "/sponsors/mobile-hub.jpeg",
-    type: "sponsor",
-  },
-  {
-    name: "Smt.Luiza Pereira e Rodrigues",
-    role: "ZP Member, Benaulim Constituency",
-    category: "Sponsor",
-    image: "/sponsors/luiza-pereira.jpeg",
-    type: "person",
-  },
-  {
-    name: "Hotel Shakti Palace",
-    role: "Ponda, Goa",
-    category: "Sponsor",
-    image: "/sponsors/hotel-shakti-palace.png",
-    type: "partner",
+    title: "MEDIA PARTNER",
+    className: "media-group",
+    sponsors: [
+      {
+        name: "Goa News Hub",
+        role: "GNH",
+        image: "/sponsors/goa-news-hub.png",
+        type: "media",
+      },
+    ],
   },
 ];
 
@@ -89,7 +120,7 @@ export default function SponsorsSection() {
         </p>
 
         <h2 className="supporters-title">
-          OUR SUPPORTERS
+          OUR SPONSORS
         </h2>
 
         <div className="supporters-line">
@@ -97,40 +128,69 @@ export default function SponsorsSection() {
         </div>
 
         <p className="supporters-subtitle">
-          DISTINGUISHED GUESTS • PARTNERS • SPONSORS
+          OUR OFFICIAL SPONSORS & PARTNERS
         </p>
 
       </div>
 
-      {/* SUPPORTERS GRID */}
-      <div className="supporters-grid">
 
-        {supporters.map((supporter, index) => (
+      {/* SPONSOR GROUPS */}
+      <div className="sponsor-groups">
+
+        {sponsorGroups.map((group, groupIndex) => (
           <div
-            className={`supporter-card supporter-card-${supporter.type}`}
-            key={`${supporter.name}-${index}`}
+            className={`sponsor-group ${group.className}`}
+            key={groupIndex}
           >
 
-            {/* CATEGORY */}
-            <div className="supporter-category">
-              {supporter.category}
+            {/* GROUP HEADING */}
+            <div className="sponsor-group-heading">
+              <span className="sponsor-heading-line" />
+
+              <h3>
+                {group.title}
+              </h3>
+
+              <span className="sponsor-heading-line" />
             </div>
 
-            {/* IMAGE */}
-            <div className="supporter-image-wrapper">
-              <img
-                src={supporter.image}
-                alt={supporter.name}
-                className="supporter-image"
-              />
-            </div>
 
-            {/* DETAILS */}
-            <div className="supporter-details">
+            {/* GROUP SPONSORS */}
+            <div className="sponsor-group-grid">
 
-              <h3>{supporter.name}</h3>
+              {group.sponsors.map((sponsor, sponsorIndex) => (
+                <div
+                  className={`supporter-card supporter-card-${sponsor.type}`}
+                  key={`${sponsor.name}-${sponsorIndex}`}
+                >
 
-              <p>{supporter.role}</p>
+                  {/* IMAGE */}
+                  <div className="supporter-image-wrapper">
+
+                    <img
+                      src={sponsor.image}
+                      alt={sponsor.name}
+                      className="supporter-image"
+                    />
+
+                  </div>
+
+
+                  {/* DETAILS */}
+                  <div className="supporter-details">
+
+                    <h4>
+                      {sponsor.name}
+                    </h4>
+
+                    <p>
+                      {sponsor.role}
+                    </p>
+
+                  </div>
+
+                </div>
+              ))}
 
             </div>
 
