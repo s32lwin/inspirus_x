@@ -6,7 +6,7 @@ const sponsorGroups = [
     className: "powered-by-group",
     sponsors: [
       {
-        name: "Shri.Babush Monserrate",
+        name: "Shri. Babush Monserrate",
         role: "Hon. Minister for Labour and Employment,Govt. of Goa",
         image: "/sponsors/babush-monserrate.webp",
         type: "person",
@@ -19,7 +19,7 @@ const sponsorGroups = [
     className: "supported-by-group",
     sponsors: [
       {
-        name: "Shri.Subhash Phal Desai",
+        name: "Shri. Subhash Phal Desai",
         role: "Hon. Minister of Social Welfare, Govt. of Goa",
         image: "/sponsors/subhash-phal-desai.jpeg",
         type: "person",
@@ -32,7 +32,7 @@ const sponsorGroups = [
     className: "bronze-group",
     sponsors: [
       {
-        name: "Shri.Damu Naik",
+        name: "Shri. Damodar(Damu) Gajanan Naik",
         role: "State President of BJP,Goa Pradesh" ,
         image: "/sponsors/damu-naik.webp",
         type: "person",
@@ -45,22 +45,29 @@ const sponsorGroups = [
     className: "pearl-group",
     sponsors: [
       {
-        name: "Shri.Nilesh Cabral",
-        role: "Hon. Member of the Goa Legislative Assembly",
+        name: "Shri. Nilesh Cabral",
+        role: "Hon. Member of the Goa Legislative Assembly , Curchorem Constituency",
         image: "/sponsors/nilesh-cabral.webp",
         type: "person",
       },
       {
-        name: "Smt.Luiza Pereira e Rodrigues",
+        name: "Smt. Luiza Pereira e Rodrigues",
         role: "ZP Member, Benaulim Constituency",
         image: "/sponsors/luiza-pereira.jpeg",
         type: "person",
       },
       {
-        name: "Mr.Venzy Viegas",
-        role: "Hon. Member of the Goa Legislative Assembly",
+        name: "Mr. Venzy Viegas",
+        role: "Hon. Member of the Goa Legislative Assembly , Benaulim Constituency",
         image: "/sponsors/venzy-viegas.webp",
         type: "person",
+      },
+      {
+        name:"Mr. Aleixo Reginaldo Lourenço",
+        role:"Hon. Member of the Goa Legislative Assembly , Curtorim constituency",
+        image:"/sponsors/aleixo-reginaldo-lourenco.jpeg",
+        type:"person",
+
       },
       {
         name: "Hotel Shakti Palace",

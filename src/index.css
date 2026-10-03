@@ -5923,14 +5923,14 @@ svg image,
 
 /* =========================================================
    PEARL
-   5 SPONSORS
-   3 TOP + 2 CENTERED BELOW
+   6 SPONSORS
+   3 TOP + 3 BOTTOM
    ========================================================= */
 
 .pearl-group .sponsor-group-grid {
   display: grid;
 
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   gap: 30px;
 
@@ -5938,36 +5938,32 @@ svg image,
 }
 
 
-/* First three sponsors */
+/* All Pearl sponsors */
+
+.pearl-group .supporter-card {
+  width: 100%;
+
+  margin: 0;
+}
+
+
+/* Reset old nth-child positioning */
 
 .pearl-group .supporter-card:nth-child(1),
 .pearl-group .supporter-card:nth-child(2),
-.pearl-group .supporter-card:nth-child(3) {
-  grid-column: span 2;
-
-  width: 100%;
-}
-
-
-/* Fourth sponsor */
-
-.pearl-group .supporter-card:nth-child(4) {
-  grid-column: 2 / span 2;
+.pearl-group .supporter-card:nth-child(3),
+.pearl-group .supporter-card:nth-child(4),
+.pearl-group .supporter-card:nth-child(5),
+.pearl-group .supporter-card:nth-child(6) {
+  grid-column: auto;
 
   width: 100%;
 
   margin: 0;
-}
 
+  justify-self: stretch;
 
-/* Fifth sponsor */
-
-.pearl-group .supporter-card:nth-child(5) {
-  grid-column: 4 / span 2;
-
-  width: 100%;
-
-  margin: 0;
+  transform: none;
 }
 
 
@@ -6162,12 +6158,17 @@ svg image,
   .pearl-group .supporter-card:nth-child(2),
   .pearl-group .supporter-card:nth-child(3),
   .pearl-group .supporter-card:nth-child(4),
-  .pearl-group .supporter-card:nth-child(5) {
+  .pearl-group .supporter-card:nth-child(5),
+  .pearl-group .supporter-card:nth-child(6)
+   {
     grid-column: auto;
 
     width: 100%;
 
     margin: 0;
+
+    justify-self: stretch;
+    transform: none;
   }
 
 
